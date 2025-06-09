@@ -1,2 +1,14 @@
 Dominio
 DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco

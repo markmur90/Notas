@@ -53,3 +53,10 @@ Last login: Mon Jun  9 04:36:45 2025 from 194.126.177.137
 venv simulador
 [05:14]
 reinicio
+[10:57]
+d_local
+vps_locsync
+[11:28]
+corrido simulador
+[12:46]
+Deploy de plantillas conexion y curl
