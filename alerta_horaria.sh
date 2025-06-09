@@ -76,12 +76,20 @@ PENDIENTES=$(cat "$PENDIENTES_FILE")
 # === Construir mensaje completo ===
 MENSAJE="🌎 Bogotá: $HORA_BOGOTA\n🕰️ Berlín: $HORA_BERLIN\n📊 Hoy: $(format_time $DIA)\n📦 Proyecto: $(format_time $TOTAL)\n\n📌 Pendientes:\n$PENDIENTES"
 
-# Notificación local
-if [ -n "$DISPLAY" ] && command -v notify-send >/dev/null; then
-    notify-send "⏰ Alerta Horaria" "$MENSAJE"
-else
-    echo "🔕 Entorno gráfico no disponible, omitiendo notificación" >> "$LOG_ALERTAS"
-fi
+# Notificación local (Zenity o notify-send)
+send_notify() {
+    local title=$1
+    local msg=$2
+    if command -v zenity >/dev/null; then
+        zenity --notification --text="${title}\n${msg}" &
+    elif [ -n "$DISPLAY" ] && command -v notify-send >/dev/null; then
+        notify-send "$title" "$msg"
+    else
+        echo "🔕 Entorno gráfico no disponible, omitiendo notificación" >> "$LOG_ALERTAS"
+    fi
+}
+
+send_notify "⏰ Alerta Horaria" "$MENSAJE"
 
 # Rotación simple de alertas
 [ "$(wc -l < "$LOG_ALERTAS")" -gt 1000 ] && tail -n 500 "$LOG_ALERTAS" > "$LOG_ALERTAS.tmp" && mv "$LOG_ALERTAS.tmp" "$LOG_ALERTAS"
