@@ -7,11 +7,12 @@ if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
     exit 1
 fi
 echo $$ > "$PIDFILE"
-trap "rm -f $PIDFILE" EXIT
+trap 'rm -f "$PIDFILE"' EXIT
 
 # === Entorno para audio desde cron ===
 export DISPLAY=:0
-export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export XDG_RUNTIME_DIR
 
 # === Rutas de logs ===
 LOG_DIR="$HOME/Notas/logs"

@@ -7,7 +7,10 @@ if [ ! -f "$ENV_PATH" ]; then
 fi
 
 # Cargar variables del .env
-export $(grep -v '^#' "$ENV_PATH" | xargs)
+# export $(grep -v '^#' "$ENV_PATH" | xargs)
+set -o allexport
+source "$ENV_PATH"
+set +o allexport
 
 # Mensaje recibido como parámetro
 MENSAJE="$1"

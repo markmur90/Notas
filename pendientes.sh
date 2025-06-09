@@ -22,7 +22,7 @@ while true; do
     1)
       echo -e "\n📋 Lista de pendientes:"
       nl -w2 -s'. ' "$PENDIENTES"
-      read -p $'\nPresiona enter para continuar...' ;;
+      read -r -p $'\nPresiona enter para continuar...' ;;
     2)
       echo -n "🆕 Escribe el nuevo pendiente: "
       read -r NUEVO
@@ -46,7 +46,7 @@ while true; do
     4)
       echo -e "\n✅ Completados:"
       nl -w2 -s'. ' "$COMPLETADOS"
-      read -p $'\nPresiona enter para continuar...' ;;
+      read -r -p $'\nPresiona enter para continuar...' ;;
     5)
       echo "👋 Salida..."
       break ;;
