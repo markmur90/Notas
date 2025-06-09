@@ -59,8 +59,20 @@ MENSAJE="⏰ $HORA_ACTUAL
 📊 Hoy: $(format_time $DIA)
 📦 Proyecto: $(format_time $TOTAL)"
 
-# === Notificación gráfica ===
-notify-send "⏰ Alerta Horaria" "$MENSAJE"
+# === Notificación gráfica (Zenity o notify-send) ===
+send_notify() {
+    local title=$1
+    local msg=$2
+    if command -v zenity >/dev/null; then
+        zenity --notification --text="${title}\n${msg}" &
+    elif [ -n "$DISPLAY" ] && command -v notify-send >/dev/null; then
+        notify-send "$title" "$msg"
+    else
+        echo "🔕 Entorno gráfico no disponible, omitiendo notificación" >> "$LOG_ALERTAS"
+    fi
+}
+
+send_notify "⏰ Alerta Horaria" "$MENSAJE"
 echo -e "$MENSAJE\n" >> "$LOG_ALERTAS"
 
 # === Alerta hablada y Telegram cada 4 horas (48 ciclos de 5 minutos) ===
