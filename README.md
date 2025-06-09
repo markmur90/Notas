@@ -33,6 +33,7 @@ Anteriormente la reproducción de audio y el envío por Telegram se realizaban
 cada tres ejecuciones (aproximadamente cada 30 minutos si se ejecutaba cada
 10). Esta versión elimina esa condición, por lo que la salida de audio
 coincide con cada notificación del sistema.
+
 ### Mejorar la voz de las alertas
 
 El script usa `espeak` para la salida hablada. Si están instalados los paquetes
@@ -43,4 +44,23 @@ Para instalarlos en sistemas basados en Debian:
 
 ```bash
 sudo apt-get install mbrola mbrola-es1
+```
+
+Para elegir una voz distinta o configurarla manualmente, ejecuta:
+
+```bash
+./alerta_horaria.sh --config-voice
+```
+
+Se mostrará un menú con las voces disponibles de `espeak` y la selección
+quedará guardada en `~/Notas/voz_seleccionada` para próximas ejecuciones.
+
+## Sincronización automática de logs
+
+El script `logs_sync.sh` monitorea la carpeta `logs` con `inotifywait` y, ante cualquier cambio, realiza un commit y empuja los resultados al repositorio configurado. Se debe contar con acceso por SSH al repositorio.
+
+Ejemplo de uso:
+
+```bash
+./logs_sync.sh
 ```

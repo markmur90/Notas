@@ -24,10 +24,49 @@ LOG_FECHA="$LOG_DIR/ultima_fecha.log"
 LOG_AUDIO="$LOG_DIR/audio_contador.log"
 LOG_VOZ="$LOG_DIR/voz.log"
 
-# Elegir voz para espeak. Si está disponible una voz MBROLA,
-# la usamos para un sonido menos robótico.
-VOICE="es"
-[ -d /usr/share/mbrola/es1 ] && VOICE="mb-es1"
+# === Configuración de voz ===
+# Se guarda la elección del usuario en un archivo para
+# no preguntar en cada ejecución.
+VOICE_FILE="$HOME/Notas/voz_seleccionada"
+
+select_voice() {
+    if ! command -v espeak >/dev/null; then
+        echo "❌ 'espeak' no está instalado." >&2
+        exit 1
+    fi
+
+    echo "Selecciona la voz para las alertas:"
+    mapfile -t VOICES < <(espeak --voices=es | awk 'NR>1 {print $1}')
+    PS3="Número de opción: "
+    select V in "${VOICES[@]}"; do
+        if [ -n "$V" ]; then
+            VOICE="$V"
+            echo "$VOICE" > "$VOICE_FILE"
+            break
+        else
+            echo "Opción inválida"
+        fi
+    done
+}
+
+# Permitir configurar la voz manualmente con --config-voice
+if [[ $1 == --config-voice ]]; then
+    select_voice
+    exit 0
+fi
+
+if [ -f "$VOICE_FILE" ]; then
+    VOICE="$(cat "$VOICE_FILE")"
+else
+    # Si existe una voz MBROLA la proponemos por defecto
+    if [ -d /usr/share/mbrola/es1 ]; then
+        VOICE="mb-es1"
+        echo "$VOICE" > "$VOICE_FILE"
+    else
+        select_voice
+    fi
+fi
+
 
 
 # === Telegram ===

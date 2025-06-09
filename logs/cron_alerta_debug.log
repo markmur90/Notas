@@ -72,3 +72,4 @@ No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
 No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
 No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
 Error al lanzar («spawn») el comando «dbus-launch --autolaunch=92d5645cf0b3499b9876f2a19f502d1d --binary-syntax --close-stderr»: El proceso hijo terminó con el código 1
+Ya se está ejecutando. Abortando.

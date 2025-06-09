@@ -14,18 +14,37 @@ alias audio_resumen="bash \"$INSTALL_DIR/resumen_audio.sh\""
 alias backup_now="bash \"$INSTALL_DIR/daily_backup.sh\""
 alias sync_backup="bash \"$INSTALL_DIR/backup_and_sync.sh\""
 alias pendientes="bash \"$INSTALL_DIR/pendientes.sh\""
+alias Sincronizar="bash \"$INSTALL_DIR/logs_sync.sh\""
 
-# Alias de menú y ayuda
-alias notas='clear; 
-echo "📚 GUÍA COMPLETA DE AYUDA DISPONIBLE";
-echo "-------------------------------------";
-echo "alerta_horaria       → Ejecuta con logs y Telegram";
-echo "texto                → Crea una nueva nota de texto";
-echo "voz                  → Graba una nota de voz";
-echo "dia_resumen          → Genera resumen de notas diarias";
-echo "proyecto_resumen     → Muestra resumen por proyecto";
-echo "audio_resumen        → Convierte resumen a audio";
-echo "backup_now           → Ejecuta backup manual";
-echo "sync_backup          → Sincroniza backups y notas";
-echo "pendientes           → Administra tareas pendientes";
-'
+# Menú interactivo basado en grupos de alias
+Notas() {
+    typeset -A alias_groups
+    alias_groups=(
+        ["Notas"]="alerta_horaria texto voz dia_resumen proyecto_resumen audio_resumen pendientes Sincronizar"
+    )
+
+    while true; do
+        echo -e "\nSelecciona un grupo de alias para ver o ejecutar:"
+        select grupo in "${(@k)alias_groups}" "Salir"; do
+            if [[ "$grupo" == "Salir" ]]; then
+                return
+            elif [[ -n "$grupo" && -n "${alias_groups[$grupo]}" ]]; then
+                while true; do
+                    echo -e "\nAlias en el grupo: $grupo"
+                    alias_list=("${(s: :)alias_groups[$grupo]}")
+                    select alias_cmd in "${alias_list[@]}" "Volver"; do
+                        if [[ "$alias_cmd" == "Volver" ]]; then
+                            break
+                        elif [[ -n "$alias_cmd" ]]; then
+                            echo -e "\n🔧 Ejecutando alias: $alias_cmd\n"
+                            eval "$alias_cmd"
+                        fi
+                        break
+                    done
+                    [[ "$REPLY" -eq ${#alias_list[@]}+1 ]] && break
+                done
+                break
+            fi
+        done
+    done
+}
