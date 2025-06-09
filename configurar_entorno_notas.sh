@@ -14,7 +14,7 @@ fi
 
 # Instalar crontab con rutas absolutas
 TMP_CRON=$(mktemp)
-sed "s|\$HOME/.local/share/notas|$CURRENT_DIR|g" "$CURRENT_DIR/crontab.txt" > "$TMP_CRON"
+sed "s|\$HOME/.local/share/Notas|$CURRENT_DIR|g" "$CURRENT_DIR/crontab.txt" > "$TMP_CRON"
 crontab "$TMP_CRON"
 rm "$TMP_CRON"
 

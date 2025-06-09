@@ -2,7 +2,7 @@
 
 set -e
 
-INSTALL_PATH="$HOME/.local/share/notas"
+INSTALL_PATH="$HOME/.local/share/Notas"
 BIN_PATH="$HOME/.local/bin"
 mkdir -p "$INSTALL_PATH"
 mkdir -p "$BIN_PATH"
@@ -22,8 +22,8 @@ crontab "$INSTALL_PATH/crontab.txt"
 echo "[INFO] Crontab instalado"
 
 # Crear acceso directo en ~/.local/bin
-echo '#!/bin/bash' > "$BIN_PATH/notas"
-echo 'bash "$HOME/.local/share/Notas/notas_menu.sh" "$@"' >> "$BIN_PATH/notas"
-chmod +x "$BIN_PATH/notas"
+echo '#!/bin/bash' > "$BIN_PATH/Notas"
+echo 'bash "$HOME/.local/share/Notas/Notas_menu.sh" "$@"' >> "$BIN_PATH/Notas"
+chmod +x "$BIN_PATH/Notas"
 
 echo "[✔] Instalación completada. Abre una nueva terminal o ejecuta 'source ~/.zshrc'"

@@ -2,3 +2,5 @@ IP
 Sincronización
 Plantilla
 Conexión Banco
+IP Servidor
+En red Segura

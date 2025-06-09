@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Detectar el directorio actual del script
-INSTALL_DIR="/home/markmur88/notas"
+INSTALL_DIR="/home/markmur88/Notas"
 # INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Alias para ejecutar scripts desde el directorio actual
