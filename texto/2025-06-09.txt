@@ -85,3 +85,17 @@ individual files in /usr/share/doc/*/copyright.
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 Last login: Mon Jun  9 12:10:52 2025 from 149.88.102.41
+[13:39]
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 12:54:32 2025 from 149.88.102.41
+[13:53]
+Act Logs

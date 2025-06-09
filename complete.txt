@@ -17,3 +17,6 @@ vps_locsyncl
 🧪 1. Local a Local
 chmod
 d_njalla
+vps_locsyncl
+vps_sim_start
+IP
