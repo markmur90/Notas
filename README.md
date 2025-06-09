@@ -52,8 +52,12 @@ Para elegir una voz distinta o configurarla manualmente, ejecuta:
 ./alerta_horaria.sh --config-voice
 ```
 
+
 Se mostrará un menú con las voces disponibles de `espeak` y la selección
 quedará guardada en `~/Notas/voz_seleccionada` para próximas ejecuciones.
+Al ejecutar esta opción se reproducirá un ejemplo de cada voz y luego se
+mostrará el menú para elegir. La selección quedará guardada en
+`~/Notas/voz_seleccionada` para próximas ejecuciones.
 
 ## Sincronización automática de logs
 

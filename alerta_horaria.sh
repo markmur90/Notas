@@ -35,8 +35,17 @@ select_voice() {
         exit 1
     fi
 
-    echo "Selecciona la voz para las alertas:"
     mapfile -t VOICES < <(espeak --voices=es | awk 'NR>1 {print $1}')
+
+    echo "Previsualizando voces disponibles..."
+    for V in "${VOICES[@]}"; do
+        echo "- $V"
+        espeak -v "$V" "Esta es la voz $V" >/dev/null 2>&1
+    done
+
+    echo
+    echo "Selecciona la voz para las alertas:" 
+    
     PS3="Número de opción: "
     select V in "${VOICES[@]}"; do
         if [ -n "$V" ]; then
