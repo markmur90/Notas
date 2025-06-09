@@ -1,0 +1,73 @@
+Error al lanzar («spawn») el comando «dbus-launch --autolaunch=92d5645cf0b3499b9876f2a19f502d1d --binary-syntax --close-stderr»: El proceso hijo terminó con el código 1
+Error al lanzar («spawn») el comando «dbus-launch --autolaunch=92d5645cf0b3499b9876f2a19f502d1d --binary-syntax --close-stderr»: El proceso hijo terminó con el código 1
+
+speaker-test 1.2.14
+
+Playback device is default
+Stream parameters are 48000Hz, S16_LE, 1 channels
+WAV file(s)
+Rate set to 48000Hz (requested 48000Hz)
+Buffer size range from 192 to 2097152
+Period size range from 64 to 699051
+Periods = 4
+was set period_size = 12000
+was set buffer_size = 48000
+ 0 - Front Left
+Time per period = 0,479641
+
+speaker-test 1.2.14
+
+Playback device is default
+Stream parameters are 48000Hz, S16_LE, 1 channels
+WAV file(s)
+Rate set to 48000Hz (requested 48000Hz)
+Buffer size range from 192 to 2097152
+Period size range from 64 to 699051
+Periods = 4
+was set period_size = 12000
+was set buffer_size = 48000
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
+No se puede lanzar D-Bus automáticamente sin X11 $DISPLAY
