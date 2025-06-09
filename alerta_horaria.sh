@@ -24,6 +24,12 @@ LOG_FECHA="$LOG_DIR/ultima_fecha.log"
 LOG_AUDIO="$LOG_DIR/audio_contador.log"
 LOG_VOZ="$LOG_DIR/voz.log"
 
+# Elegir voz para espeak. Si está disponible una voz MBROLA,
+# la usamos para un sonido menos robótico.
+VOICE="es"
+[ -d /usr/share/mbrola/es1 ] && VOICE="mb-es1"
+
+
 # === Telegram ===
 TG_TOKEN="7881009139:AAH1mokuP0AjmCbd_tN3VJIxVkG7Fq95j5o"
 TG_CHAT_ID="769077177"
@@ -93,7 +99,7 @@ if (( AUDIO_CONT % 3 == 0 )); then
     TEXTO="Son las $HORA_BOGOTA_TEXTO en Bogotá. Pendientes: $PENDIENTES."
     # Audio con log de errores
     if command -v espeak >/dev/null && command -v aplay >/dev/null; then
-        espeak -v es "$TEXTO" --stdout | aplay 2>> "$LOG_VOZ"
+        espeak -v "$VOICE" -s 140 "$TEXTO" --stdout | aplay 2>> "$LOG_VOZ"
     fi
 
     # Telegram
