@@ -12,3 +12,6 @@ Run Simulador
 Test
 correr local
 Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local

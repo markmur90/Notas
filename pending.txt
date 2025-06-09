@@ -1,7 +1,9 @@
+Test local-sim
 🧪 1. Local a Local
 🌐 2. Local a VPS
 🔁 3. VPS a VPS
 🔁 4. VPS a Local
-vps_locsyncl
+chmod
 d_njalla
-
+vps_locsyncl
+vps_sim_start

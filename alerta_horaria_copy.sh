@@ -81,19 +81,32 @@ if [ "$(wc -l < "$LOG_ALERTAS")" -gt 1000 ]; then
     mv "$LOG_ALERTAS.tmp" "$LOG_ALERTAS"
 fi
 
-# Alerta hablada y Telegram cada 15 minutos
-if (( AUDIO_CONT % 3 == 0 )); then
-    TEXTO="Alerta horaria. Tiempo trabajado hoy: $(format_time "$DIA"). Tiempo total del proyecto: $(format_time "$TOTAL")."
-    # Rutas absolutas y comprobación
-    ESPEAK_CMD=$(command -v espeak || echo "/usr/bin/espeak")
-    APLAY_CMD=$(command -v aplay   || echo "/usr/bin/aplay")
-    if [ -x "$ESPEAK_CMD" ] && [ -x "$APLAY_CMD" ]; then
-        "$ESPEAK_CMD" -v es "$TEXTO" --stdout \
-          | "$APLAY_CMD" -D default 2>> "$LOG_VOZ"
-    fi
+# # Alerta hablada y Telegram cada 15 minutos
+# if (( AUDIO_CONT % 3 == 0 )); then
+#     TEXTO="Alerta horaria. Tiempo trabajado hoy: $(format_time "$DIA"). Tiempo total del proyecto: $(format_time "$TOTAL")."
+#     # Rutas absolutas y comprobación
+#     ESPEAK_CMD=$(command -v espeak || echo "/usr/bin/espeak")
+#     APLAY_CMD=$(command -v aplay   || echo "/usr/bin/aplay")
+#     if [ -x "$ESPEAK_CMD" ] && [ -x "$APLAY_CMD" ]; then
+#         "$ESPEAK_CMD" -v es "$TEXTO" --stdout \
+#           | "$APLAY_CMD" -D default 2>> "$LOG_VOZ"
+#     fi
 
-    # Envío a Telegram
-    curl -s -X POST https://api.telegram.org/bot"$TG_TOKEN"/sendMessage \
-        -d chat_id="$TG_CHAT_ID" -d text="$TEXTO" \
-        >> "$LOG_DIR/telegram.log" 2>&1
+#     # Envío a Telegram
+#     curl -s -X POST https://api.telegram.org/bot"$TG_TOKEN"/sendMessage \
+#         -d chat_id="$TG_CHAT_ID" -d text="$TEXTO" \
+#         >> "$LOG_DIR/telegram.log" 2>&1
+# fi
+
+
+# Alerta hablada y Telegram en cada ejecución
+TEXTO="Son las $HORA_BOGOTA_TEXTO en Bogotá. Pendientes: $PENDIENTES."
+# Audio con log de errores
+if command -v espeak >/dev/null && command -v aplay >/dev/null; then
+    espeak -v es "$TEXTO" --stdout | aplay 2>> "$LOG_VOZ"
 fi
+
+# Telegram
+curl -s -X POST https://api.telegram.org/bot$TG_TOKEN/sendMessage \
+    -d chat_id="$TG_CHAT_ID" -d text="$TEXTO" \
+    >> "$LOG_DIR/telegram.log" 2>&1
