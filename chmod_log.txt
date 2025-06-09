@@ -4,3 +4,4 @@
 ✅ chmod +x -> ./enviar_telegram.sh
 ✅ chmod +x -> ./alias_notas.sh
 ✅ chmod +x -> ./instalar_notas_3.11.sh
+✅ chmod +x -> ./logs_sync.sh

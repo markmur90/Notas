@@ -154,22 +154,30 @@ fi
 # Rotación simple de alertas
 [ "$(wc -l < "$LOG_ALERTAS")" -gt 1000 ] && tail -n 500 "$LOG_ALERTAS" > "$LOG_ALERTAS.tmp" && mv "$LOG_ALERTAS.tmp" "$LOG_ALERTAS"
 
-# Alerta hablada y Telegram cada 15 min
-if (( AUDIO_CONT % 3 == 0 )); then
-    TEXTO="Son las $HORA_BOGOTA_TEXTO en Bogotá. Pendientes: $PENDIENTES."
-    # Audio con log de errores
-    if command -v gtts-cli >/dev/null && command -v mpg123 >/dev/null; then
-        TMP_MP3="/tmp/voz_$$.mp3"
-        if gtts-cli --lang es "$TEXTO" --output "$TMP_MP3" 2>> "$LOG_VOZ"; then
+# Mensaje a reproducir y enviar
+TEXTO="Son las $HORA_BOGOTA_TEXTO en Bogotá. Pendientes: $PENDIENTES."
+
+if command -v gtts-cli >/dev/null && command -v mpg123 >/dev/null; then
+    TMP_MP3="/tmp/voz_$$.mp3"
+    TMP_WAV="/tmp/voz_$$.wav"
+    if gtts-cli --lang es "$TEXTO" --output "$TMP_MP3" 2>> "$LOG_VOZ"; then
+        if command -v ffmpeg >/dev/null && command -v play >/dev/null; then
+            ffmpeg -loglevel quiet -i "$TMP_MP3" "$TMP_WAV"
+            play "$TMP_WAV" tempo 1.4 2>> "$LOG_VOZ"
+            rm -f "$TMP_WAV"
+        else
             mpg123 -q "$TMP_MP3" 2>> "$LOG_VOZ"
-            rm -f "$TMP_MP3"
         fi
-    elif command -v espeak >/dev/null && command -v aplay >/dev/null; then
-        espeak -v "$VOICE" -s 140 "$TEXTO" --stdout | aplay 2>> "$LOG_VOZ"
+        rm -f "$TMP_MP3"
     fi
 
-    # Telegram
-    curl -s -X POST https://api.telegram.org/bot$TG_TOKEN/sendMessage \
-        -d chat_id="$TG_CHAT_ID" -d text="$TEXTO" \
-        >> "$LOG_DIR/telegram.log" 2>&1
+elif command -v espeak >/dev/null && command -v aplay >/dev/null; then
+    espeak -v "$VOICE" -s 140 "$TEXTO" --stdout | aplay 2>> "$LOG_VOZ"
+else
+    echo "❌ No se encontró un método de síntesis de voz" >> "$LOG_VOZ"
 fi
+
+# Telegram
+curl -s -X POST https://api.telegram.org/bot$TG_TOKEN/sendMessage \
+    -d chat_id="$TG_CHAT_ID" -d text="$TEXTO" \
+    >> "$LOG_DIR/telegram.log" 2>&1
