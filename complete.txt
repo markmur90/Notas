@@ -15,3 +15,5 @@ Pantilla Comexión Banco
 d_njalla
 vps_locsyncl
 🧪 1. Local a Local
+chmod
+d_njalla
