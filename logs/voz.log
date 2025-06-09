@@ -46,3 +46,4 @@ Playing WAVE 'stdin' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
 Playing WAVE 'stdin' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
 Playing WAVE 'stdin' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
 Playing WAVE 'stdin' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+aplay: read_header:2964: read error

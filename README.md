@@ -37,13 +37,33 @@ coincide con cada notificación del sistema.
 ### Mejorar la voz de las alertas
 
 El script usa `espeak` para la salida hablada. Si están instalados los paquetes
-`mbrola` y `mbrola-es1`, se utilizará de forma automática la voz `mb-es1`, que
+`mbrola` y alguna de sus voces (`mbrola-es1`, `mbrola-es2`, etc.), se utilizará
+de forma automática la primera voz MBROLA disponible (por ejemplo `mb-es1`), que
 suena más natural que la predeterminada.
+
+También es posible emplear [gTTS](https://pypi.org/project/gTTS/) para obtener
+una voz más natural. Si `gtts-cli` y `mpg123` están presentes, el script la
+utilizará automáticamente en lugar de `espeak`. Requiere conexión a internet.
 
 Para instalarlos en sistemas basados en Debian:
 
 ```bash
 sudo apt-get install mbrola mbrola-es1
+```
+
+Para contar con más voces en español puedes instalar paquetes adicionales de
+MBROLA, como `mbrola-es2`, `mbrola-es3` o `mbrola-es4`:
+
+```bash
+sudo apt-get install mbrola-es2 mbrola-es3 mbrola-es4
+```
+
+Para probar la síntesis con gTTS se necesitan `python3-pip` y el reproductor
+`mpg123`. Instala ambos con:
+
+```bash
+sudo apt-get install python3-pip mpg123
+pip3 install --user gtts
 ```
 
 Para elegir una voz distinta o configurarla manualmente, ejecuta:
@@ -52,8 +72,11 @@ Para elegir una voz distinta o configurarla manualmente, ejecuta:
 ./alerta_horaria.sh --config-voice
 ```
 
-Al ejecutar esta opción se mostrará un menú con las voces disponibles.
-Al elegir una, escucharás una muestra y podrás confirmar si deseas usarla.
+Se mostrará un menú con las voces disponibles de `espeak` y la selección
+quedará guardada en `~/Notas/voz_seleccionada` para próximas ejecuciones.
+Al ejecutar esta opción se mostrará un menú con todas las voces disponibles
+según `espeak` (por ejemplo `es`, `en`, `mb-es1`). Al elegir una,
+escucharás una muestra y podrás confirmar si deseas usarla.
 La selección quedará guardada en `~/Notas/voz_seleccionada` para próximas
 ejecuciones.
 

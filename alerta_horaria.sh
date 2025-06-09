@@ -24,6 +24,10 @@ LOG_FECHA="$LOG_DIR/ultima_fecha.log"
 LOG_AUDIO="$LOG_DIR/audio_contador.log"
 LOG_VOZ="$LOG_DIR/voz.log"
 
+source ~/notas_env/bin/activate
+
+
+
 # === Configuración de voz ===
 # Se guarda la elección del usuario en un archivo para
 # no preguntar en cada ejecución.
@@ -35,7 +39,13 @@ select_voice() {
         exit 1
     fi
 
-    mapfile -t VOICES < <(espeak --voices=es | awk 'NR>1 {print $1}')
+    # Extraer las voces disponibles en formato utilizable por "espeak".
+    # El comando "espeak --voices" muestra varias columnas; la ruta del
+    # archivo de voz se encuentra en la quinta. Quitamos la ruta y dejamos
+    # solo el nombre del archivo (por ejemplo "es", "en", "mb-es1").
+    mapfile -t VOICES < <(
+        espeak --voices | awk 'NR>1 {print $5}' | sed 's:.*/::' | sort -u
+    )
 
     while true; do
         echo "Selecciona la voz para las alertas:"
@@ -67,13 +77,15 @@ fi
 if [ -f "$VOICE_FILE" ]; then
     VOICE="$(cat "$VOICE_FILE")"
 else
-    # Si existe una voz MBROLA la proponemos por defecto
-    if [ -d /usr/share/mbrola/es1 ]; then
-        VOICE="mb-es1"
-        echo "$VOICE" > "$VOICE_FILE"
-    else
-        select_voice
-    fi
+    # Proponer la primera voz MBROLA disponible
+    for MB in es1 es2 es3 es4; do
+        if [ -d "/usr/share/mbrola/$MB" ]; then
+            VOICE="mb-$MB"
+            echo "$VOICE" > "$VOICE_FILE"
+            break
+        fi
+    done
+    [ -z "$VOICE" ] && select_voice
 fi
 
 
@@ -146,7 +158,13 @@ fi
 if (( AUDIO_CONT % 3 == 0 )); then
     TEXTO="Son las $HORA_BOGOTA_TEXTO en Bogotá. Pendientes: $PENDIENTES."
     # Audio con log de errores
-    if command -v espeak >/dev/null && command -v aplay >/dev/null; then
+    if command -v gtts-cli >/dev/null && command -v mpg123 >/dev/null; then
+        TMP_MP3="/tmp/voz_$$.mp3"
+        if gtts-cli --lang es "$TEXTO" --output "$TMP_MP3" 2>> "$LOG_VOZ"; then
+            mpg123 -q "$TMP_MP3" 2>> "$LOG_VOZ"
+            rm -f "$TMP_MP3"
+        fi
+    elif command -v espeak >/dev/null && command -v aplay >/dev/null; then
         espeak -v "$VOICE" -s 140 "$TEXTO" --stdout | aplay 2>> "$LOG_VOZ"
     fi
 
