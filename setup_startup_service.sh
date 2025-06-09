@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SERVICE_FILE="/etc/systemd/system/notas_startup.service"
-SCRIPT_PATH="/home/markmur88/notas/backup_and_sync.sh"
+SCRIPT_PATH="/home/markmur88/Notas/backup_and_sync.sh"
 
 echo "📦 Creando servicio systemd para ejecución en el arranque..."
 

@@ -4,7 +4,7 @@
 VPS="markmur88@80.78.30.242"
 SSH_KEY="$HOME/.ssh/vps_njalla_nueva"
 REMOTE_DIR="/home/markmur88/backup"
-LOCAL_BACKUP="/home/markmur88/notas/logs/respaldo_tmp"
+LOCAL_BACKUP="/home/markmur88/Notas/logs/respaldo_tmp"
 mkdir -p "$LOCAL_BACKUP"
 
 # Fecha
@@ -27,8 +27,8 @@ ssh -i "$SSH_KEY" "$VPS" "rm -rf /home/markmur88/api_bank_heroku /var/lib/postgr
 
 # Tiempo acumulado
 DIA=$(date +"%Y-%m-%d")
-PROYECTO_FILE="/home/markmur88/notas/logs/tiempos/proyecto_total.log"
-DIA_FILE="/home/markmur88/notas/logs/tiempos/$DIA.log"
+PROYECTO_FILE="/home/markmur88/Notas/logs/tiempos/proyecto_total.log"
+DIA_FILE="/home/markmur88/Notas/logs/tiempos/$DIA.log"
 MINUTOS_HOY=$(awk '{s+=$1} END {print s}' "$DIA_FILE")
 HORAS_HOY=$((MINUTOS_HOY / 60))
 MINUTOS_TOTAL=$(awk '{s+=$1} END {print s}' "$PROYECTO_FILE")
@@ -36,4 +36,4 @@ HORAS_TOTAL=$((MINUTOS_TOTAL / 60))
 
 # Telegram
 MSG="✅ Respaldo diario listo y datos eliminados del VPS.\n🗓️ Hoy: $MINUTOS_HOY min ($HORAS_HOY hs)\n📦 Proyecto: $MINUTOS_TOTAL min ($HORAS_TOTAL hs)"
-"/home/markmur88/notas/enviar_telegram.sh" "$MSG"
+"/home/markmur88/Notas/enviar_telegram.sh" "$MSG"

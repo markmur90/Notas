@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENV_PATH="${HOME}/notas/config.conf"
+ENV_PATH="${HOME}/Notas/config.conf"
 if [ ! -f "$ENV_PATH" ]; then
     echo "❌ No se encontró archivo de configuración: $ENV_PATH"
     exit 1

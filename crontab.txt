@@ -1,13 +1,13 @@
 # === ALERTAS ===
-*/15 * * * * /home/markmur88/notas/alerta_horaria.sh
+*/15 * * * * /home/markmur88/Notas/alerta_horaria.sh
 
 # === NOTAS Y RESÚMENES ===
-@reboot /home/markmur88/notas/startup_sync.sh
-0 23 * * * /home/markmur88/notas/resumen_dia.sh >> /home/markmur88/notas/logs/resumen_dia.log 2>&1
-0 22 * * 5 /home/markmur88/notas/resumen_proyecto.sh >> /home/markmur88/notas/logs/resumen_proyecto.log 2>&1
+@reboot /home/markmur88/Notas/startup_sync.sh
+0 23 * * * /home/markmur88/Notas/resumen_dia.sh >> /home/markmur88/Notas/logs/resumen_dia.log 2>&1
+0 22 * * 5 /home/markmur88/Notas/resumen_proyecto.sh >> /home/markmur88/Notas/logs/resumen_proyecto.log 2>&1
 
 # === BACKUP & SYNC ===
-30 9 * * * /home/markmur88/notas/daily_backup.sh >> /home/markmur88/notas/logs/backup.log 2>&1
+30 9 * * * /home/markmur88/Notas/daily_backup.sh >> /home/markmur88/Notas/logs/backup.log 2>&1
 
 # === AUDIO Y OTROS ===
-15 21 * * * /home/markmur88/notas/resumen_audio.sh >> /home/markmur88/notas/logs/audio.log 2>&1
+15 21 * * * /home/markmur88/Notas/resumen_audio.sh >> /home/markmur88/Notas/logs/audio.log 2>&1

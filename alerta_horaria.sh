@@ -14,7 +14,7 @@ export DISPLAY=:0
 export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
 # === Rutas de logs ===
-LOG_DIR="$HOME/notas/logs"
+LOG_DIR="$HOME/Notas/logs"
 mkdir -p "$LOG_DIR"
 LOG_ALERTAS="$LOG_DIR/alertas_horas.log"
 LOG_TOTAL="$LOG_DIR/tiempo_total.log"
@@ -28,6 +28,7 @@ TG_TOKEN="7881009139:AAH1mokuP0AjmCbd_tN3VJIxVkG7Fq95j5o"
 TG_CHAT_ID="769077177"
 
 HORA_BOGOTA=$(TZ="America/Bogota" date +"%Y-%m-%d %H:%M:%S")
+HORA_BOGOTA_TEXTO=$(TZ="America/Bogota" date +"%H:%M")
 HORA_BERLIN=$(date +"%Y-%m-%d %H:%M:%S")
 DIA_HOY=$(date +"%Y-%m-%d")
 
@@ -68,7 +69,7 @@ format_time() {
 }
 
 # === Leer pendientes ===
-PENDIENTES_FILE="$HOME/notas/pending.txt"
+PENDIENTES_FILE="$HOME/Notas/pending.txt"
 [ ! -f "$PENDIENTES_FILE" ] && touch "$PENDIENTES_FILE"
 PENDIENTES=$(cat "$PENDIENTES_FILE")
 [ -z "$PENDIENTES" ] && PENDIENTES="(sin pendientes)"
@@ -88,8 +89,7 @@ fi
 
 # Alerta hablada y Telegram cada 15 min
 if (( AUDIO_CONT % 3 == 0 )); then
-    TEXTO="Alerta horaria. Tiempo trabajado hoy: $(format_time $DIA). Tiempo Pendientes: $PENDIENTES."
-
+    TEXTO="Son las $HORA_BOGOTA_TEXTO en Bogotá. Pendientes: $PENDIENTES."
     # Audio con log de errores
     if command -v espeak >/dev/null && command -v aplay >/dev/null; then
         espeak -v es "$TEXTO" --stdout | aplay 2>> "$LOG_VOZ"

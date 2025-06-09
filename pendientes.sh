@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PENDIENTES="$HOME/notas/pending.txt"
-COMPLETADOS="$HOME/notas/complete.txt"
+PENDIENTES="$HOME/Notas/pending.txt"
+COMPLETADOS="$HOME/Notas/complete.txt"
 
 mkdir -p "$(dirname "$PENDIENTES")"
 touch "$PENDIENTES" "$COMPLETADOS"

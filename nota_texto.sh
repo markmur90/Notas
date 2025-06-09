@@ -1,7 +1,7 @@
 #!/bin/bash
 FECHA=$(date '+%Y-%m-%d')
 HORA=$(date '+%H:%M')
-DIR="$HOME/notas/texto"
+DIR="$HOME/Notas/texto"
 mkdir -p "$DIR"
 echo "📒 Nota rápida (terminá con Ctrl+D):"
 cat >> "$DIR/$FECHA.txt" <<EOF
