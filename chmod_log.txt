@@ -1,0 +1,6 @@
+✅ chmod +x -> ./pendientes.sh
+✅ chmod +x -> ./configurar_entorno_notas.sh
+✅ chmod +x -> ./setup_startup_service.sh
+✅ chmod +x -> ./enviar_telegram.sh
+✅ chmod +x -> ./alias_notas.sh
+✅ chmod +x -> ./instalar_notas_3.11.sh

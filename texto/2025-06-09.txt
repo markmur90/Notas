@@ -1,0 +1,55 @@
+[03:05]
+inicio
+[03:51]
+┌──(markmur88㉿local)-[~]
+└─$ vps_l_user        
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sun Jun  8 15:48:46 2025 from 194.126.177.89
+[04:29]
+                                                                                                           
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 03:02:57 2025 from 194.126.177.137
+[04:36]
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 04:29:12 2025 from 194.126.177.137
+[04:49]
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 04:36:45 2025 from 194.126.177.137
+[04:54]
+venv simulador
+[05:14]
+reinicio

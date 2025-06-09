@@ -1,0 +1,28 @@
+[03:16]
+despliegue
+[03:23]
+deploy
+[03:48]
+simulador
+[10:09]
+listo tor simulador y proyecto
+[10:27]
+Instalar Heroku CLI
+[11:48]
+onion
+[11:49]
+subir servidor
+[12:24]
+simulador
+[12:35]
+sincronizacion
+[12:41]
+nombre archivo
+[12:49]
+arrancó simulador
+[15:09]
+JWT Y TOKEN
+[15:10]
+sincronizado, Git, H2
+[15:26]
+TrasnfernciaSimilada, vevn PyJWT

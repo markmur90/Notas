@@ -1,0 +1,8 @@
+Package: notas-pod
+Version: 3.11
+Section: base
+Priority: optional
+Architecture: all
+Depends: bash, cron, zsh
+Maintainer: Markmur88 <markmur88@proton.me>
+Description: Instalador de scripts de notas con configuración interactiva, alias, y crontab.
