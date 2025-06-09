@@ -8,7 +8,20 @@ REPO_DIR="$SCRIPT_DIR"
 
 SSH_KEY="$HOME/.ssh/id_ed25519_personal"
 
+# URL del repositorio remoto para sincronizar sin pedir usuario
+REMOTE_URL="git@github.com:markmur90/Notas.git"
+
 cd "$REPO_DIR" || exit 1
+
+# Configurar la URL remota 'origin' si no existe o es distinta
+CURRENT_URL=$(git remote get-url origin 2>/dev/null || echo "")
+if [ "$CURRENT_URL" != "$REMOTE_URL" ]; then
+    if git remote | grep -q '^origin$'; then
+        git remote set-url origin "$REMOTE_URL"
+    else
+        git remote add origin "$REMOTE_URL"
+    fi
+fi
 
 echo "🔍 Monitoring $LOG_DIR for changes..."
 
