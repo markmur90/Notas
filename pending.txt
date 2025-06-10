@@ -1,12 +1,10 @@
-Test local-sim
-🧪 1. Local a Local
-🌐 2. Local a VPS
-🔁 3. VPS a VPS
-🔁 4. VPS a Local
-Arreglar Ip dinámica
-vps_locsyncl
-restartapi
-running
-d_local
-Logs
-https://simulator-api.db.com:443/gw/oidc/authorize
+Arreglar Ip dinámica.
+Sincronnización vps 3.
+Reinicio API en deploy 4.
+Correr running en Simulador 5.
+Hacer deploy 3.
+Test local-sim.
+1. Local a Local.
+2. Local a VPS.
+3. VPS a VPS.
+4. VPS a Local.

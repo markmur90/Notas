@@ -77,3 +77,5 @@ Ya se está ejecutando. Abortando.
 Ya se está ejecutando. Abortando.
 Ya se está ejecutando. Abortando.
 Ya se está ejecutando. Abortando.
+Error al lanzar («spawn») el comando «dbus-launch --autolaunch=92d5645cf0b3499b9876f2a19f502d1d --binary-syntax --close-stderr»: El proceso hijo terminó con el código 1
+Error al lanzar («spawn») el comando «dbus-launch --autolaunch=92d5645cf0b3499b9876f2a19f502d1d --binary-syntax --close-stderr»: El proceso hijo terminó con el código 1
