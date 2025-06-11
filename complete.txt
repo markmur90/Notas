@@ -39,3 +39,5 @@ sync
 me quedo en sandbox
 Arreglar IP dinámica.
 después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas

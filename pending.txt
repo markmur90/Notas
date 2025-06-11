@@ -5,5 +5,3 @@ Test con los siguientes procesos:
 3. VPS a VPS.
 4. VPS a Local.Entorno
 env
-revisar archivos de sincronización cron
-Arreglar Git Notas
