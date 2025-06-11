@@ -1,7 +1,7 @@
+Confirmar IP obtenida.
 Arreglar plantilla envío.
 Test con los siguientes procesos:
 1. Local a Local.
 2. Local a VPS.
 3. VPS a VPS.
 4. VPS a Local.Entorno
-env
