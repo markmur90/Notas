@@ -22,3 +22,20 @@ vps_sim_start
 IP
 "auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
 https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas

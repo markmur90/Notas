@@ -117,10 +117,8 @@ DELTA_MIN=$(( (NOW - LAST_TS) / 60 ))
 
 # Leer y limpiar contadores
 TOTAL=$(cat "$LOG_TOTAL" 2>/dev/null || echo 0)
-DIA=$(cat "$LOG_DIA" 2>/dev/null || echo 0)
 AUDIO_CONT=$(cat "$LOG_AUDIO" 2>/dev/null || echo 0)
 TOTAL=${TOTAL//[^0-9]/}
-DIA=${DIA//[^0-9]/}
 AUDIO_CONT=${AUDIO_CONT//[^0-9]/}
 
 
@@ -149,7 +147,8 @@ PENDIENTES=$(cat "$PENDIENTES_FILE")
 MENSAJE="🌎 Bogotá: $HORA_BOGOTA
 🕰️ Berlín: $HORA_BERLIN
 
-📦 Hoy: $(format_time $TOTAL)
+📊 Hoy: $(format_time $DIA)
+📦 Proyecto: $(format_time $TOTAL)
 
 📌 Pendientes:\n$PENDIENTES"
 
@@ -164,15 +163,7 @@ fi
 [ "$(wc -l < "$LOG_ALERTAS")" -gt 1000 ] && tail -n 500 "$LOG_ALERTAS" > "$LOG_ALERTAS.tmp" && mv "$LOG_ALERTAS.tmp" "$LOG_ALERTAS"
 
 # Mensaje a reproducir y enviar
-# TEXTO="Son las... $HORA_BOGOTA_TEXTO.... MI AMOR!!!,... llevamos trabajando hoy hasta el momento: $(format_time $DIA)."
-# === Mensaje de voz ===
-TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo trabajando $(format_time $TOTAL)."
-
-if [ "$PENDIENTES" != "(sin pendientes)" ] && [ "$((DIA % 30))" -eq 0 ]; then
-    TEXTO="$TEXTO_BASE Recuerda revisar tus pendientes: $PENDIENTES."
-else
-    TEXTO="$TEXTO_BASE ¡Hasta luego!"
-fi
+TEXTO="Son las... $HORA_BOGOTA_TEXTO.... MI AMOR!!!,... llevamos trabajando hoy hasta el momento: $(format_time $DIA)."
 
 if command -v gtts-cli >/dev/null && command -v mpg123 >/dev/null; then
     TMP_MP3="/tmp/voz_$$.mp3"
@@ -180,7 +171,7 @@ if command -v gtts-cli >/dev/null && command -v mpg123 >/dev/null; then
     if gtts-cli --lang es "$TEXTO" --output "$TMP_MP3" 2>> "$LOG_VOZ"; then
         if command -v ffmpeg >/dev/null && command -v play >/dev/null; then
             ffmpeg -loglevel quiet -i "$TMP_MP3" "$TMP_WAV"
-            play "$TMP_WAV" tempo 1.5 2>> "$LOG_VOZ"
+            play "$TMP_WAV" tempo 1.2 2>> "$LOG_VOZ"
             rm -f "$TMP_WAV"
         else
             mpg123 -q "$TMP_MP3" 2>> "$LOG_VOZ"
