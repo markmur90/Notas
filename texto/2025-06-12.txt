@@ -7,3 +7,35 @@ vps_l_user
 cMEN
 [18:38]
 cAPI
+[18:43]
+vps_l_user
+cMEN
+d_local
+cSCR
+cAPI
+vps_up_copy
+cSIM
+cNOT
+cNOT
+cAPI
+simulador
+servicios simulador independiente
+cSIM
+cNOT
+cSCR
+cAPI
+vps_up_copy
+cAPI
+cSCR
+cAPI
+vps_up_copy
+cSIM
+vps_up_copy
+debug
+sm_dir
+vps_up_copy
+ALLOWED_HOSTS
+vps_up_copy
+ip AllowInternalNetworkMiddleware
+vps_up_copy
+vps_up_copy
