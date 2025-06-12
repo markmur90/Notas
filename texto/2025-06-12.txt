@@ -1,2 +1,9 @@
 [17:54]
 cNOT
+[18:18]
+localup
+vps up
+vps_l_user
+cMEN
+[18:38]
+cAPI
