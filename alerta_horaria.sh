@@ -166,7 +166,7 @@ fi
 # Mensaje a reproducir y enviar
 # TEXTO="Son las... $HORA_BOGOTA_TEXTO.... MI AMOR!!!,... llevamos trabajando hoy hasta el momento: $(format_time $DIA)."
 # === Mensaje de voz ===
-TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo trabajando $(format_time $TOTAL)."
+TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo trabajando $(format_time $DIA)."
 
 if [ "$PENDIENTES" != "(sin pendientes)" ] && [ "$((DIA % 30))" -eq 0 ]; then
     TEXTO="$TEXTO_BASE Recuerda revisar tus pendientes: $PENDIENTES."
