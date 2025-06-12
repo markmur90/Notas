@@ -20,9 +20,9 @@ ssh -i "$SSH_KEY" -p 22 "$REMOTE_USER@$REMOTE_IP" "
 echo "⬇️ Descargando respaldo y limpiando VPS..."
 scp -i "$SSH_KEY" -P 22 "$REMOTE_USER@$REMOTE_IP:$REMOTE_TMP" "$LOCAL_BACKUP"
 
-# Limpiar remoto
-ssh -i "$SSH_KEY" -p 22 "$REMOTE_USER@$REMOTE_IP" "
-    rm -rf /tmp/db.backup '$REMOTE_PROJECT' '$REMOTE_TMP' &&
-    sudo -u postgres psql -c 'DROP DATABASE IF EXISTS nombre_base;' &&
-    echo '🧹 Proyecto, backups y base eliminados.'
-"
+# # Limpiar remoto
+# ssh -i "$SSH_KEY" -p 22 "$REMOTE_USER@$REMOTE_IP" "
+#     rm -rf /tmp/db.backup '$REMOTE_PROJECT' '$REMOTE_TMP' &&
+#     sudo -u postgres psql -c 'DROP DATABASE IF EXISTS nombre_base;' &&
+#     echo '🧹 Proyecto, backups y base eliminados.'
+# "

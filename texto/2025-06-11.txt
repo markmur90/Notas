@@ -4,3 +4,100 @@ gab ia
 anakin
 opentouter
 venice
+[08:41]
+
+
+Al final tu histórico habrá vuelto al punto limpio anterior a las fusiones no deseadas.
+
+git fetch origin
+git reset --hard f6164200e74d87c8a6d2e813626608fa80920587
+git push origin main --force
+git tag -l | xargs -r git tag -d
+for TAG in $(git ls-remote --tags origin | awk '{print $2}' | sed 's|refs/tags/||'); do
+  git push origin :refs/tags/$TAG
+done
+[10:19]
+Rutas para Deploy
+
+A continuación tienes las rutas de configuración más comunes en un servidor Ubuntu/Debian para cada uno de los servicios que mencionas (y algunos adicionales que suelen acompañar tu stack bancario). Si tu distribución o tu patrón de instalación difiere, ajústalas en consecuencia.
+
+gunicorn
+Archivos para el servicio systemd y configuración global:
+
+/etc/systemd/system/gunicorn.service
+/etc/gunicorn/config.py                # (opcional, si usas un archivo de configuración central)
+/etc/gunicorn.d/*.py                   # (si tu paquete lo crea en /etc/gunicorn.d/)
+
+nginx
+Nginel principal, bloques de servidor y directorios de includes:
+
+/etc/nginx/nginx.conf
+/etc/nginx/sites-available/
+/etc/nginx/sites-enabled/
+/etc/nginx/conf.d/*.conf
+
+supervisor
+Archivo maestro y directorios para cada programa:
+
+/etc/supervisor/supervisord.conf
+/etc/supervisor/conf.d/*.conf
+
+fail2ban
+Configuración principal, cárceles y overrides:
+
+/etc/fail2ban/fail2ban.conf
+/etc/fail2ban/jail.conf
+/etc/fail2ban/jail.d/*.conf
+
+certbot
+Certificados, renovaciones y opciones globales:
+
+/etc/letsencrypt/cli.ini
+/etc/letsencrypt/renewal/*.conf
+/etc/letsencrypt/live/<dominio>/fullchain.pem
+/etc/letsencrypt/live/<dominio>/privkey.pem
+
+tor
+Archivo de configuración y datos del servicio:
+
+/etc/tor/torrc
+/var/lib/tor/hidden_service/            # (si alojas un servicio onion)
+/var/lib/tor/<relay-or-exit-profile>/
+
+Y algunos más que conviene tener a mano:
+
+systemd (genérico)
+Unidades personalizadas y overrides:
+
+/etc/systemd/system/*.service
+/etc/systemd/system/*.socket
+/etc/systemd/system/<unidad>.service.d/override.conf
+
+ufw (firewall)
+Reglas y configuraciones:
+
+/etc/ufw/ufw.conf
+/etc/ufw/before.rules
+/etc/ufw/after.rules
+/etc/ufw/applications.d/*.profile
+
+sshd
+Servidor SSH (acceso administrativo):
+
+/etc/ssh/sshd_config
+/etc/ssh/ssh_config
+
+postgresql
+Si tu backend es PostgreSQL, por versión y cluster:
+
+/etc/postgresql/<versión>/main/postgresql.conf
+/etc/postgresql/<versión>/main/pg_hba.conf
+
+redis
+Cache y celery broker típico:
+
+/etc/redis/redis.conf
+
+Con estas rutas podrás localizar y ajustar cada componente de tu infraestructura bancaria. 
+[20:35]
+Test

@@ -42,3 +42,4 @@ después revisar entorno que aplique las salidas
 revisar archivos de sincronización cron
 Arreglar Git Notas
 env
+arreglar rutas deploy vps, observar notas
