@@ -1,0 +1,16 @@
+# 1) espeak y voces MBROLA
+sudo apt-get update
+sudo apt-get install -y espeak mbrola mbrola-us1 mbrola-us2 mbrola-uk1 mbrola-uk2 mbrola-de1 mbrola-de2
+
+# 2) Python y gtts-cli
+sudo apt-get install -y python3-pip
+pip3 install --upgrade gTTS
+
+# 3) mpg123 (para reproducir MP3)
+sudo apt-get install -y mpg123
+
+# 4) ffmpeg y sox (para convertir y reproducir WAV)
+sudo apt-get install -y ffmpeg sox
+
+# 5) opción: instala todas las voces disponibles de MBROLA (si deseas más idiomas)
+sudo apt-get install -y mbrola-* 

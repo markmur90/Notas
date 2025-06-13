@@ -52,3 +52,4 @@
 /home/markmur88/Notas/alerta_horaria.sh: línea 164: [: : se esperaba una expresión entera
 /home/markmur88/Notas/alerta_horaria.sh: línea 164: /home/markmur88/Notas/logs/alertas_horas.log: No existe el fichero o el directorio
 /home/markmur88/Notas/alerta_horaria.sh: línea 164: [: : se esperaba una expresión entera
+Error al lanzar («spawn») el comando «dbus-launch --autolaunch=92d5645cf0b3499b9876f2a19f502d1d --binary-syntax --close-stderr»: El proceso hijo terminó con el código 1

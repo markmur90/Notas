@@ -1,3 +1,24 @@
+📦 Resumen total del proyecto (notas acumuladas)
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/2025-06-13/voz_03-56-28.wav
+/home/markmur88/Notas/audio/2025-06-13/voz_04-02-01.wav
+/home/markmur88/Notas/audio/2025-06-13/voz_04-02-26.wav
+/home/markmur88/Notas/audio/2025-06-13/voz_04-01-35.wav
+/home/markmur88/Notas/audio/2025-06-09/voz_14-44-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+Confirmar IP obtenida.
+Test con los siguientes procesos:
+1. Local a Local.
+2. Local a VPS.
+3. VPS a VPS.
+4. VPS a Local.Entorno
+test de prueba
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
 Dominio
 DNS
 IP
@@ -48,12 +69,3 @@ plantilla de conexion
 crear entorno de conexion para suimulador
 Arrancar servidor en vps con servicios independientes.
 completar servidor.
-certs
-8443
-DAtos API
-1. Local a Local.
-3. VPS a VPS.
-Test con los siguientes procesos:
-test de prueba
-4. VPS a Local.Entorno
-Anañir datos a simulador
