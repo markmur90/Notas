@@ -86,12 +86,12 @@ PENDIENTES=$(<"$PEND_FILE")
 HORA_BOGOTA=$(TZ="America/Bogota" date +"%Y-%m-%d %H:%M")
 HORA_BERLIN=$(date +"%Y-%m-%d %H:%M")
 
-MENSAJE="Hora actual: $HORA_BOGOTA
-Hora Berlín: $HORA_BERLIN
-Transcurrido Hoy: $(format_time $DIA)
-Transcurrido Total: $(format_time $TOTAL)
+MENSAJE="Hora actual:🌎 $HORA_BOGOTA
+🕰️ Hora Berlín: $HORA_BERLIN
+📦 Transcurrido Hoy: $(format_time $DIA)
+📦 Transcurrido Total: $(format_time $TOTAL)
 
-Lista de Pendientes:
+📌 Lista de Pendientes:
 $PENDIENTES"
 
 if [ -n "$DISPLAY" ] && command -v notify-send >/dev/null; then
