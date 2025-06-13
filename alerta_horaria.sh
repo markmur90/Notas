@@ -96,11 +96,12 @@ PENDIENTES=$(cat "$PENDIENTES_FILE")
 HORA_BOGOTA=$(TZ="America/Bogota" date +"%Y-%m-%d %H:%M:%S")
 HORA_BERLIN=$(date +"%Y-%m-%d %H:%M:%S")
 
-MENSAJE="🌎 Bogotá: $HORA_BOGOTA
-🕰️ Berlín: $HORA_BERLIN
-📦 Hoy: $(format_time $DIA)
-📦 Total: $(format_time $TOTAL)
-📌 Pendientes:
+MENSAJE="Hora Bogotá: $HORA_BOGOTA
+Hora Berlín: $HORA_BERLIN
+Tiempo Hoy: $(format_time $DIA)
+Tiempo Total: $(format_time $TOTAL)
+
+Lista de pendientes:
 $PENDIENTES"
 
 if [ -n "$DISPLAY" ] && command -v notify-send >/dev/null; then
@@ -111,7 +112,7 @@ fi
 
 [ "$(wc -l < "$LOG_ALERTAS")" -gt 1000 ] && tail -n 500 "$LOG_ALERTAS" > "$LOG_ALERTAS.tmp" && mv "$LOG_ALERTAS.tmp" "$LOG_ALERTAS"
 
-TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Hoy $(format_time $DIA). En total $(format_time $TOTAL)."
+TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo transcurrido hoy $(format_time $DIA). En total $(format_time $TOTAL)."
 if [ "$PENDIENTES" != "(sin pendientes)" ] && [ $((DIA % 30)) -eq 0 ]; then
     TEXTO="$TEXTO_BASE Recuerda pendientes: $PENDIENTES."
 else
@@ -127,7 +128,7 @@ case "$TTS_ENGINE" in
             mpg123 -q "${TMP_AUDIO}.mp3"
         elif command -v ffmpeg >/dev/null && command -v play >/dev/null; then
             ffmpeg -loglevel quiet -i "${TMP_AUDIO}.mp3" "${TMP_AUDIO}.wav"
-            play "${TMP_AUDIO}.wav"
+            play "${TMP_AUDIO}.wav" tempo 1.5
             rm -f "${TMP_AUDIO}.wav"
         fi
         rm -f "${TMP_AUDIO}.mp3"
