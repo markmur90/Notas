@@ -13,9 +13,15 @@ PS3="Selecciona un motor (#): "
 select engine in "${ENGINES[@]}"; do
     case "$engine" in
         espeak)
-            mapfile -t VOICES < <(espeak --voices | awk 'NR>1 {print $5}' | sed 's:.*/::' | sort -u)
+            # Solo voces latinas (código es*)
+            mapfile -t ALL_VOICES < <(espeak --voices | awk 'NR>1 {print $5}' | sed 's:.*/::' | sort -u)
+            VOICES=()
+            for v in "${ALL_VOICES[@]}"; do
+                [[ "$v" == es* ]] && VOICES+=("$v")
+            done
+            [ ${#VOICES[@]} -eq 0 ] && VOICES=("es")
             while true; do
-                echo "Voces disponibles (espeak):"
+                echo "Voces latinas disponibles (espeak):"
                 PS3="Voz espeak (#): "
                 select V in "${VOICES[@]}"; do
                     if [ -n "$V" ]; then
@@ -35,9 +41,15 @@ select engine in "${ENGINES[@]}"; do
             done
             ;;
         gtts-cli)
-            mapfile -t LANGS < <(gtts-cli --all | awk -F: '{gsub(/^ +| +$/,"",$1); print $1}')
+            # Solo dialectos de español (es, es-*)
+            mapfile -t ALL_LANGS < <(gtts-cli --all | awk -F: '{gsub(/^ +| +$/,"",$1); print $1}')
+            LANGS=()
+            for l in "${ALL_LANGS[@]}"; do
+                [[ "$l" == es* ]] && LANGS+=("$l")
+            done
+            [ ${#LANGS[@]} -eq 0 ] && LANGS=("es")
             while true; do
-                echo "Idiomas disponibles (gTTS):"
+                echo "Idiomas latinos disponibles (gTTS):"
                 PS3="Idioma gTTS (#): "
                 select L in "${LANGS[@]}"; do
                     if [ -n "$L" ]; then

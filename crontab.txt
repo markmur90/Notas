@@ -13,5 +13,3 @@
 15 21 * * * /home/markmur88/Notas/resumen_audio.sh >> /home/markmur88/Notas/logs/audio.log 2>&1
 
 
-
-Mira trabajo aproximadamente 15 a 20 horas diarias, vivo en el horario america/bogota, mi pc esta en el horario europa/berlin por temas de trabajo, hay días que empiezo a las 10am otros días a las 8am, otros días a las 6pm, hasta casi siempre la madrugada, necesito saber que tiempo voy trabajando en el día, y en total,
