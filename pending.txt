@@ -1,4 +1,3 @@
 Confirmar IP obtenida.
 2. Local a VPS.
 Añadir datos al vps
-Implementar Plantillas

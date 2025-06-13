@@ -57,3 +57,4 @@ Test con los siguientes procesos:
 test de prueba
 4. VPS a Local.Entorno
 Anañir datos a simulador
+Implementar Plantillas

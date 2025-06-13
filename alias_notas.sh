@@ -20,9 +20,10 @@ alias Sincronizar="bash \"$INSTALL_DIR/logs_sync.sh\""
 Notas() {
     typeset -A alias_groups
     alias_groups=(
-        ["Notas"]="texto voz"
-        ["Alertas"]="alerta_horaria pendientes Sincronizar"
         ["Resumen"]="dia_resumen proyecto_resumen audio_resumen"
+        ["Alertas"]="alerta_horaria pendientes Sincronizar"
+        ["Notas"]="texto voz"
+        
     )
 
     while true; do
