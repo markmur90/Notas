@@ -100,7 +100,7 @@ else
     echo "🔕 Entorno gráfico no disponible" >> "$LOG_ALERTAS"
 fi
 
-TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo trabajando $(format_time $TOTAL)."
+TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo $(format_time $TOTAL)."
 
 if [ "$PENDIENTES" != "(sin pendientes)" ] && [ "$((DIA % 30))" -eq 0 ]; then
     TEXTO="$TEXTO_BASE Recuerda revisar tus pendientes: $PENDIENTES."
@@ -116,7 +116,7 @@ case "$TTS_ENGINE" in
             mpg123 -q "${TMP_AUDIO}.mp3"
         elif command -v ffmpeg >/dev/null && command -v play >/dev/null; then
             ffmpeg -loglevel quiet -i "${TMP_AUDIO}.mp3" "${TMP_AUDIO}.wav"
-            play "${TMP_AUDIO}.wav" tempo 1.5 2>> "$LOG_VOZ"
+            play "${TMP_AUDIO}.wav" tempo 1.5
             rm -f "${TMP_AUDIO}.wav"
         fi
         rm -f "${TMP_AUDIO}.mp3"
