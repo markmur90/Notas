@@ -100,7 +100,7 @@ else
     echo "🔕 Entorno gráfico no disponible" >> "$LOG_ALERTAS"
 fi
 
-TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo $(format_time $TOTAL)."
+TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo $(format_time $DIA)."
 
 if [ "$PENDIENTES" != "(sin pendientes)" ] && [ "$((DIA % 30))" -eq 0 ]; then
     TEXTO="$TEXTO_BASE Recuerda revisar tus pendientes: $PENDIENTES."
