@@ -17,6 +17,7 @@ export XDG_RUNTIME_DIR
 # === Rutas de logs ===
 LOG_DIR="$HOME/Notas/logs"
 mkdir -p "$LOG_DIR"
+
 LOG_ALERTAS="$LOG_DIR/alertas_horas.log"
 LOG_TOTAL="$LOG_DIR/tiempo_total.log"
 LOG_DIA="$LOG_DIR/tiempo_dia.log"
@@ -26,6 +27,27 @@ LOG_VOZ="$LOG_DIR/voz.log"
 
 LOG_SESSION_START="$LOG_DIR/session_start_ts.log"
 LOG_LAST_TS="$LOG_DIR/ultima_alerta_ts.log"
+
+# Lista de todos los logs
+LOG_FILES=(
+  "$LOG_ALERTAS"
+  "$LOG_TOTAL"
+  "$LOG_DIA"
+  "$LOG_FECHA"
+  "$LOG_AUDIO"
+  "$LOG_VOZ"
+  "$LOG_SESSION_START"
+  "$LOG_LAST_TS"
+)
+
+# Crear cada archivo si no existe
+for file in "${LOG_FILES[@]}"; do
+  if [ ! -f "$file" ]; then
+    touch "$file"
+  fi
+done
+
+
 source ~/notas_env/bin/activate
 
 
