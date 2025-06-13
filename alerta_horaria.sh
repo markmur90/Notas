@@ -86,11 +86,12 @@ PENDIENTES=$(<"$PEND_FILE")
 HORA_BOGOTA=$(TZ="America/Bogota" date +"%Y-%m-%d %H:%M")
 HORA_BERLIN=$(date +"%Y-%m-%d %H:%M")
 
-MENSAJE="🌎 Bogotá: $HORA_BOGOTA
-🕰️ Berlín: $HORA_BERLIN
-📦 Hoy: $(format_time $DIA)
-📦 Total: $(format_time $TOTAL)
-📌 Pendientes:
+MENSAJE="Hora actual: $HORA_BOGOTA
+Hora Berlín: $HORA_BERLIN
+Transcurrido Hoy: $(format_time $DIA)
+Transcurrido Total: $(format_time $TOTAL)
+
+Lista de Pendientes:
 $PENDIENTES"
 
 if [ -n "$DISPLAY" ] && command -v notify-send >/dev/null; then
@@ -99,21 +100,29 @@ else
     echo "🔕 Entorno gráfico no disponible" >> "$LOG_ALERTAS"
 fi
 
+TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo trabajando $(format_time $TOTAL)."
+
+if [ "$PENDIENTES" != "(sin pendientes)" ] && [ "$((DIA % 30))" -eq 0 ]; then
+    TEXTO="$TEXTO_BASE Recuerda revisar tus pendientes: $PENDIENTES."
+else
+    TEXTO="$TEXTO_BASE ¡Hasta luego!"
+fi
+
 TMP_AUDIO="/tmp/alerta_voz_$$"
 case "$TTS_ENGINE" in
     gtts)
-        gtts-cli --lang "$TTS_LANG" "$MENSAJE" --output "${TMP_AUDIO}.mp3" 2>>"$LOG_VOZ"
+        gtts-cli --lang "$TTS_LANG" "$TEXTO" --output "${TMP_AUDIO}.mp3" 2>>"$LOG_VOZ"
         if command -v mpg123 >/dev/null; then
             mpg123 -q "${TMP_AUDIO}.mp3"
         elif command -v ffmpeg >/dev/null && command -v play >/dev/null; then
             ffmpeg -loglevel quiet -i "${TMP_AUDIO}.mp3" "${TMP_AUDIO}.wav"
-            play "${TMP_AUDIO}.wav"
+            play "${TMP_AUDIO}.wav" tempo 1.5 2>> "$LOG_VOZ"
             rm -f "${TMP_AUDIO}.wav"
         fi
         rm -f "${TMP_AUDIO}.mp3"
         ;;
     espeak)
-        espeak -v "$TTS_VOICE" -s 200 "$MENSAJE" --stdout > "${TMP_AUDIO}.wav" 2>>"$LOG_VOZ"
+        espeak -v "$TTS_VOICE" -s 200 "$TEXTO" --stdout > "${TMP_AUDIO}.wav" 2>>"$LOG_VOZ"
         aplay "${TMP_AUDIO}.wav"
         rm -f "${TMP_AUDIO}.wav"
         ;;
