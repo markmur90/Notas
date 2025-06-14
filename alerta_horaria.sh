@@ -20,7 +20,17 @@ LOG_AUDIO="$LOG_DIR/audio_contador.log"
 LOG_VOZ="$LOG_DIR/voz.log"
 LOG_SESSION_START="$LOG_DIR/session_start_ts.log"
 LOG_LAST_TS="$LOG_DIR/ultima_alerta_ts.log"
-for file in "$LOG_ALERTAS" "$LOG_TOTAL" "$LOG_DIA" "$LOG_FECHA" "$LOG_AUDIO" "$LOG_VOZ" "$LOG_SESSION_START" "$LOG_LAST_TS"; do
+LOG_FILES=(
+  "$LOG_ALERTAS"
+  "$LOG_TOTAL"
+  "$LOG_DIA"
+  "$LOG_FECHA"
+  "$LOG_AUDIO"
+  "$LOG_VOZ"
+  "$LOG_SESSION_START"
+  "$LOG_LAST_TS"
+)
+for file in "${LOG_FILES[@]}"; do
   [ ! -f "$file" ] && echo "" > "$file"
 done
 
@@ -42,8 +52,7 @@ fi
 TG_TOKEN="7881009139:AAH1mokuP0AjmCbd_tN3VJIxVkG7Fq95j5o"
 TG_CHAT_ID="769077177"
 
-# Fechas y reinicio diario según Bogotá (sin segundos)
-CURRENT_DATE_BOGOTA=$(TZ="America/Bogota" date +"%Y-%m-%d")
+CURRENT_DATE_BOGOTA=$(TZ="America/Bogota" date +%Y-%m-%d)
 LAST_DATE=$(cat "$LOG_FECHA" 2>/dev/null || echo "")
 NOW=$(date +%s)
 if [ "$CURRENT_DATE_BOGOTA" != "$LAST_DATE" ]; then
@@ -62,9 +71,9 @@ DELTA_MIN=$(( (NOW - LAST_TS) / 60 ))
 [ ! -f "$LOG_DIA" ] && echo "0" > "$LOG_DIA"
 [ ! -f "$LOG_AUDIO" ] && echo "0" > "$LOG_AUDIO"
 
-TOTAL=$(cat "$LOG_TOTAL")
-DIA=$(cat "$LOG_DIA")
-AUDIO_CONT=$(cat "$LOG_AUDIO")
+TOTAL=$(cat "$LOG_TOTAL" 2>/dev/null || echo 0)
+DIA=$(cat "$LOG_DIA" 2>/dev/null || echo 0)
+AUDIO_CONT=$(cat "$LOG_AUDIO" 2>/dev/null || echo 0)
 
 TOTAL=$((TOTAL + DELTA_MIN))
 DIA=$((DIA + DELTA_MIN))
@@ -75,23 +84,24 @@ echo "$DIA" > "$LOG_DIA"
 echo "$AUDIO_CONT" > "$LOG_AUDIO"
 echo "$NOW" > "$LOG_LAST_TS"
 
-format_time(){ printf "%02d horas y %02d minutos" "$(( $1/60 ))" "$(( $1%60 ))"; }
+format_time(){
+    printf "%02d horas y %02d minutos" "$(($1/60))" "$(($1%60))"
+}
 
-PEND_FILE="$HOME/Notas/pending.txt"
-[ ! -f "$PEND_FILE" ] && touch "$PEND_FILE"
-PENDIENTES=$(<"$PEND_FILE")
+PENDIENTES_FILE="$HOME/Notas/pending.txt"
+[ ! -f "$PENDIENTES_FILE" ] && touch "$PENDIENTES_FILE"
+PENDIENTES=$(cat "$PENDIENTES_FILE")
 [ -z "$PENDIENTES" ] && PENDIENTES="(sin pendientes)"
 
-# Sin segundos en la hora
-HORA_BOGOTA=$(TZ="America/Bogota" date +"%Y-%m-%d %H:%M")
-HORA_BERLIN=$(date +"%Y-%m-%d %H:%M")
+HORA_BOGOTA=$(TZ="America/Bogota" date +"%Y-%m-%d %H:%M:%S")
+HORA_BERLIN=$(date +"%Y-%m-%d %H:%M:%S")
 
-MENSAJE="Hora actual:🌎 $HORA_BOGOTA
-🕰️ Hora Berlín: $HORA_BERLIN
-📦 Transcurrido Hoy: $(format_time $DIA)
-📦 Transcurrido Total: $(format_time $TOTAL)
+MENSAJE="Hora Bogotá: $HORA_BOGOTA
+Hora Berlín: $HORA_BERLIN
+Tiempo Hoy: $(format_time $DIA)
+Tiempo Total: $(format_time $TOTAL)
 
-📌 Lista de Pendientes:
+Lista de pendientes:
 $PENDIENTES"
 
 if [ -n "$DISPLAY" ] && command -v notify-send >/dev/null; then
@@ -100,18 +110,20 @@ else
     echo "🔕 Entorno gráfico no disponible" >> "$LOG_ALERTAS"
 fi
 
-TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo $(format_time $DIA)."
+[ "$(wc -l < "$LOG_ALERTAS")" -gt 1000 ] && tail -n 500 "$LOG_ALERTAS" > "$LOG_ALERTAS.tmp" && mv "$LOG_ALERTAS.tmp" "$LOG_ALERTAS"
 
-if [ "$PENDIENTES" != "(sin pendientes)" ] && [ "$((DIA % 30))" -eq 0 ]; then
-    TEXTO="$TEXTO_BASE Recuerda revisar tus pendientes: $PENDIENTES."
+TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo $(format_time $DIA). En total $(format_time $TOTAL)."
+if [ "$PENDIENTES" != "(sin pendientes)" ] && [ $((DIA % 30)) -eq 0 ]; then
+    TEXTO="$TEXTO_BASE Recuerda pendientes: $PENDIENTES."
 else
     TEXTO="$TEXTO_BASE ¡Hasta luego!"
 fi
 
+# Síntesis de voz
 TMP_AUDIO="/tmp/alerta_voz_$$"
 case "$TTS_ENGINE" in
     gtts)
-        gtts-cli --lang "$TTS_LANG" "$TEXTO" --output "${TMP_AUDIO}.mp3" 2>>"$LOG_VOZ"
+        gtts-cli --lang "$TTS_LANG" "$MENSAJE" --output "${TMP_AUDIO}.mp3" 2>>"$LOG_VOZ"
         if command -v mpg123 >/dev/null; then
             mpg123 -q "${TMP_AUDIO}.mp3"
         elif command -v ffmpeg >/dev/null && command -v play >/dev/null; then
@@ -122,16 +134,15 @@ case "$TTS_ENGINE" in
         rm -f "${TMP_AUDIO}.mp3"
         ;;
     espeak)
-        espeak -v "$TTS_VOICE" -s 200 "$TEXTO" --stdout > "${TMP_AUDIO}.wav" 2>>"$LOG_VOZ"
+        espeak -v "$TTS_VOICE" -s 140 "$MENSAJE" --stdout > "${TMP_AUDIO}.wav" 2>>"$LOG_VOZ"
         aplay "${TMP_AUDIO}.wav"
         rm -f "${TMP_AUDIO}.wav"
         ;;
 esac
 
-ARCH_WAV="$LOG_DIR/alerta_voz_$(date +%Y-%m-%d_%H-%M).wav"
+# Log de voz
+ARCH_WAV="$LOG_DIR/alerta_voz_$(date +%Y-%m-%d_%H-%M-%S).wav"
 mv "/tmp/alerta_voz_$$."* "$ARCH_WAV" 2>/dev/null
 [ -f "$ARCH_WAV" ] && echo "$ARCH_WAV" >> "$LOG_VOZ"
 
-curl -s -X POST https://api.telegram.org/bot$TG_TOKEN/sendMessage \
-     -d chat_id="$TG_CHAT_ID" -d text="$MENSAJE" \
-     >> "$LOG_DIR/telegram.log" 2>&1
+curl -s -X POST https://api.telegram.org/bot$TG_TOKEN/sendMessage -d chat_id="$TG_CHAT_ID" -d text="$MENSAJE" >> "$LOG_DIR/telegram.log" 2>&1
