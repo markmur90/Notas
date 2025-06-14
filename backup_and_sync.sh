@@ -15,7 +15,7 @@ VPS_PORT="22"
 SSH_KEY="/home/$USER_LOCAL/.ssh/vps_njalla_nueva"
 DIR_REMOTO="/home/$VPS_USER/api_bank_heroku"
 
-FECHA=$(date +%Y-%m-%d_%H)
+FECHA=$(date +%Y-%m-%d__%H)
 HORA_BOGOTA_TEXTO=$(TZ="America/Bogota" date +"%H:%M")
 
 mkdir -p "$DIR_BACKUP"
