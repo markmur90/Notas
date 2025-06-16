@@ -112,9 +112,17 @@ fi
 
 [ "$(wc -l < "$LOG_ALERTAS")" -gt 1000 ] && tail -n 500 "$LOG_ALERTAS" > "$LOG_ALERTAS.tmp" && mv "$LOG_ALERTAS.tmp" "$LOG_ALERTAS"
 
-TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo $(format_time $DIA). En total $(format_time $TOTAL)."
-if [ "$PENDIENTES" != "(sin pendientes)" ] && [ $((DIA % 30)) -eq 0 ]; then
-    TEXTO="$TEXTO_BASE Recuerda pendientes: $PENDIENTES."
+# TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo $(format_time $DIA). En total $(format_time $TOTAL)."
+# if [ "$PENDIENTES" != "(sin pendientes)" ] && [ $((DIA % 30)) -eq 0 ]; then
+#     TEXTO="$TEXTO_BASE Recuerda pendientes: $PENDIENTES."
+# else
+#     TEXTO="$TEXTO_BASE ¡Hasta luego!"
+# fi
+
+TEXTO_BASE="Son las $(TZ="America/Bogota" date +"%H:%M"). Tiempo $(format_time $TOTAL)."
+
+if [ "$PENDIENTES" != "(sin pendientes)" ] && [ "$((DIA % 30))" -eq 0 ]; then
+    TEXTO="$TEXTO_BASE Recuerda revisar tus pendientes: $PENDIENTES."
 else
     TEXTO="$TEXTO_BASE ¡Hasta luego!"
 fi
@@ -123,7 +131,7 @@ fi
 TMP_AUDIO="/tmp/alerta_voz_$$"
 case "$TTS_ENGINE" in
     gtts)
-        gtts-cli --lang "$TTS_LANG" "$MENSAJE" --output "${TMP_AUDIO}.mp3" 2>>"$LOG_VOZ"
+        gtts-cli --lang "$TTS_LANG" "$TEXTO_BASE" --output "${TMP_AUDIO}.mp3" 2>>"$LOG_VOZ"
         if command -v mpg123 >/dev/null; then
             mpg123 -q "${TMP_AUDIO}.mp3"
         elif command -v ffmpeg >/dev/null && command -v play >/dev/null; then

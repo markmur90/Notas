@@ -924,3 +924,4 @@ Replaygain: off
 Done.
 Playing WAVE 'stdin' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
 Playing WAVE 'stdin' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
+Error: Failed to connect. Probable cause: Unknown
