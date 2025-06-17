@@ -1,5 +1,4 @@
-CArgar LLMS
-Deploy Simulador, API, Local
-Revisar Simulador
-Revisar API
-Revisar Local
+subir sim a vps
+probar sim vps
+transfer a vps
+Corregir ALLOW_FAKE_BANK

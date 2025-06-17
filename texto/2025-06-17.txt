@@ -1,0 +1,7 @@
+[03:59]
+Subir Simulador, corregido middleeare, bootstrap
+[05:05]
+sync vps x tasks
+start2
+[05:41]
+sincronizar datos simulador

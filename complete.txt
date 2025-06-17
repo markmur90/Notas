@@ -62,3 +62,10 @@ menu ufw
 Confirmar IP obtenida.
 2. Local a VPS.
 Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
