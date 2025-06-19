@@ -1,4 +1,7 @@
-subir sim a vps
-probar sim vps
 transfer a vps
-Corregir ALLOW_FAKE_BANK
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+migraciones simulador
+Crear oficial con contraseña
+Rutas API a simulador
+registros

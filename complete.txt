@@ -69,3 +69,6 @@ Revisar Simulador
 Revisar API
 Revisar Local
 222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps

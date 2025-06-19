@@ -1,1 +1,15 @@
 [src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3412.mp3: No such file or directory
+Error al lanzar («spawn») el comando «dbus-launch --autolaunch=92d5645cf0b3499b9876f2a19f502d1d --binary-syntax --close-stderr»: El proceso hijo terminó con el código 1
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Error al lanzar («spawn») el comando «dbus-launch --autolaunch=92d5645cf0b3499b9876f2a19f502d1d --binary-syntax --close-stderr»: El proceso hijo terminó con el código 1
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
