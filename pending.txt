@@ -1,7 +1,4 @@
-transfer a vps
 conexion banco, revisión dominio e ip
 modificar dominio, mock, y path
-migraciones simulador
-Crear oficial con contraseña
 Rutas API a simulador
-registros
+pruebas script

@@ -72,3 +72,9 @@ Revisar Local
 subir sim a vps
 Corregir ALLOW_FAKE_BANK
 probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros

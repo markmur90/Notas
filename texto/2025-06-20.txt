@@ -1,0 +1,14 @@
+[02:09]
+cargar datos en local del simulador
+subir simulador
+arrancar simulador
+desce el script hacer pruebas con conexion
+d_local
+arranque de simulador
+prueba de script
+[04:06]
+
+[04:06]
+express
+actualización script para puertos 
+inicio de sim auto
