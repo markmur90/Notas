@@ -1,3 +1,20 @@
+📦 Resumen total del proyecto
+🕒 2025-06-20 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+Rutas API a simulador
+pruebas script
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
 Dominio
 DNS
 IP
@@ -78,9 +95,8 @@ migraciones simulador
 subir simulador
 arrabcar simulador
 registros
-Plantillas por cargos
-conexion banco, revisión dominio e ip
-modificar dominio, mock, y path
-pruebas script
-correccion menu admin
-Rutas API a simulador
+
+📨 Enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado

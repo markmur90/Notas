@@ -1,0 +1,25 @@
+[00:45]
+modicficado simulador los templates
+[01:15]
+express
+d_local
+express
+espress
+verificar arranque de servicios
+corrección de plantilla usuarios
+bk bdd
+h2
+hk
+scr
+sim
+express
+modificar sim
+corriendo codex
+[08:25]
+
+[08:27]
+corriendo codex
+express
+eliminar debtor creditor y transfer simulados
+express
+correccion del menu de administrador para listar

@@ -12,3 +12,5 @@ prueba de script
 express
 actualización script para puertos 
 inicio de sim auto
+[20:10]
+d_local

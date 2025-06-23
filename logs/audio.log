@@ -10,3 +10,16 @@ Playing raw data '/tmp/resumen_voz_315083.wav' : Unsigned 8 bit, Rate 8000 Hz, M
 📨 Enviado a Telegram
 Failed to read voice 'gtts:es'
 Playing raw data '/tmp/resumen_voz_221932.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+🔊 Generando resumen por voz
+📨 Enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+🔊 Generando resumen por voz
+📨 Enviado a Telegram
+Failed to read voice 'gtts:es'
+Playing raw data '/tmp/resumen_voz_34345.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+🔊 Generando resumen por voz
+📨 Enviado a Telegram
+Failed to read voice 'gtts:es'
+Playing raw data '/tmp/resumen_voz_162982.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
