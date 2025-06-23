@@ -1,2 +1,4 @@
-Corregir rutas en la API
 Realizar prueba de Local a VPS
+Error en Autorización
+Conexión bancaria desactivada.
+Error de seguridad: State mismatch

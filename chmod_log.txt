@@ -6,3 +6,5 @@
 ✅ chmod +x -> ./instalar_notas_3.11.sh
 ✅ chmod +x -> ./logs_sync.sh
 ✅ chmod +x -> ./select_voice.sh
+✅ chmod +x -> ./backup_local_combinar.sh
+✅ chmod +x -> ./backup_vps_combinar_y_enviar_telegram.sh

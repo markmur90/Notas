@@ -84,3 +84,4 @@ modificar dominio, mock, y path
 pruebas script
 correccion menu admin
 Rutas API a simulador
+Corregir rutas en la API
