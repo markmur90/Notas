@@ -126,3 +126,12 @@
 2025-06-24 02:21:03 - ✅ Dump de BD generado: db_backup_2025-06-24__02-21.sql
 2025-06-24 02:23:41 - ✅ Tar H2 completado: proyecto_backup_H2_2025-06-24__02-21.tar.gz
 2025-06-24 02:23:50 - ✅ Tar HK completado: proyecto_backup_HK_2025-06-24__02-21.tar.gz
+2025-06-24 02:26:30 - ✅ Tar SC completado: proyecto_backup_SC_2025-06-24__02-21.tar.gz
+2025-06-24 02:28:22 - ✅ Tar SM completado: proyecto_backup_SM_2025-06-24__02-21.tar.gz
+2025-06-24 02:28:35 - ✅ Tar NT completado: proyecto_backup_NT_2025-06-24__02-21.tar.gz
+2025-06-24 02:28:38 - 📦 Tars a enviar: 4 archivos.
+2025-06-24 02:28:46 - 📤 Enviado tar: proyecto_backup_NT_2025-06-24__02-21.tar.gz
+2025-06-24 02:28:53 - 📤 Enviado tar: proyecto_backup_SM_2025-06-24__02-21.tar.gz
+2025-06-24 02:29:12 - 📤 Enviado tar: proyecto_backup_SC_2025-06-24__02-21.tar.gz
+2025-06-24 02:29:22 - 📤 Enviado tar: proyecto_backup_HK_2025-06-24__02-21.tar.gz
+2025-06-24 02:29:23 - 🧹 Limpieza de tars antiguos completada.

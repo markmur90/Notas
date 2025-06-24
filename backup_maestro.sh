@@ -14,21 +14,19 @@ LOG_DIR="${INSTALL_DIR}/logs"
 LOG_FILE="${LOG_DIR}/backup_master.log"
 mkdir -p "$BACKUP_VPS_DIR" "$LOG_DIR"
 
-# === Función de envío a Telegram con gestión de 413 ===
+# === Función de envío a Telegram con gestión de 413 (versión parcheada) ===
 send_telegram() {
   local MSG="$1"
   local FILE="${2:-}"
 
+  # helper que devuelve sólo el código HTTP
   _do_send() {
-    local method="$1"   # sendDocument o sendMessage
-    shift
     curl -s -w '%{http_code}' -o /dev/null "$@"
   }
 
   if [[ -n "$FILE" && -f "$FILE" ]]; then
-    # Intentamos enviar como documento
     http_code=$(_do_send \
-      "sendDocument" -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendDocument" \
+      -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendDocument" \
       -F chat_id="${CHAT_ID}" \
       -F document=@"${FILE}" \
       -F caption="${MSG}")
@@ -36,7 +34,7 @@ send_telegram() {
     name="$(basename "$FILE")"
   else
     http_code=$(_do_send \
-      "sendMessage" -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+      -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
       -d chat_id="${CHAT_ID}" \
       -d text="${MSG}")
     action="Mensaje"
@@ -44,36 +42,37 @@ send_telegram() {
   fi
 
   if [[ "$http_code" -eq 200 ]]; then
-    if [[ -n "$name" ]]; then
-      echo "📨 ${action} enviado: ${name}"
-    else
-      echo "📨 ${action} enviado"
-    fi
+    [[ -n "$name" ]] && echo "📨 ${action} enviado: ${name}" || echo "📨 ${action} enviado"
     return 0
   fi
 
   if [[ "$http_code" -eq 413 && -n "$FILE" ]]; then
-    # Payload Too Large: partida en chunks de 49MB
-    echo "⚠️ ${name} demasiado grande, dividiendo en partes..."
-    mapfile -t chunks < <(split -b 49M --numeric-suffixes=1 --suffix-length=3 "$FILE" "${FILE}.part_")
-    total=${#chunks[@]}
+    echo "⚠️ ${name} demasiado grande (413), partiendo en trozos de 49MB..."
+    split -b 49M --numeric-suffixes=1 --suffix-length=3 "$FILE" "${FILE}.part_"
+    parts=( "${FILE}.part_"* )
+    total=${#parts[@]}
 
-    for i in "${!chunks[@]}"; do
-      part="${chunks[i]}"
+    for i in "${!parts[@]}"; do
+      chunk="${parts[i]}"
       seq=$((i+1))
-      send_telegram "${MSG} (parte ${seq}/${total})" "$part" || {
-        echo "❌ Falló envío de parte ${seq}/${total}: $(basename "$part")"
+      echo "➡️ Enviando parte ${seq}/${total}: $(basename "$chunk")"
+      code=$(_do_send \
+        -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendDocument" \
+        -F chat_id="${CHAT_ID}" \
+        -F document=@"${chunk}" \
+        -F caption="${MSG} (parte ${seq}/${total})")
+      if [[ "$code" -ne 200 ]]; then
+        echo "❌ Falló envío parte ${seq}/${total} (HTTP $code)"
         exit 1
-      }
-      rm -f "$part"
+      fi
+      echo "✅ Parte ${seq}/${total} enviada"
+      rm -f "$chunk"
     done
 
-    # Todas las partes enviadas
     echo "✅ Todas las partes de ${name} enviadas"
     return 0
   fi
 
-  # Otro error HTTP o sin archivo
   echo "❌ Error enviando a Telegram (${action} ${name}), código HTTP $http_code"
   return 1
 }
