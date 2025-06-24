@@ -67,3 +67,4 @@ Failed to create secure directory (/run/user/1000/pulse): No such file or direct
 Failed to create secure directory (/run/user/1000/pulse): No such file or directory
 Failed to create secure directory (/run/user/1000/pulse): No such file or directory
 Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_6176.mp3: No such file or directory

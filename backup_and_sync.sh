@@ -2,7 +2,11 @@
 
 # === CONFIGURACIÓN ===
 USER_LOCAL="markmur88"
-DIR_PROYECTO="/home/$USER_LOCAL/api_bank_h2"
+DIR_PROYECTO_H2="/home/$USER_LOCAL/api_bank_h2"
+DIR_PROYECTO_HK="/home/$USER_LOCAL/api_bank_heroku"
+DIR_PROYECTO_SC="/home/$USER_LOCAL/scripts"
+DIR_PROYECTO_SM="/home/$USER_LOCAL/Simulador"
+DIR_PROYECTO_NT="/home/$USER_LOCAL/Notas"
 DIR_BACKUP="/home/$USER_LOCAL/backup/vps"
 DB_NAME="mydatabase"
 DB_USER="markmur88"
@@ -13,31 +17,35 @@ VPS_USER="markmur88"
 VPS_IP="80.78.30.242"
 VPS_PORT="22"
 SSH_KEY="/home/$USER_LOCAL/.ssh/vps_njalla_nueva"
-DIR_REMOTO="/home/$VPS_USER/api_bank_heroku"
+DIR_REMOTO_HK="/home/$VPS_USER/api_bank_heroku"
 DIR_REMOTO_H2="/home/$VPS_USER/api_bank_h2"
-DIR_REMOTO_SCR="/home/$VPS_USER/scripts"
-DIR_REMOTO_SIM="/home/$VPS_USER/Simulador"
+DIR_REMOTO_SC="/home/$VPS_USER/scripts"
+DIR_REMOTO_SM="/home/$VPS_USER/Simulador"
 
-FECHA=$(date +%Y-%m-%d__%H)
+FECHA=$(date +%Y-%m-%d)
 HORA_BOGOTA_TEXTO=$(TZ="America/Bogota" date +"%H:%M")
 
 mkdir -p "$DIR_BACKUP"
 pg_dump -U "$DB_USER" -h "$DB_HOST" -p "$DB_PORT" "$DB_NAME" > "$DIR_BACKUP/db_backup_$FECHA.sql"
-tar -czf "$DIR_BACKUP/proyecto_backup_$FECHA.tar.gz" -C "$DIR_PROYECTO" .
+tar -czf "$DIR_BACKUP/proyecto_backup_KH_$FECHA.tar.gz" -C "$DIR_PROYECTO_HK" .
+tar -czf "$DIR_BACKUP/proyecto_backup_2H_$FECHA.tar.gz" -C "$DIR_PROYECTO_H2" .
+tar -czf "$DIR_BACKUP/proyecto_backup_SC_$FECHA.tar.gz" -C "$DIR_PROYECTO_SC" .
+tar -czf "$DIR_BACKUP/proyecto_backup_SM_$FECHA.tar.gz" -C "$DIR_PROYECTO_SM" .
+tar -czf "$DIR_BACKUP/proyecto_backup_NT_$FECHA.tar.gz" -C "$DIR_PROYECTO_NT" .
 
-scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/db_backup_HK_$FECHA.sql" "$VPS_USER@$VPS_IP:$DIR_REMOTO/"
-scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_HK_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO/"
-scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_H2_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_H2/"
-scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_SC_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_SCR/"
-scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_SM_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_SIM/"
+# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/db_backup_HK_$FECHA.sql" "$VPS_USER@$VPS_IP:$DIR_REMOTO/"
+# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_HK_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_HK/"
+# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_H2_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_H2/"
+# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_SC_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_SC/"
+# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_SM_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_SM/"
 
 echo "✅ Respaldo y sincronización completados el $FECHA"
 
 # Tiempo acumulado según Bogotá
 DIA=$(TZ="America/Bogota" date +"%Y-%m-%d")
 LOG_DIR="/home/$USER_LOCAL/Notas/logs"
-PROYECTO_FILE="$LOG_DIR/proyecto_total.log"
-DIA_FILE="$LOG_DIR/$DIA.log"
+PROYECTO_FILE="$LOG_DIR/tiempo_total.log"
+DIA_FILE="$LOG_DIR/tiempo_dia.log"
 mkdir -p "$LOG_DIR"
 touch "$PROYECTO_FILE" "$DIA_FILE"
 

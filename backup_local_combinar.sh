@@ -12,14 +12,14 @@
 # ================ Implementación ================
 USER_LOCAL="markmur88"
 DIR_BACKUP="/home/${USER_LOCAL}/backup/vps"
-LOCAL_TMP_DIR="${HOME}/descargas/backups"
-ENVIAR_TG="${HOME}/Notas/enviar_telegram.sh"
+LOCAL_TMP_DIR="/home/markmur88/backup"
+ENVIAR_TG="/home/markmur88/Notas/enviar_telegram.sh"
 
 # Crear carpeta temporal si no existe
 mkdir -p "$LOCAL_TMP_DIR"
 
 # Timestamp para el ZIP
-TIMESTAMP=$(date +%Y-%m-%d__%H-%M)
+TIMESTAMP=$(date +%Y-%m-%d)
 
 # 1) Seleccionar los 4 tar.gz más recientes de DIR_BACKUP
 readarray -t RECENT_FILES < <(
@@ -47,7 +47,7 @@ zip -j "$ZIP_FILE" "${TMP_PATHS[@]}"
 
 # 5) Programar eliminación local a los 40 minutos
 (
-  sleep 2400
+  sleep 7200
   if rm -f "$ZIP_FILE"; then
     "$ENVIAR_TG" "✅ Eliminado local: $(basename "$ZIP_FILE")"
   fi

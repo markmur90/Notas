@@ -8,3 +8,5 @@
 ✅ chmod +x -> ./select_voice.sh
 ✅ chmod +x -> ./backup_local_combinar.sh
 ✅ chmod +x -> ./backup_vps_combinar_y_enviar_telegram.sh
+✅ chmod +x -> ./backup_maestro.sh
+✅ chmod +x -> ./backup_maestro_individual.sh
