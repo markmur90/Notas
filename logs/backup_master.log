@@ -135,3 +135,23 @@
 2025-06-24 02:29:12 - 📤 Enviado tar: proyecto_backup_SC_2025-06-24__02-21.tar.gz
 2025-06-24 02:29:22 - 📤 Enviado tar: proyecto_backup_HK_2025-06-24__02-21.tar.gz
 2025-06-24 02:29:23 - 🧹 Limpieza de tars antiguos completada.
+2025-06-24 02:34:10 - 👉 Inicio de backup maestro.
+2025-06-24 02:34:14 - ✅ Dump de BD generado: db_backup_2025-06-24__02-34.sql
+2025-06-24 02:36:23 - ✅ Tar H2 completado: proyecto_backup_H2_2025-06-24__02-34.tar.gz
+2025-06-24 02:36:31 - ✅ Tar HK completado: proyecto_backup_HK_2025-06-24__02-34.tar.gz
+2025-06-24 02:38:33 - 👉 Inicio de backup maestro.
+2025-06-24 02:38:35 - ✅ Dump de BD generado: db_backup_2025-06-24__02-38.sql
+2025-06-24 02:40:31 - ✅ Tar H2 completado: proyecto_backup_H2_2025-06-24__02-38.tar.gz
+2025-06-24 02:40:36 - ✅ Tar HK completado: proyecto_backup_HK_2025-06-24__02-38.tar.gz
+2025-06-24 02:41:39 - ✅ Tar SC completado: proyecto_backup_SC_2025-06-24__02-38.tar.gz
+2025-06-24 02:42:13 - ✅ Tar SM completado: proyecto_backup_SM_2025-06-24__02-38.tar.gz
+2025-06-24 02:42:28 - ✅ Tar NT completado: proyecto_backup_NT_2025-06-24__02-38.tar.gz
+2025-06-24 02:42:30 - 📦 Tars a enviar: 4 archivos.
+2025-06-24 02:42:40 - 📤 Enviado tar: proyecto_backup_NT_2025-06-24__02-38.tar.gz
+2025-06-24 02:44:22 - 📤 Enviado tar: proyecto_backup_SM_2025-06-24__02-38.tar.gz
+2025-06-24 02:52:03 - 📤 Enviado tar: proyecto_backup_SC_2025-06-24__02-38.tar.gz
+2025-06-24 02:52:15 - 📤 Enviado tar: proyecto_backup_HK_2025-06-24__02-38.tar.gz
+2025-06-24 02:52:17 - 🧹 Limpieza de tars antiguos completada.
+2025-06-24 03:30:01 - 👉 Inicio de backup maestro.
+2025-06-24 03:55:01 - 👉 Inicio de backup maestro.
+2025-06-25 03:55:01 - 👉 Inicio de backup maestro.

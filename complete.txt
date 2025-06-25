@@ -85,3 +85,9 @@ pruebas script
 correccion menu admin
 Rutas API a simulador
 Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token

@@ -1,0 +1,32 @@
+[03:02]
+corregido conexion_ssh.py
+conexion_banco.py
+[07:32]
+clientid
+[07:32]
+Simulador - clientid
+List
+cuentas-deudor - list
+transferencias - nuevo InvalidToken
+No exception message supplied
+Registro Token en  	Value
+connection 	
+
+<DatabaseWrapper vendor='sqlite' alias='default'>
+
+expression 	
+
+Col(sim_debtor_account, banco.DebtorAccount.iban)
+
+self 	
+
+<banco.models.EncryptedCharField: iban>
+
+value 	
+
+'gAAAAABoVKu6S3xbgGdA2RQrFcRZWaTgY5vJp7vcwK5dedBEWj_sanP6VHMQNpb2PCEOz9KjELFoHLrgsePMuwwsCN8ta5hgqQ21j-r28Pfk8PyxCUmX5ww='
+[07:37]
+Simulador-ClientId
+Simulador-ClientID-List
+Simulador-cuentas.deudor-list
+Simulador-transferencias-nuevo.InvalidToken
