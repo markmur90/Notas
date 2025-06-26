@@ -29857,3 +29857,3057 @@ Pruebe 'date --help' para más información.
 Failed to read voice 'gtts:es'
 ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
 aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-06-25 16:00:01
+
+📝 Notas acumuladas:
+🗒 /home/markmur88/Notas/texto/2025-06-06.txt (2025-06-06 10:17:31)
+[08:02]
+sync 
+[08:02]
+eliminación
+[08:04]
+desintalacion 
+intalacion
+[08:07]
+error en desintalación
+[11:22]
+deploy njalla
+[11:49]
+arranque despliegue
+[11:58]
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+📥 Clonando repositorio Django...
+Cloning into '/home/markmur88/api_bank_heroku'...
+fatal: could not read Username for 'https://github.com': No such device or address
+[1;31m❌ Fallo final en despliegue remoto. Consulta logs en /home/markmur88/api_bank_h2/scripts/logs/despliegue/00_18_00_deploy_njalla_.log[0m
+[12:08]
+
+📥 Clonando repositorio Django...
+fatal: destination path '/home/markmur88/api_bank_heroku' already exists and is not an empty directory.
+[1;31m❌ Fallo final en despliegue remoto. Consulta logs en /home/markmur88/api_bank_h2/scripts/logs/despliegue/00_18_00_deploy_njalla_.log[0m
+[12:13]
+DO
+bash: line 42: --: command not found
+[1;31m❌ Fallo final en despliegue remoto. Consulta logs en /home/markmur88/api_bank_h2/scripts/logs/despliegue/00_18_00_deploy_njalla_.log[0m
+
+d
+[12:20]
+site-packages (from -r /home/markmur88/api_bank_heroku/requirements.txt (line 139)) (0.2.3.post1)
+DO
+bash: line 42: --: command not found
+[1;31m❌ Fallo final en despliegue remoto. Consulta logs en /home/markmur88/api_bank_h2/scripts/logs/despliegue/00_18_00_deploy_njalla_.log[0m
+[12:23]
+post1)
+DO
+bash: line 44: --: command not found
+[1;31m❌ Fallo final en despliegue remoto. Consulta logs en /home/markmur88/api_bank_h2/scripts/logs/despliegue/00_18_00_deploy_njalla_.log[0m
+[12:27]
+post1)
+DO
+bash: line 44: --: command not found
+[12:30]
+SQL
+[12:35]
+WeasyPrint
+[12:38]
+Weasy dependencias
+[12:51]
+EOF
+[16:45]
+fail2ban
+[17:16]
+deploy sin failban2, reseteo, sin 49222
+🗒 /home/markmur88/Notas/texto/2025-06-07.txt (2025-06-07 09:12:38)
+[05:05]
+Inicio y cambio user
+[05:24]
+copy backup
+update
+copy heroku
+envAPP
+[05:45]
+update
+[05:56]
+fail2ban
+[06:58]
+fail2ban actualizado y funcionando
+[07:16]
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/jail.d/sshd-ddos.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-server -t
+2025-06-07 07:09:41,501 fail2ban.configreader   [17720]: WARNING 'allowipv6' not defined in 'Definition'. Using default one: 'auto'
+OK: configuration test is successful
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl restart fail2ban
+sudo systemctl status  fail2ban
+
+● fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; enabled; preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Sat 2025-06-07 07:10:03 CEST; 71ms ago
+       Docs: man:fail2ban(1)
+   Main PID: 17729 (fail2ban-server)
+      Tasks: 1 (limit: 38442)
+     Memory: 3.5M
+        CPU: 30ms
+     CGroup: /system.slice/fail2ban.service
+             └─17729 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:10:20,468 fail2ban                [17744]: ERROR   Failed to access socket path: /var/run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ 
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo mkdir -p /var/run/fail2ban
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo ln -sf /run/fail2ban/fail2ban.sock /var/run/fail2ban/fail2ban.sock
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:11:35,631 fail2ban                [17786]: ERROR   Failed to access socket path: /var/run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/fail2ban.conf        
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl restart fail2ban
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:12:53,018 fail2ban                [17826]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl restart fail2ban      
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:13:15,585 fail2ban                [17844]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo mkdir -p /run/fail2ban
+sudo chown root:root /run/fail2ban
+sudo chmod 755 /run/fail2ban
+
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl restart fail2ban
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl status fail2ban
+ls -l /run/fail2ban/fail2ban.sock
+× fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; enabled; preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: failed (Result: exit-code) since Sat 2025-06-07 07:14:17 CEST; 9s ago
+   Duration: 803ms
+       Docs: man:fail2ban(1)
+    Process: 17869 ExecStart=/usr/bin/fail2ban-server -xf start (code=exited, status=255/EXCEPTION)
+   Main PID: 17869 (code=exited, status=255/EXCEPTION)
+        CPU: 477ms
+
+Jun 07 07:14:16 coretransapi systemd[1]: Started fail2ban.service - Fail2Ban Service.
+Jun 07 07:14:16 coretransapi fail2ban-server[17869]: 2025-06-07 07:14:16,960 fail2ban.configreader   [17869]>
+Jun 07 07:14:17 coretransapi fail2ban-server[17869]: Server ready
+Jun 07 07:14:17 coretransapi systemd[1]: fail2ban.service: Main process exited, code=exited, status=255/EXCE>
+Jun 07 07:14:17 coretransapi systemd[1]: fail2ban.service: Failed with result 'exit-code'.
+ls: cannot access '/run/fail2ban/fail2ban.sock': No such file or directory
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ ls -l /run/fail2ban/fail2ban.sock
+ls: cannot access '/run/fail2ban/fail2ban.sock': No such file or directory
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ ls -l /run/fail2ban/fail2ban.sock
+ls: cannot access '/run/fail2ban/fail2ban.sock': No such file or directory
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo mkdir -p /run/fail2ban
+sudo chown root:root /run/fail2ban
+sudo chmod 755 /run/fail2ban
+
+sudo systemctl restart fail2ban
+sudo systemctl status fail2ban
+
+● fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; enabled; preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Sat 2025-06-07 07:15:44 CEST; 66ms ago
+       Docs: man:fail2ban(1)
+   Main PID: 17916 (fail2ban-server)
+      Tasks: 1 (limit: 38442)
+     Memory: 4.9M
+        CPU: 40ms
+     CGroup: /system.slice/fail2ban.service
+             └─17916 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+
+Jun 07 07:15:44 coretransapi systemd[1]: Started fail2ban.service - Fail2Ban Service.
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:15:57,162 fail2ban                [17931]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+[07:28]
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo mkdir -p /var/run/fail2ban
+sudo chown root:root /var/run/fail2ban
+sudo chmod 755 /var/run/fail2ban
+
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/fail2ban.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo mkdir -p /run/fail2ban
+sudo chown root:root /run/fail2ban
+sudo chmod 755 /run/fail2ban
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/ssh/sshd_config                                      
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/client.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/client.conf  
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl restart fail2ban
+sudo systemctl status fail2ban
+
+● fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; enabled; preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Sat 2025-06-07 07:24:43 CEST; 69ms ago
+       Docs: man:fail2ban(1)
+   Main PID: 18111 (fail2ban-server)
+      Tasks: 1 (limit: 38442)
+     Memory: 3.3M
+        CPU: 30ms
+     CGroup: /system.slice/fail2ban.service
+             └─18111 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:24:57,769 fail2ban                [18126]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/fail2ban.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/fail2ban.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/jail.d/sshd-ddos.conf                          
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl restart fail2ban              
+sudo systemctl status fail2ban
+
+● fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; enabled; preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Sat 2025-06-07 07:27:01 CEST; 62ms ago
+       Docs: man:fail2ban(1)
+   Main PID: 18178 (fail2ban-server)
+      Tasks: 1 (limit: 38442)
+     Memory: 3.7M
+        CPU: 32ms
+     CGroup: /system.slice/fail2ban.service
+             └─18178 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+
+Jun 07 07:27:01 coretransapi systemd[1]: Started fail2ban.service - Fail2Ban Service.
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos        
+2025-06-07 07:27:10,575 fail2ban                [18191]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/fail2ban.conf        
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl restart fail2ban      
+sudo systemctl status fail2ban
+
+● fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; enabled; preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: active (running) since Sat 2025-06-07 07:27:59 CEST; 61ms ago
+       Docs: man:fail2ban(1)
+   Main PID: 18207 (fail2ban-server)
+      Tasks: 1 (limit: 38442)
+     Memory: 4.2M
+        CPU: 34ms
+     CGroup: /system.slice/fail2ban.service
+             └─18207 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+
+Jun 07 07:27:59 coretransapi systemd[1]: Started fail2ban.service - Fail2Ban Service.
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:28:10,998 fail2ban                [18220]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+[07:31]
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client -s /run/fail2ban/fail2ban.sock status sshd-ddos
+
+2025-06-07 07:29:27,200 fail2ban                [18247]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ export FAIL2BAN_SOCKET=/run/fail2ban/fail2ban.sock
+sudo fail2ban-client status sshd-ddos
+
+2025-06-07 07:29:39,040 fail2ban                [18254]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/client.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:30:28,561 fail2ban                [18283]: ERROR   Failed to access socket path: /run/fail2ban/fail2ban.sock. Is fail2ban running?
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+[07:34]
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo rm -f /run/fail2ban/fail2ban.sock /var/run/fail2ban/fail2ban.sock
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl edit fail2ban.service
+Editing "/etc/systemd/system/fail2ban.service.d/override.conf" canceled: temporary file is empty.
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl daemon-reload
+sudo systemctl restart fail2ban
+
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ ls -l /run/fail2ban/fail2ban.sock
+
+ls: cannot access '/run/fail2ban/fail2ban.sock': No such file or directory
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo ls -l /run/fail2ban/fail2ban.sock
+
+ls: cannot access '/run/fail2ban/fail2ban.sock': No such file or directory
+[07:41]
+elimina sshd-ddos
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ /etc/fail2ban/jail.d/sshd-systemd.conf
+zsh: permission denied: /etc/fail2ban/jail.d/sshd-systemd.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/jail.d/sshd-systemd.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl reload fail2ban
+fail2ban.service is not active, cannot reload.
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo journalctl -f -u fail2ban.service
+Jun 07 07:32:59 coretransapi fail2ban-server[18543]: 2025-06-07 07:32:59,640 fail2ban.configreader   [18543]: WARNING 'allowipv6' not defined in 'Definition'. Using default one: 'auto'
+Jun 07 07:32:59 coretransapi fail2ban-server[18543]: Server ready
+Jun 07 07:33:00 coretransapi systemd[1]: fail2ban.service: Main process exited, code=exited, status=255/EXCEPTION
+Jun 07 07:33:00 coretransapi systemd[1]: fail2ban.service: Failed with result 'exit-code'.
+Jun 07 07:34:48 coretransapi systemd[1]: Started fail2ban.service - Fail2Ban Service.
+Jun 07 07:34:48 coretransapi fail2ban-server[18718]: 2025-06-07 07:34:48,347 fail2ban.configreader   [18718]: WARNING 'allowipv6' not defined in 'Definition'. Using default one: 'auto'
+Jun 07 07:34:48 coretransapi fail2ban-server[18718]: Server ready
+Jun 07 07:34:48 coretransapi systemd[1]: fail2ban.service: Main process exited, code=exited, status=255/EXCEPTION
+Jun 07 07:34:48 coretransapi systemd[1]: fail2ban.service: Failed with result 'exit-code'.
+Jun 07 07:37:22 coretransapi systemd[1]: fail2ban.service: Unit cannot be reloaded because it is inactive.
+q^C
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/jail.d/sshd-ddos.conf               
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo nano /etc/fail2ban/jail.d/sshd-ddos.conf
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-server -t
+# Debe responder "OK: configuration test is successful"
+2025-06-07 07:39:19,701 fail2ban.configreader   [18857]: WARNING 'allowipv6' not defined in 'Definition'. Using default one: 'auto'
+OK: configuration test is successful
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl restart fail2ban
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd-ddos
+2025-06-07 07:39:46,585 fail2ban                [18903]: ERROR   NOK: ('sshd-ddos',)
+Sorry but the jail 'sshd-ddos' does not exist
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl reload fail2ban
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo journalctl -f -u fail2ban.service
+Jun 07 07:34:48 coretransapi systemd[1]: fail2ban.service: Main process exited, code=exited, status=255/EXCEPTION
+Jun 07 07:34:48 coretransapi systemd[1]: fail2ban.service: Failed with result 'exit-code'.
+Jun 07 07:37:22 coretransapi systemd[1]: fail2ban.service: Unit cannot be reloaded because it is inactive.
+Jun 07 07:39:37 coretransapi systemd[1]: Started fail2ban.service - Fail2Ban Service.
+Jun 07 07:39:37 coretransapi fail2ban-server[18875]: 2025-06-07 07:39:37,667 fail2ban.configreader   [18875]: WARNING 'allowipv6' not defined in 'Definition'. Using default one: 'auto'
+Jun 07 07:39:38 coretransapi fail2ban-server[18875]: Server ready
+Jun 07 07:40:11 coretransapi systemd[1]: Reloading fail2ban.service - Fail2Ban Service...
+Jun 07 07:40:11 coretransapi fail2ban-client[18913]: 2025-06-07 07:40:11,201 fail2ban.configreader   [18913]: WARNING 'allowipv6' not defined in 'Definition'. Using default one: 'auto'
+Jun 07 07:40:11 coretransapi fail2ban-client[18913]: OK
+Jun 07 07:40:11 coretransapi systemd[1]: Reloaded fail2ban.service - Fail2Ban Service.
+^C
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo fail2ban-client status sshd     
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:     5
+|  `- Journal matches:  _SYSTEMD_UNIT=ssh.service
+`- Actions
+   |- Currently banned: 1
+   |- Total banned:     1
+   `- Banned IP list:   45.135.232.177
+                                                                                                             
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+[07:52]
+postgressql
+
+echo "🔍 Verificando entorno..."
+
+# Detectar OS
+OS="$(uname -s)"
+echo "🖥 Sistema detectado: $OS"
+
+# Verificar instalación
+if ! command -v psql &>/dev/null; then
+    echo "❌ PostgreSQL no está instalado (psql no encontrado)"
+    if [[ "$OS" == "Darwin" ]]; then
+        echo "ℹ️ Intenta con: brew install postgresql"
+    else
+        echo "ℹ️ Intenta con: sudo apt install postgresql"
+    fi
+    exit 1
+fi
+
+# Manejo según sistema
+if [[ "$OS" == "Linux" ]]; then
+    echo "🛠 Buscando servicio PostgreSQL..."
+
+    PG_SERVICE=$(systemctl list-unit-files --type=service | grep -E '^postgresql.*\.service' | awk '{print $1}' | head -n1)
+
+    if [[ -z "$PG_SERVICE" ]]; then
+        echo "❌ No se detectó un servicio PostgreSQL válido"
+        exit 1
+    fi
+
+    echo "📦 Servicio detectado: $PG_SERVICE"
+
+    if ! systemctl is-active --quiet "$PG_SERVICE"; then
+        echo "🔌 Activando servicio..."
+        sudo systemctl enable "$PG_SERVICE"
+        sudo systemctl start "$PG_SERVICE"
+    else
+        echo "✅ PostgreSQL ya está activo."
+    fi
+
+elif [[ "$OS" == "Darwin" ]]; then
+    echo "🍏 Verificando servicio PostgreSQL (Homebrew)..."
+    if ! brew services list | grep -q postgresql; then
+        echo "❌ PostgreSQL no está registrado con Homebrew Services"
+        echo "ℹ️ Usa: brew services start postgresql"
+        exit 1
+    fi
+
+    echo "🔁 Iniciando PostgreSQL..."
+    brew services start postgresql
+    echo "✅ PostgreSQL está activo."
+else
+    echo "❌ Sistema operativo no compatible: $OS"
+    exit 1
+fi
+
+echo "🏁 PostgreSQL listo para usar."
+
+
+
+# Verificar si PostgreSQL está instalado
+if ! command -v psql &>/dev/null; then
+    echo "❌ PostgreSQL no está instalado (psql no encontrado)"
+    exit 1
+fi
+
+# Buscar servicio PostgreSQL disponible
+PG_SERVICE=$(systemctl list-unit-files --type=service | grep -E '^postgresql.*\.service' | awk '{print $1}' | head -n1)
+
+if [[ -z "$PG_SERVICE" ]]; then
+    echo "❌ No se encontró ningún servicio PostgreSQL"
+    exit 1
+fi
+
+echo "🔍 Servicio PostgreSQL detectado: $PG_SERVICE"
+
+# Verificar si está activo
+if ! systemctl is-active --quiet "$PG_SERVICE"; then
+    echo "⏳ Iniciando servicio PostgreSQL..."
+    sudo systemctl enable "$PG_SERVICE"
+    sudo systemctl start "$PG_SERVICE"
+else
+    echo "✅ PostgreSQL ya está activo."
+fi
+[08:21]
+exclude
+[08:24]
+delete
+[08:27]
+backup
+[08:33]
+prueba de voz
+[08:37]
+sync
+[08:43]
+modificación del script y re sincronización
+[08:48]
+herramienta pv
+[08:51]
+postgres usuarios
+[08:53]
+vps supervisor y nginx
+[09:04]
+hacer_json
+[09:10]
+mac
+[09:28]
+UFW
+[11:03]
+simulador listo con procedimientos separados
+sync
+[11:08]
+reinicio
+[11:20]
+deploy com
+[11:49]
+sync h2 heroku
+[12:05]
+┌──(markmur88㉿coretransapi)-[~]
+└─$ sudo mkdir -p /var/log/supervisor
+sudo chown markmur88 /var/log/supervisor
+sudo chmod 750 /var/log/supervisor
+                                    
+[12:06]
+sudo tee /etc/supervisor/conf.d/coretransapi.conf > /dev/null <<SUPERVISOR
+[program:coretransapi]
+directory=/home/markmur88/api_bank_heroku
+command=/home/markmur88/envAPP/bin/gunicorn config.wsgi:application \\
+  --bind unix:/home/markmur88/api_bank_heroku/api.sock \\
+  --workers 3
+autostart=false
+autorestart=true
+umask=007
+stderr_logfile=/var/log/supervisor/coretransapi.err.log
+stdout_logfile=/var/log/supervisor/coretransapi.out.log
+user=markmur88
+group=www-data
+environment=\\
+  PATH="/home/markmur88/envAPP/bin",\\
+  DJANGO_SETTINGS_MODULE="config.settings",\\
+  DJANGO_ENV="production",\\
+  DEBUG="False",\\
+  ALLOWED_HOSTS="api.coretransapi.com",\\
+  SECRET_KEY="MX2QfdeWkTc8ihotA_i1Hm7_4gYJQB4oVjOKFnuD6Cw",\\
+  REDIRECT_URI="https://api.coretransapi.com/oauth2/callback/",\\
+  ORIGIN="https://api.coretransapi.com",\\
+  CLIENT_ID="7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7",\\
+  CLIENT_SECRET="L88pwGelUZ5EV1YpfOG3e_r24M8YQ40-Gaay9HC4vt4RIl-Jz2QjtmcKxY8UpOWUInj9CoUILPBSF-H0QvUQqw",\\
+  TOKEN_URL="https://simulator-api.db.com:443/gw/oidc/token",\\
+  AUTHORIZE_URL="https://simulator-api.db.com:443/gw/oidc/authorize",\\
+  OTP_URL="https://simulator-api.db.com:443/gw/dbapi/others/onetimepasswords/v2/single",\\
+  AUTH_URL="https://simulator-api.db.com:443/gw/dbapi/others/transactionAuthorization/v1/challenges",\\
+  API_URL="https://simulator-api.db.com:443/gw/dbapi/paymentInitiation/payments/v1/sepaCreditTransfer",\\
+  SCOPE="sepa_credit_transfers",\\
+  TIMEOUT="3600",\\
+  TIMEOUT_REQUEST="3600"
+SUPERVISOR
+[12:07]
+# 5.1. Definir bloque básico HTTP en Nginx (para ACME challenge)
+sudo tee /etc/nginx/sites-available/coretransapi.conf > /dev/null <<NGINX_BASIC
+server {
+    listen 80;
+    server_name api.coretransapi.com;
+
+    # Proxy a Gunicorn (puerto 8000) — durante ACME challenge, Certbot overrideusa /.well-known
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        include proxy_params;
+    }
+}
+NGINX_BASIC
+[12:07]
+sudo ln -sf /etc/nginx/sites-available/coretransapi.conf /etc/nginx/sites-enabled/
+sudo rm -f /etc/nginx/sites-enabled/default
+[12:08]
+sudo nginx -t
+sudo systemctl reload nginx
+[12:09]
+┌──(markmur88㉿coretransapi)-[~]
+└─$ sudo certbot --nginx --non-interactive --agree-tos -m "netghostx90@protonmail.com" -d api.coretransapi.com
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Certificate not yet due for renewal
+Deploying certificate
+Successfully deployed certificate for api.coretransapi.com to /etc/nginx/sites-enabled/coretransapi.conf
+Congratulations! You have successfully enabled HTTPS on https://api.coretransapi.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[12:10]
+sudo nginx -t
+sudo systemctl reload nginx
+[13:31]
+fase 2, simulador y sync
+[13:53]
+arreglo de fase 2
+[14:01]
+fase2 quitar procesos anexos
+[14:19]
+Deploy Tor
+[14:30]
+deploy torrc
+[14:39]
+supervisor 
+
+[program:coretransapi]
+directory=/home/markmur88/api_bank_heroku
+command=/home/markmur88/envAPP/bin/gunicorn config.wsgi:application --bind unix:/home/markmur88/api_bank_heroku/api.sock --workers 3
+autostart=false
+autorestart=true
+umask=007
+stderr_logfile=/var/log/supervisor/coretransapi.err.log
+stdout_logfile=/var/log/supervisor/coretransapi.out.log
+user=markmur88
+group=www-data
+environment=PATH="/home/markmur88/envAPP/bin",DJANGO_SETTINGS_MODULE="config.settings",DJANGO_ENV="production",DEBUG="False",ALLOWED_HOSTS="api.coretransapi.com",SECRET_KEY="MX2QfdeWkTc8ihotA_i1Hm7_4gYJQB4oVjOKFnuD6Cw",REDIRECT_URI="https://api.coretransapi.com/oauth2/callback/",ORIGIN="https://api.coretransapi.com",CLIENT_ID="7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7",CLIENT_SECRET="L88pwGelUZ5EV1YpfOG3e_r24M8YQ40-Gaay9HC4vt4RIl-Jz2QjtmcKxY8UpOWUInj9CoUILPBSF-H0QvUQqw",TOKEN_URL="https://simulator-api.db.com:443/gw/oidc/token",AUTHORIZE_URL="https://simulator-api.db.com:443/gw/oidc/authorize",OTP_URL="https://simulator-api.db.com:443/gw/dbapi/others/onetimepasswords/v2/single",AUTH_URL="https://simulator-api.db.com:443/gw/dbapi/others/transactionAuthorization/v1/challenges",API_URL="https://simulator-api.db.com:443/gw/dbapi/paymentInitiation/payments/v1/sepaCreditTransfer",SCOPE="sepa_credit_transfers",TIMEOUT="3600",TIMEOUT_REQUEST="3600"
+[15:03]
+usermod debian-tor
+[15:06]
+deploy sim
+[15:07]
+Ese mensaje confirma que Tor no generó el archivo hostname, lo cual apunta a un problema con el archivo de configuración torrc. Puede deberse a:
+🔍 Posibles causas
+
+    HiddenServiceDir mal definido o con permisos incorrectos.
+
+    HiddenServicePort ausente o mal declarado.
+
+    Tor no tiene permiso de escritura en /var/lib/tor/hidden_service.
+
+    El archivo torrc no fue cargado correctamente antes de reiniciar el servicio.
+
+✅ Verificación rápida del torrc
+
+Asegurate que /etc/tor/torrc contenga al menos esto:
+
+Log notice file /var/log/tor/notices.log
+DataDirectory /var/lib/tor
+HiddenServiceDir /var/lib/tor/hidden_service
+HiddenServicePort 80 127.0.0.1:8000
+
+    ⚠️ Si usás otro puerto en Django o Gunicorn, actualizá el 127.0.0.1:8000 al que corresponda.
+
+🛠 Recomendaciones:
+
+    Corregí torrc si falta algo.
+
+    Borrá el directorio si quedó mal creado:
+
+sudo systemctl stop tor
+sudo rm -rf /var/lib/tor/hidden_service
+sudo mkdir -p /var/lib/tor/hidden_service
+sudo chown -R debian-tor:debian-tor /var/lib/tor/hidden_service
+sudo chmod 700 /var/lib/tor/hidden_service
+
+    Reiniciá Tor:
+
+sudo systemctl start tor
+
+    Verificá el log para más pistas:
+
+sudo tail -n 20 /var/log/tor/notices.log
+
+¿Querés que revise el torrc que tenés en /scripts/tor/torrc dentro del zip para confirmar si está bien?
+Dijiste:
+que significa chmod 700 y 750 y chown -R
+ChatGPT dijo:
+
+Buena pregunta. Vamos por partes, bien directo:
+🔐 chmod 700 vs chmod 750
+
+chmod ajusta permisos de acceso a archivos o directorios. El número está en formato octal (base 8) y cada dígito representa permisos:
+Dígito	Significado
+7	lectura + escritura + ejecución (rwx) = permiso total
+5	lectura + ejecución (r-x)
+0	sin permisos (---)
+
+    chmod 700 /ruta → solo el dueño puede leer, escribir y ejecutar. Nadie más.
+
+    chmod 750 /ruta → el dueño tiene todo; el grupo puede leer y ejecutar; otros nada.
+
+👤 chown -R usuario:grupo /ruta
+
+chown cambia el propietario y grupo de un archivo/directorio.
+
+    -R significa recursivo: aplica también a todos los archivos y subdirectorios dentro.
+
+    Ejemplo:
+
+    chown -R debian-tor:debian-tor /var/lib/tor/hidden_service
+
+    Esto hace que debian-tor sea el dueño, y su grupo, de todo dentro del directorio.
+
+🧅 ¿Por qué se usa esto en Tor?
+
+Tor (como servicio) corre como el usuario debian-tor, así que:
+
+    chown -R debian-tor:debian-tor → le da acceso.
+
+    chmod 700 → asegura que solo Tor puede leer y escribir en el directorio del servicio oculto, como exige la seguridad de Tor.
+
+¿Querés que te tire un resumen rápido en comentario bash para pegar en scripts?
+Dijiste:
+echo "⌛ Esperando generación del servicio oculto..."
+for i in {1..30}; do
+  if [[ -f /var/lib/tor/hidden_service/hostname ]]; then
+    echo "🧅 Servicio oculto generado:"
+    sudo cat /var/lib/tor/hidden_service/hostname
+    sudo chown -R markmur88 /var/lib/tor/hidden_service
+    sudo chmod 750 /var/lib/tor/hidden_service
+    break
+  fi
+  sleep 5
+done
+ChatGPT dijo:
+
+Ese bloque está casi perfecto. Solo te hago un par de sugerencias menores para robustez:
+✅ Versión ajustada
+
+echo "⌛ Esperando generación del servicio oculto..."
+for i in {1..30}; do
+  if [[ -f /var/lib/tor/hidden_service/hostname ]]; then
+    echo "🧅 Servicio oculto generado:"
+    sudo cat /var/lib/tor/hidden_service/hostname
+
+    # Asignar dueño y permisos seguros al directorio
+    sudo chown -R markmur88:markmur88 /var/lib/tor/hidden_service
+    sudo chmod 750 /var/lib/tor/hidden_service
+    break
+  fi
+  sleep 5
+done
+
+# Validación por si no se generó
+if [[ ! -f /var/lib/tor/hidden_service/hostname ]]; then
+  echo "⚠️ Timeout: no se generó el servicio oculto. Revisá el torrc o los logs de Tor."
+fi
+
+🧠 Detalles:
+
+    sleep 5 está bien para evitar spamear disco/CPU.
+
+    chmod 750 es correcto si querés permitir acceso al grupo. Si es solo para el usuario, sería 700.
+
+    El :markmur88 en chown es opcional si el grupo por defecto ya es correcto, pero lo dejo explícito para claridad.
+
+¿Querés que esto lo meta dentro de algún script de instalación o lo dejo como bloque independiente?
+Dijiste:
+tiene que estar creado el grupo? o como vemos que usuario y grupo tiene asignado para setaraelo bien
+ChatGPT dijo:
+
+Excelente punto. Vamos al grano:
+✅ ¿El grupo debe estar creado?
+
+Sí. Si hacés:
+
+sudo chown -R markmur88:markmur88 /ruta
+
+Entonces el grupo markmur88 debe existir. En la mayoría de las distros, cuando se crea el usuario markmur88, también se crea un grupo del mismo nombre por defecto —pero no siempre.
+🕵️ Ver qué usuario y grupo tiene un archivo o carpeta
+
+Usá:
+
+ls -ld /var/lib/tor/hidden_service
+
+Salida típica:
+
+drwx------ 2 debian-tor debian-tor 4096 jun  7 12:00 /var/lib/tor/hidden_service
+
+Ahí ves que el usuario es debian-tor y el grupo también debian-tor.
+🧱 Crear grupo si no existe
+
+Si querés asegurarte de que el grupo markmur88 exista:
+
+sudo groupadd markmur88  # Solo si no existe
+sudo usermod -a -G markmur88 markmur88  # Asegura que el usuario esté en ese grupo
+
+🧼 Alternativa segura sin grupo personalizado
+
+Si no necesitás que otro grupo acceda al servicio oculto, usá:
+
+sudo chown -R markmur88 /var/lib/tor/hidden_service
+sudo chmod 700 /var/lib/tor/hidden_service
+
+Ahí solo markmur88 podrá acceder, que es lo más seguro para un .onion.
+
+¿Querés que revise a quién pertenece ese directorio ahora mismo con un ls -ld si me pasás la salida?
+Dijiste:
+drwx--S--- 1 debian-tor debian-tor 136 Jun  7 14:34 /var/lib/tor/hidden_service
+ChatGPT dijo:
+
+Perfecto. Esa salida te dice todo lo que necesitás:
+
+drwx--S--- 1 debian-tor debian-tor ...
+
+🔍 Traducción:
+
+    Dueño: debian-tor
+
+    Grupo: debian-tor
+
+    Permisos: drwx--S---
+
+        d: es un directorio
+
+        rwx: el usuario (debian-tor) tiene lectura, escritura y ejecución
+
+        --S: el grupo no puede leer ni escribir, pero tiene setgid
+
+        ---: otros no tienen acceso
+
+    Ese S indica que el bit setgid está activo, pero el grupo no tiene permisos de ejecución, lo cual es raro en un directorio.
+
+✅ Recomendación en tu caso
+
+Si vas a dejar que Tor maneje ese directorio automáticamente, lo mejor es no cambiar los permisos ni el dueño. Dejá que lo use debian-tor:debian-tor.
+
+Entonces, en tu script, en lugar de esto:
+
+sudo chown -R markmur88 /var/lib/tor/hidden_service
+sudo chmod 750 /var/lib/tor/hidden_service
+
+Usá esto solo si necesitás leer hostname manualmente:
+
+sudo cat /var/lib/tor/hidden_service/hostname
+
+Y si necesitás acceso como usuario, podés hacer:
+
+sudo adduser markmur88 debian-tor
+
+Eso te da acceso indirecto como miembro del grupo, sin romper la seguridad de Tor.
+
+¿Querés que ajustemos el script para que lea el .onion solo si el usuario está en el grupo debian-tor?
+[15:23]
+autostart=true
+autorestart=true
+startsecs=5
+sudo nano /etc/supervisor/conf.d/coretransapi.conf
+[15:24]
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl restart coretransapi
+[15:24]
+Perfecto, eso confirma que Gunicorn no está dejando el socket api.sock persistente, o algo (como Supervisor o Nginx) lo borra antes de que Nginx pueda usarlo.
+🔍 Qué sabemos:
+
+    Gunicorn crea el socket correctamente (lo dice el log).
+
+    Luego se cae (por otro error o reinicio) y elimina el socket al salir.
+
+    Nginx lo busca cuando ya no existe, por eso el 502 Bad Gateway.
+
+✅ Fix sólido: forzamos que Gunicorn cree el socket con los permisos correctos y que no se elimine antes de que Nginx lo use.
+🔧 Paso 1: Ajustar supervisor para que no reinicie en falso
+
+Editá el archivo coretransapi.conf:
+
+sudo nano /etc/supervisor/conf.d/coretransapi.conf
+
+Asegurate de tener estas líneas:
+
+autostart=true
+autorestart=true
+startsecs=5
+
+Eso evita que Gunicorn se marque como "fallido" demasiado rápido y que api.sock desaparezca.
+🔧 Paso 2: Reiniciar todo en orden
+
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl restart coretransapi
+
+Esperá 2-3 segundos y luego verificá:
+
+ls -l /home/markmur88/api_bank_heroku/api.sock
+
+Si aparece el socket, hacé:
+
+sudo chown markmur88:www-data /home/markmur88/api_bank_heroku/api.sock
+sudo chmod 770 /home/markmur88/api_bank_heroku/api.sock
+
+Y luego reiniciá nginx:
+
+sudo systemctl restart nginx
+
+Con eso deberías levantar el .onion o el dominio y ver la app funcionando. ¿Querés que prepare un script para hacer todo eso en orden automáticamente?
+[16:12]
+🔐 Solicitando acceso sudo...
+🌍 Entorno cargado desde /home/markmur88/api_bank_h2/.env
+--------------------------------------------- SISTEMA ----------------------------------------------
+
+📅 Fecha de ejecución: 2025-06-07 15:46:07
+📄 Script: 00_01_sistema.sh
+═══════════════════════════════════════════
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+Hit:4 http://deb.debian.org/debian bookworm-backports InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+🔄 Sistema actualizado.
+---///---///---///---///---///---///---///---///---///---
+
+----------------------------------------------- ZIP ------------------------------------------------
+--------------------------------------------- PUERTOS ----------------------------------------------
+------------------------------------------- CONTENEDORES -------------------------------------------
+--------------------------------------------- POSTGRES ---------------------------------------------
+
+📅 Fecha de ejecución: 2025-06-07 15:46:15
+📄 Script: 00_07_postgres.sh
+═══════════════════════════════════════════
+🔍 Verificando PostgreSQL...
+Requirement already satisfied: pip in /home/markmur88/envAPP/lib/python3.11/site-packages (25.1.1)
+📦 Instalando dependencias...
+Requirement already satisfied: annotated-types==0.7.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 1)) (0.7.0)
+Requirement already satisfied: anyio==4.9.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 2)) (4.9.0)
+Requirement already satisfied: asgiref==3.8.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 3)) (3.8.1)
+Requirement already satisfied: attrs==25.3.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 4)) (25.3.0)
+Requirement already satisfied: bcrypt==4.3.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 5)) (4.3.0)
+Requirement already satisfied: bleach==6.2.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 6)) (6.2.0)
+Requirement already satisfied: blinker==1.9.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 7)) (1.9.0)
+Requirement already satisfied: Brotli==1.1.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 8)) (1.1.0)
+Requirement already satisfied: cachetools==5.5.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 9)) (5.5.2)
+Requirement already satisfied: certifi==2025.1.31 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 10)) (2025.1.31)
+Requirement already satisfied: cffi==1.17.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 11)) (1.17.1)
+Requirement already satisfied: chardet==5.2.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 12)) (5.2.0)
+Requirement already satisfied: charset-normalizer==3.4.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 13)) (3.4.1)
+Requirement already satisfied: click==8.1.8 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 14)) (8.1.8)
+Requirement already satisfied: clickclick==20.10.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 15)) (20.10.2)
+Requirement already satisfied: colorama==0.4.6 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 16)) (0.4.6)
+Requirement already satisfied: connexion==3.2.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 17)) (3.2.0)
+Requirement already satisfied: coverage==7.8.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 18)) (7.8.0)
+Requirement already satisfied: cryptography==44.0.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 19)) (44.0.2)
+Requirement already satisfied: cssselect2==0.8.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 20)) (0.8.0)
+Requirement already satisfied: distlib==0.3.9 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 21)) (0.3.9)
+Requirement already satisfied: distro==1.9.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 22)) (1.9.0)
+Requirement already satisfied: dj-database-url==2.3.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 23)) (2.3.0)
+Requirement already satisfied: Django==5.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 24)) (5.2)
+Requirement already satisfied: django-bootstrap5==25.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 25)) (25.1)
+Requirement already satisfied: django-cors-headers==4.7.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 26)) (4.7.0)
+Requirement already satisfied: django-debug-toolbar==5.1.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 27)) (5.1.0)
+Requirement already satisfied: django-environ==0.12.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 28)) (0.12.0)
+Requirement already satisfied: django-heroku==0.3.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 29)) (0.3.1)
+Requirement already satisfied: django-markdownify==0.9.5 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 30)) (0.9.5)
+Requirement already satisfied: django-oauth-toolkit==3.0.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 31)) (3.0.1)
+Requirement already satisfied: django-sslserver==0.22 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 32)) (0.22)
+Requirement already satisfied: djangorestframework==3.16.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 33)) (3.16.0)
+Requirement already satisfied: djangorestframework_simplejwt==5.5.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 34)) (5.5.0)
+Requirement already satisfied: dnspython==2.7.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 35)) (2.7.0)
+Requirement already satisfied: drf-yasg==1.21.10 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 36)) (1.21.10)
+Requirement already satisfied: ecdsa==0.19.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 37)) (0.19.1)
+Requirement already satisfied: Faker==37.1.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 38)) (37.1.0)
+Requirement already satisfied: filelock==3.18.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 39)) (3.18.0)
+Requirement already satisfied: flake8==7.2.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 40)) (7.2.0)
+Requirement already satisfied: Flask==3.1.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 41)) (3.1.0)
+Requirement already satisfied: Flask-Testing==0.8.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 42)) (0.8.1)
+Requirement already satisfied: Flask-WTF==1.2.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 43)) (1.2.2)
+Requirement already satisfied: fonttools==4.57.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 44)) (4.57.0)
+Requirement already satisfied: greenlet==3.2.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 45)) (3.2.2)
+Requirement already satisfied: gunicorn==23.0.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 46)) (23.0.0)
+Requirement already satisfied: h11==0.14.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 47)) (0.14.0)
+Requirement already satisfied: httpcore==1.0.8 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 48)) (1.0.8)
+Requirement already satisfied: httpx==0.28.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 49)) (0.28.1)
+Requirement already satisfied: idna==3.10 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 50)) (3.10)
+Requirement already satisfied: inflection==0.5.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 51)) (0.5.1)
+Requirement already satisfied: iniconfig==2.1.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 52)) (2.1.0)
+Requirement already satisfied: itsdangerous==2.2.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 53)) (2.2.0)
+Requirement already satisfied: Jinja2==3.1.6 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 54)) (3.1.6)
+Requirement already satisfied: jiter==0.10.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 55)) (0.10.0)
+Requirement already satisfied: joblib==1.5.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 56)) (1.5.1)
+Requirement already satisfied: jsonschema==4.23.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 57)) (4.23.0)
+Requirement already satisfied: jsonschema-specifications==2024.10.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 58)) (2024.10.1)
+Requirement already satisfied: jwcrypto==1.5.6 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 59)) (1.5.6)
+Requirement already satisfied: livereload==2.7.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 60)) (2.7.1)
+Requirement already satisfied: lxml==5.3.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 61)) (5.3.2)
+Requirement already satisfied: Markdown==3.8 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 62)) (3.8)
+Requirement already satisfied: MarkupSafe==3.0.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 63)) (3.0.2)
+Requirement already satisfied: mccabe==0.7.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 64)) (0.7.0)
+Requirement already satisfied: mypy==1.15.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 65)) (1.15.0)
+Requirement already satisfied: mypy-extensions==1.0.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 66)) (1.0.0)
+Requirement already satisfied: nltk==3.9.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 67)) (3.9.1)
+Requirement already satisfied: oauthlib==3.2.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 68)) (3.2.2)
+Requirement already satisfied: openai==1.82.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 69)) (1.82.0)
+Requirement already satisfied: openapi-client==1.1.7 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 70)) (1.1.7)
+Requirement already satisfied: packaging==24.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 71)) (24.2)
+Requirement already satisfied: paramiko==3.5.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 72)) (3.5.1)
+Requirement already satisfied: pillow==11.2.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 73)) (11.2.1)
+Requirement already satisfied: platformdirs==4.3.7 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 74)) (4.3.7)
+Requirement already satisfied: playwright==1.52.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 75)) (1.52.0)
+Requirement already satisfied: pluggy==1.5.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 76)) (1.5.0)
+Requirement already satisfied: psycopg2==2.9.10 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 77)) (2.9.10)
+Requirement already satisfied: psycopg2-binary==2.9.10 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 78)) (2.9.10)
+Requirement already satisfied: py==1.11.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 79)) (1.11.0)
+Requirement already satisfied: pyasn1==0.4.8 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 80)) (0.4.8)
+Requirement already satisfied: pycodestyle==2.13.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 81)) (2.13.0)
+Requirement already satisfied: pycparser==2.22 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 82)) (2.22)
+Requirement already satisfied: pydantic==2.11.3 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 83)) (2.11.3)
+Requirement already satisfied: pydantic_core==2.33.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 84)) (2.33.1)
+Requirement already satisfied: pydyf==0.11.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 85)) (0.11.0)
+Requirement already satisfied: pyee==13.0.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 86)) (13.0.0)
+Requirement already satisfied: pyflakes==3.3.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 87)) (3.3.2)
+Requirement already satisfied: PyJWT==2.9.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 88)) (2.9.0)
+Requirement already satisfied: PyNaCl==1.5.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 89)) (1.5.0)
+Requirement already satisfied: pyOpenSSL==25.0.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 90)) (25.0.0)
+Requirement already satisfied: pyphen==0.17.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 91)) (0.17.2)
+Requirement already satisfied: pyproject-api==1.9.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 92)) (1.9.0)
+Requirement already satisfied: pytest==8.3.5 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 93)) (8.3.5)
+Requirement already satisfied: pytest-cov==6.1.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 94)) (6.1.1)
+Requirement already satisfied: pytest-django==4.11.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 95)) (4.11.1)
+Requirement already satisfied: pytest-mock==3.14.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 96)) (3.14.0)
+Requirement already satisfied: pytest-randomly==3.16.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 97)) (3.16.0)
+Requirement already satisfied: python-dateutil==2.9.0.post0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 98)) (2.9.0.post0)
+Requirement already satisfied: python-decouple==3.8 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 99)) (3.8)
+Requirement already satisfied: python-dotenv==1.1.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 100)) (1.1.0)
+Requirement already satisfied: python-jose==3.4.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 101)) (3.4.0)
+Requirement already satisfied: python-multipart==0.0.20 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 102)) (0.0.20)
+Requirement already satisfied: python-nmap==0.7.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 103)) (0.7.1)
+Requirement already satisfied: pytz==2025.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 104)) (2025.2)
+Requirement already satisfied: PyYAML==6.0.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 105)) (6.0.2)
+Requirement already satisfied: qrcode==8.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 106)) (8.1)
+Requirement already satisfied: referencing==0.36.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 107)) (0.36.2)
+Requirement already satisfied: regex==2024.11.6 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 108)) (2024.11.6)
+Requirement already satisfied: reportlab==4.4.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 109)) (4.4.0)
+Requirement already satisfied: requests==2.32.3 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 110)) (2.32.3)
+Requirement already satisfied: requests-oauthlib==2.0.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 111)) (2.0.0)
+Requirement already satisfied: rpds-py==0.24.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 112)) (0.24.0)
+Requirement already satisfied: rsa==4.9.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 113)) (4.9.1)
+Requirement already satisfied: selenium==3.141.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 114)) (3.141.0)
+Requirement already satisfied: setuptools==78.1.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 115)) (78.1.0)
+Requirement already satisfied: six==1.17.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 116)) (1.17.0)
+Requirement already satisfied: sniffio==1.3.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 117)) (1.3.1)
+Requirement already satisfied: sqlparse==0.5.3 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 118)) (0.5.3)
+Requirement already satisfied: starlette==0.46.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 119)) (0.46.2)
+Requirement already satisfied: swagger_ui_bundle==1.1.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 120)) (1.1.0)
+Requirement already satisfied: tinycss2==1.4.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 121)) (1.4.0)
+Requirement already satisfied: tinyhtml5==2.0.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 122)) (2.0.0)
+Requirement already satisfied: tomli==2.2.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 123)) (2.2.1)
+Requirement already satisfied: tornado==6.4.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 124)) (6.4.2)
+Requirement already satisfied: tox==4.25.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 125)) (4.25.0)
+Requirement already satisfied: tqdm==4.67.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 126)) (4.67.1)
+Requirement already satisfied: types-python-dateutil==2.9.0.20241206 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 127)) (2.9.0.20241206)
+Requirement already satisfied: typing-inspection==0.4.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 128)) (0.4.0)
+Requirement already satisfied: typing_extensions==4.13.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 129)) (4.13.2)
+Requirement already satisfied: tzdata==2025.2 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 130)) (2025.2)
+Requirement already satisfied: uritemplate==4.1.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 131)) (4.1.1)
+Requirement already satisfied: urllib3==1.26.16 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 132)) (1.26.16)
+Requirement already satisfied: virtualenv==20.30.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 133)) (20.30.0)
+Requirement already satisfied: weasyprint==65.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 134)) (65.1)
+Requirement already satisfied: webencodings==0.5.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 135)) (0.5.1)
+Requirement already satisfied: Werkzeug==3.1.3 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 136)) (3.1.3)
+Requirement already satisfied: whitenoise==6.9.0 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 137)) (6.9.0)
+Requirement already satisfied: WTForms==3.2.1 in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 138)) (3.2.1)
+Requirement already satisfied: zopfli in /home/markmur88/envAPP/lib/python3.11/site-packages (from -r /home/markmur88/api_bank_h2/requirements.txt (line 139)) (0.2.3.post1)
+DO
+ALTER ROLE
+GRANT
+⚠ Borrando base de datos existente: mydatabase
+ pg_terminate_backend 
+----------------------
+(0 rows)
+
+DROP DATABASE
+CREATE DATABASE
+GRANT
+✅ Base de datos y usuario listos.
+------------------------------------------- MIGRACIONES --------------------------------------------
+
+📅 Fecha de ejecución: 2025-06-07 15:46:22
+📄 Script: 00_08_migraciones.sh
+═══════════════════════════════════════════
+🧹 Eliminando cachés de Python y migraciones anteriores...
+---///---///---///---///---///---///---///---///---///---
+
+🔄 Generando migraciones de Django...
+[settings] DJANGO_ENV = local
+[settings] Variables cargadas desde: /home/markmur88/api_bank_h2/.env.local
+⚠ Django apps aún no están listas. Configuración dinámica omitida.
+Migrations for 'configuraciones_api':
+  api/configuraciones_api/migrations/0001_initial.py
+    + Create model ConfiguracionAPI
+Migrations for 'gpt3':
+  api/gpt3/migrations/0001_initial.py
+    + Create model Account
+    + Create model Address
+    + Create model FinancialInstitution
+    + Create model GroupHeader
+    + Create model InstructedAmount
+    + Create model PaymentIdentification
+    + Create model Creditor
+    + Create model Debtor
+    + Create model BulkTransfer
+    + Create model PaymentInformation
+    + Create model CreditTransfersDetails
+    + Create model SepaCreditTransfer
+Migrations for 'gpt4':
+  api/gpt4/migrations/0001_initial.py
+    + Create model ClientID
+    + Create model Creditor
+    + Create model CreditorAgent
+    + Create model Debtor
+    + Create model Kid
+    + Create model LogTransferencia
+    + Create model PaymentIdentification
+    + Create model ClaveGenerada
+    + Create model CreditorAccount
+    + Create model DebtorAccount
+    + Create model Transfer
+Migrations for 'authentication':
+  api/authentication/migrations/0001_initial.py
+    + Create model CustomUser
+Migrations for 'transfers':
+  api/transfers/migrations/0001_initial.py
+    + Create model SepaTransaction
+    + Create model Transfer
+    + Create model SEPA2
+    + Create model SEPA3
+Migrations for 'core':
+  api/core/migrations/0001_initial.py
+    + Create model ErrorResponse
+    + Create model Message
+    + Create model TransactionStatus
+    + Create model IBAN
+    + Create model Debtor
+    + Create model StatusResponse
+    + Create model PaymentResponse
+---///---///---///---///---///---///---///---///---///---
+
+⏳ Aplicando migraciones de la base de datos...
+[settings] DJANGO_ENV = local
+[settings] Variables cargadas desde: /home/markmur88/api_bank_h2/.env.local
+⚠ Django apps aún no están listas. Configuración dinámica omitida.
+Operations to perform:
+  Apply all migrations: admin, auth, authentication, authtoken, configuraciones_api, contenttypes, core, gpt3, gpt4, oauth2_provider, sessions, transfers
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying authentication.0001_initial... OK
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+  Applying authtoken.0003_tokenproxy... OK
+  Applying authtoken.0004_alter_tokenproxy_options... OK
+  Applying configuraciones_api.0001_initial... OK
+  Applying transfers.0001_initial... OK
+  Applying core.0001_initial... OK
+  Applying gpt3.0001_initial... OK
+  Applying gpt4.0001_initial... OK
+  Applying oauth2_provider.0001_initial... OK
+  Applying oauth2_provider.0002_auto_20190406_1805... OK
+  Applying oauth2_provider.0003_auto_20201211_1314... OK
+  Applying oauth2_provider.0004_auto_20200902_2022... OK
+  Applying oauth2_provider.0005_auto_20211222_2352... OK
+  Applying oauth2_provider.0006_alter_application_client_secret... OK
+  Applying oauth2_provider.0007_application_post_logout_redirect_uris... OK
+  Applying oauth2_provider.0008_alter_accesstoken_token... OK
+  Applying oauth2_provider.0009_add_hash_client_secret... OK
+  Applying oauth2_provider.0010_application_allowed_origins... OK
+  Applying oauth2_provider.0011_refreshtoken_token_family... OK
+  Applying oauth2_provider.0012_add_token_checksum... OK
+  Applying sessions.0001_initial... OK
+⏳ Migraciones a la base de datos completa.
+---///---///---///---///---///---///---///---///---///---
+
+⏳ Aplicando Collectstatic...
+[settings] DJANGO_ENV = local
+[settings] Variables cargadas desde: /home/markmur88/api_bank_h2/.env.local
+⚠ Django apps aún no están listas. Configuración dinámica omitida.
+
+204 static files copied to '/home/markmur88/api_bank_h2/staticfiles', 5 unmodified.
+⏳ Migraciones a la base de datos completa.
+---///---///---///---///---///---///---///---///---///---
+
+------------------------------------------- CARGAR LOCAL -------------------------------------------
+
+📅 Fecha de ejecución: 2025-06-07 15:46:42
+📄 Script: 00_09_cargar_json.sh
+═══════════════════════════════════════════
+🌐 Importando backup del archivo...
+ERROR:  unrecognized configuration parameter "transaction_timeout"
+ERROR:  relation "auth_group" already exists
+ERROR:  relation "auth_group_id_seq" already exists
+ERROR:  relation "auth_group_permissions" already exists
+ERROR:  relation "auth_group_permissions_id_seq" already exists
+ERROR:  relation "auth_permission" already exists
+ERROR:  relation "auth_permission_id_seq" already exists
+ERROR:  relation "auth_user" already exists
+ERROR:  relation "auth_user_groups" already exists
+ERROR:  relation "auth_user_groups_id_seq" already exists
+ERROR:  relation "auth_user_id_seq" already exists
+ERROR:  relation "auth_user_user_permissions" already exists
+ERROR:  relation "auth_user_user_permissions_id_seq" already exists
+ERROR:  relation "authentication_customuser" already exists
+ERROR:  relation "authentication_customuser_groups" already exists
+ERROR:  relation "authentication_customuser_groups_id_seq" already exists
+ERROR:  relation "authentication_customuser_id_seq" already exists
+ERROR:  relation "authentication_customuser_user_permissions" already exists
+ERROR:  relation "authentication_customuser_user_permissions_id_seq" already exists
+ERROR:  relation "authtoken_token" already exists
+ERROR:  relation "configuraciones_api" already exists
+ERROR:  relation "configuraciones_api_id_seq" already exists
+ERROR:  relation "core_debtor" already exists
+ERROR:  relation "core_errorresponse" already exists
+ERROR:  relation "core_errorresponse_messageId_seq" already exists
+ERROR:  relation "core_iban" already exists
+ERROR:  relation "core_message" already exists
+ERROR:  relation "core_message_message_id_seq" already exists
+ERROR:  relation "core_paymentresponse" already exists
+ERROR:  relation "core_paymentresponse_id_seq" already exists
+ERROR:  relation "core_statusresponse" already exists
+ERROR:  relation "core_statusresponse_id_seq" already exists
+ERROR:  relation "core_transactionstatus" already exists
+ERROR:  relation "core_transactionstatus_id_seq" already exists
+ERROR:  relation "django_admin_log" already exists
+ERROR:  relation "django_admin_log_id_seq" already exists
+ERROR:  relation "django_content_type" already exists
+ERROR:  relation "django_content_type_id_seq" already exists
+ERROR:  relation "django_migrations" already exists
+ERROR:  relation "django_migrations_id_seq" already exists
+ERROR:  relation "django_session" already exists
+ERROR:  relation "gpt3_account" already exists
+ERROR:  relation "gpt3_account_id_seq" already exists
+ERROR:  relation "gpt3_address" already exists
+ERROR:  relation "gpt3_address_id_seq" already exists
+ERROR:  relation "gpt3_bulktransfer" already exists
+ERROR:  relation "gpt3_bulktransfer_id_seq" already exists
+ERROR:  relation "gpt3_creditor" already exists
+ERROR:  relation "gpt3_creditor_id_seq" already exists
+ERROR:  relation "gpt3_credittransfersdetails" already exists
+ERROR:  relation "gpt3_credittransfersdetails_id_seq" already exists
+ERROR:  relation "gpt3_debtor" already exists
+ERROR:  relation "gpt3_debtor_id_seq" already exists
+ERROR:  relation "gpt3_financialinstitution" already exists
+ERROR:  relation "gpt3_financialinstitution_id_seq" already exists
+ERROR:  relation "gpt3_groupheader" already exists
+ERROR:  relation "gpt3_groupheader_id_seq" already exists
+ERROR:  relation "gpt3_instructedamount" already exists
+ERROR:  relation "gpt3_instructedamount_id_seq" already exists
+ERROR:  relation "gpt3_paymentidentification" already exists
+ERROR:  relation "gpt3_paymentidentification_id_seq" already exists
+ERROR:  relation "gpt3_paymentinformation" already exists
+ERROR:  relation "gpt3_paymentinformation_id_seq" already exists
+ERROR:  relation "gpt3_sepacredittransfer" already exists
+ERROR:  relation "gpt3_sepacredittransfer_id_seq" already exists
+ERROR:  relation "gpt4_clavegenerada" already exists
+ERROR:  relation "gpt4_clavegenerada_id_seq" already exists
+ERROR:  relation "gpt4_clientid" already exists
+ERROR:  relation "gpt4_creditor" already exists
+ERROR:  relation "gpt4_creditor_id_seq" already exists
+ERROR:  relation "gpt4_creditoraccount" already exists
+ERROR:  relation "gpt4_creditoraccount_id_seq" already exists
+ERROR:  relation "gpt4_creditoragent" already exists
+ERROR:  relation "gpt4_creditoragent_id_seq" already exists
+ERROR:  relation "gpt4_debtor" already exists
+ERROR:  relation "gpt4_debtor_id_seq" already exists
+ERROR:  relation "gpt4_debtoraccount" already exists
+ERROR:  relation "gpt4_debtoraccount_id_seq" already exists
+ERROR:  relation "gpt4_kid" already exists
+ERROR:  relation "gpt4_logtransferencia" already exists
+ERROR:  relation "gpt4_logtransferencia_id_seq" already exists
+ERROR:  relation "gpt4_paymentidentification" already exists
+ERROR:  relation "gpt4_paymentidentification_id_seq" already exists
+ERROR:  relation "gpt4_transfer" already exists
+ERROR:  relation "gpt4_transfer_id_seq" already exists
+ERROR:  relation "oauth2_provider_accesstoken" already exists
+ERROR:  relation "oauth2_provider_accesstoken_id_seq" already exists
+ERROR:  relation "oauth2_provider_application" already exists
+ERROR:  relation "oauth2_provider_application_id_seq" already exists
+ERROR:  relation "oauth2_provider_grant" already exists
+ERROR:  relation "oauth2_provider_grant_id_seq" already exists
+ERROR:  relation "oauth2_provider_idtoken" already exists
+ERROR:  relation "oauth2_provider_idtoken_id_seq" already exists
+ERROR:  relation "oauth2_provider_refreshtoken" already exists
+ERROR:  relation "oauth2_provider_refreshtoken_id_seq" already exists
+ERROR:  relation "transfers_sepa2" already exists
+ERROR:  relation "transfers_sepa2_id_seq" already exists
+ERROR:  relation "transfers_sepa3" already exists
+ERROR:  relation "transfers_sepa3_id_seq" already exists
+ERROR:  relation "transfers_sepatransaction" already exists
+ERROR:  relation "transfers_sepatransaction_id_seq" already exists
+ERROR:  relation "transfers_transfer" already exists
+ERROR:  duplicate key value violates unique constraint "auth_permission_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY auth_permission, line 1
+ERROR:  duplicate key value violates unique constraint "django_content_type_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY django_content_type, line 1
+ERROR:  duplicate key value violates unique constraint "django_migrations_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY django_migrations, line 1
+ERROR:  relation "auth_group_name_key" already exists====================================>  ] 98% ETA 0:00:00
+ERROR:  relation "auth_group_permissions_group_id_permission_id_0cd325b0_uniq" already exists
+ERROR:  multiple primary keys for table "auth_group_permissions" are not allowed
+ERROR:  multiple primary keys for table "auth_group" are not allowed
+ERROR:  relation "auth_permission_content_type_id_codename_01ab375a_uniq" already exists
+ERROR:  multiple primary keys for table "auth_permission" are not allowed
+ERROR:  multiple primary keys for table "auth_user_groups" are not allowed
+ERROR:  relation "auth_user_groups_user_id_group_id_94350c0c_uniq" already exists
+ERROR:  multiple primary keys for table "auth_user" are not allowed
+ERROR:  multiple primary keys for table "auth_user_user_permissions" are not allowed
+ERROR:  relation "auth_user_user_permissions_user_id_permission_id_14a6b632_uniq" already exists
+ERROR:  relation "auth_user_username_key" already exists
+ERROR:  relation "authentication_customuse_customuser_id_group_id_8a637646_uniq" already exists
+ERROR:  relation "authentication_customuse_customuser_id_permission_923704b1_uniq" already exists
+ERROR:  relation "authentication_customuser_email_key" already exists
+ERROR:  multiple primary keys for table "authentication_customuser_groups" are not allowed
+ERROR:  multiple primary keys for table "authentication_customuser" are not allowed
+ERROR:  multiple primary keys for table "authentication_customuser_user_permissions" are not allowed
+ERROR:  relation "authentication_customuser_username_key" already exists
+ERROR:  multiple primary keys for table "authtoken_token" are not allowed
+ERROR:  relation "authtoken_token_user_id_key" already exists
+ 142KiB 0:00:01 [82.1KiB/s] [=============================================================>] 100%            
+ERROR:  relation "configuraciones_api_nombre_key" already exists
+ERROR:  multiple primary keys for table "configuraciones_api" are not allowed
+ERROR:  relation "core_debtor_iban_id_key" already exists
+ERROR:  relation "core_debtor_name_key" already exists
+ERROR:  multiple primary keys for table "core_debtor" are not allowed
+ERROR:  multiple primary keys for table "core_errorresponse" are not allowed
+ERROR:  relation "core_iban_iban_key" already exists
+ERROR:  multiple primary keys for table "core_iban" are not allowed
+ERROR:  multiple primary keys for table "core_message" are not allowed
+ERROR:  multiple primary keys for table "core_paymentresponse" are not allowed
+ERROR:  multiple primary keys for table "core_statusresponse" are not allowed
+ERROR:  multiple primary keys for table "core_transactionstatus" are not allowed
+ERROR:  multiple primary keys for table "django_admin_log" are not allowed
+ERROR:  relation "django_content_type_app_label_model_76bd3d3b_uniq" already exists
+ERROR:  multiple primary keys for table "django_content_type" are not allowed
+ERROR:  multiple primary keys for table "django_migrations" are not allowed
+ERROR:  multiple primary keys for table "django_session" are not allowed
+ERROR:  multiple primary keys for table "gpt3_account" are not allowed
+ERROR:  multiple primary keys for table "gpt3_address" are not allowed
+ERROR:  relation "gpt3_bulktransfer_payment_id_key" already exists
+ERROR:  multiple primary keys for table "gpt3_bulktransfer" are not allowed
+ERROR:  multiple primary keys for table "gpt3_creditor" are not allowed
+ERROR:  multiple primary keys for table "gpt3_credittransfersdetails" are not allowed
+ERROR:  relation "gpt3_debtor_customer_id_key" already exists
+ERROR:  relation "gpt3_debtor_debtor_name_key" already exists
+ERROR:  multiple primary keys for table "gpt3_debtor" are not allowed
+ERROR:  multiple primary keys for table "gpt3_financialinstitution" are not allowed
+ERROR:  multiple primary keys for table "gpt3_groupheader" are not allowed
+ERROR:  multiple primary keys for table "gpt3_instructedamount" are not allowed
+ERROR:  multiple primary keys for table "gpt3_paymentidentification" are not allowed
+ERROR:  multiple primary keys for table "gpt3_paymentinformation" are not allowed
+ERROR:  relation "gpt3_sepacredittransfer_payment_id_key" already exists
+ERROR:  multiple primary keys for table "gpt3_sepacredittransfer" are not allowed
+ERROR:  multiple primary keys for table "gpt4_clavegenerada" are not allowed
+ERROR:  relation "gpt4_clientid_clientId_key" already exists
+ERROR:  multiple primary keys for table "gpt4_clientid" are not allowed
+ERROR:  relation "gpt4_creditor_name_key" already exists
+ERROR:  multiple primary keys for table "gpt4_creditor" are not allowed
+ERROR:  relation "gpt4_creditor_postal_address_street_key" already exists
+ERROR:  relation "gpt4_creditoraccount_iban_key" already exists
+ERROR:  multiple primary keys for table "gpt4_creditoraccount" are not allowed
+ERROR:  relation "gpt4_creditoragent_bic_key" already exists
+ERROR:  relation "gpt4_creditoragent_financial_institution_id_key" already exists
+ERROR:  relation "gpt4_creditoragent_other_information_key" already exists
+ERROR:  multiple primary keys for table "gpt4_creditoragent" are not allowed
+ERROR:  relation "gpt4_debtor_customer_id_key" already exists
+ERROR:  relation "gpt4_debtor_name_key" already exists
+ERROR:  multiple primary keys for table "gpt4_debtor" are not allowed
+ERROR:  relation "gpt4_debtor_postal_address_city_key" already exists
+ERROR:  relation "gpt4_debtor_postal_address_street_key" already exists
+ERROR:  relation "gpt4_debtoraccount_iban_key" already exists
+ERROR:  multiple primary keys for table "gpt4_debtoraccount" are not allowed
+ERROR:  relation "gpt4_kid_kid_key" already exists
+ERROR:  multiple primary keys for table "gpt4_kid" are not allowed
+ERROR:  multiple primary keys for table "gpt4_logtransferencia" are not allowed
+ERROR:  multiple primary keys for table "gpt4_paymentidentification" are not allowed
+ERROR:  relation "gpt4_transfer_payment_id_key" already exists
+ERROR:  multiple primary keys for table "gpt4_transfer" are not allowed
+ERROR:  relation "oauth2_provider_accesstoken_id_token_id_key" already exists
+ERROR:  multiple primary keys for table "oauth2_provider_accesstoken" are not allowed
+ERROR:  relation "oauth2_provider_accesstoken_source_refresh_token_id_key" already exists
+ERROR:  relation "oauth2_provider_accesstoken_token_checksum_85319a26_uniq" already exists
+ERROR:  relation "oauth2_provider_application_client_id_key" already exists
+ERROR:  multiple primary keys for table "oauth2_provider_application" are not allowed
+ERROR:  relation "oauth2_provider_grant_code_key" already exists
+ERROR:  multiple primary keys for table "oauth2_provider_grant" are not allowed
+ERROR:  relation "oauth2_provider_idtoken_jti_key" already exists
+ERROR:  multiple primary keys for table "oauth2_provider_idtoken" are not allowed
+ERROR:  relation "oauth2_provider_refreshtoken_access_token_id_key" already exists
+ERROR:  multiple primary keys for table "oauth2_provider_refreshtoken" are not allowed
+ERROR:  relation "oauth2_provider_refreshtoken_token_revoked_af8a5134_uniq" already exists
+ERROR:  relation "transfers_sepa2_custom_id_key" already exists
+ERROR:  relation "transfers_sepa2_end_to_end_id_key" already exists
+ERROR:  relation "transfers_sepa2_idempotency_key_key" already exists
+ERROR:  multiple primary keys for table "transfers_sepa2" are not allowed
+ERROR:  relation "transfers_sepa3_idempotency_key_key" already exists
+ERROR:  multiple primary keys for table "transfers_sepa3" are not allowed
+ERROR:  multiple primary keys for table "transfers_sepatransaction" are not allowed
+ERROR:  relation "transfers_sepatransaction_transaction_id_key" already exists
+ERROR:  relation "transfers_transfer_idempotency_key_key" already exists
+ERROR:  multiple primary keys for table "transfers_transfer" are not allowed
+ERROR:  relation "auth_group_name_a6ea08ec_like" already exists
+ERROR:  relation "auth_group_permissions_group_id_b120cbf9" already exists
+ERROR:  relation "auth_group_permissions_permission_id_84c5c92e" already exists
+ERROR:  relation "auth_permission_content_type_id_2f476e4b" already exists
+ERROR:  relation "auth_user_groups_group_id_97559544" already exists
+ERROR:  relation "auth_user_groups_user_id_6a12ed8b" already exists
+ERROR:  relation "auth_user_user_permissions_permission_id_1fbb5f2c" already exists
+ERROR:  relation "auth_user_user_permissions_user_id_a95ead1b" already exists
+ERROR:  relation "auth_user_username_6821ab7c_like" already exists
+ERROR:  relation "authentication_customuser__customuser_id_33d2a5f7" already exists
+ERROR:  relation "authentication_customuser__permission_id_e47332af" already exists
+ERROR:  relation "authentication_customuser_email_a127f886_like" already exists
+ERROR:  relation "authentication_customuser_groups_customuser_id_a7d1343c" already exists
+ERROR:  relation "authentication_customuser_groups_group_id_c5ef1d10" already exists
+ERROR:  relation "authentication_customuser_username_3dffdf84_like" already exists
+ERROR:  relation "authtoken_token_key_10f0b77e_like" already exists
+ERROR:  relation "configuraciones_api_nombre_695a9ac6_like" already exists
+ERROR:  relation "core_debtor_created_by_id_7dc64213" already exists
+ERROR:  relation "core_debtor_name_b6c3e4c6_like" already exists
+ERROR:  relation "core_iban_created_by_id_bd6d179a" already exists
+ERROR:  relation "core_iban_iban_84caffba_like" already exists
+ERROR:  relation "core_paymentresponse_payment_id_id_7dbdef17" already exists
+ERROR:  relation "core_paymentresponse_transaction_status_id_b6d357f3" already exists
+ERROR:  relation "core_statusresponse_code_id_afee82cb" already exists
+ERROR:  relation "django_admin_log_content_type_id_c4bce8eb" already exists
+ERROR:  relation "django_admin_log_user_id_c564eba6" already exists
+ERROR:  relation "django_session_expire_date_a5c62663" already exists
+ERROR:  relation "django_session_session_key_c0390e0f_like" already exists
+ERROR:  relation "gpt3_bulktransfer_group_header_id_9e13c7fd" already exists
+ERROR:  relation "gpt3_bulktransfer_payment_id_7951d535_like" already exists
+ERROR:  relation "gpt3_creditor_postal_address_id_c3fe4bdd" already exists
+ERROR:  relation "gpt3_credittransfersdetails_creditor_account_id_edfee0e4" already exists
+ERROR:  relation "gpt3_credittransfersdetails_creditor_agent_id_307e38d8" already exists
+ERROR:  relation "gpt3_credittransfersdetails_creditor_id_c2e3bb00" already exists
+ERROR:  relation "gpt3_credittransfersdetails_instructed_amount_id_565e82d1" already exists
+ERROR:  relation "gpt3_credittransfersdetails_payment_identification_id_b212326b" already exists
+ERROR:  relation "gpt3_credittransfersdetails_payment_information_id_73990371" already exists
+ERROR:  relation "gpt3_debtor_customer_id_f150da57_like" already exists
+ERROR:  relation "gpt3_debtor_debtor_name_31c06933_like" already exists
+ERROR:  relation "gpt3_debtor_postal_address_id_27b92747" already exists
+ERROR:  relation "gpt3_paymentinformation_bulk_id_b9376a56" already exists
+ERROR:  relation "gpt3_paymentinformation_debtor_account_id_a9f8fa70" already exists
+ERROR:  relation "gpt3_paymentinformation_debtor_agent_id_e4143698" already exists
+ERROR:  relation "gpt3_paymentinformation_debtor_id_be16dc7a" already exists
+ERROR:  relation "gpt3_sepacredittransfer_creditor_account_id_b4e44e68" already exists
+ERROR:  relation "gpt3_sepacredittransfer_creditor_agent_id_5770bbb2" already exists
+ERROR:  relation "gpt3_sepacredittransfer_creditor_id_cd53570b" already exists
+ERROR:  relation "gpt3_sepacredittransfer_debtor_account_id_ba04d35d" already exists
+ERROR:  relation "gpt3_sepacredittransfer_debtor_id_defce29b" already exists
+ERROR:  relation "gpt3_sepacredittransfer_instructed_amount_id_0a3b9c40" already exists
+ERROR:  relation "gpt3_sepacredittransfer_payment_id_c9688bb4_like" already exists
+ERROR:  relation "gpt3_sepacredittransfer_payment_identification_id_c053176b" already exists
+ERROR:  relation "gpt4_claveg_kid_b6f50a_idx" already exists
+ERROR:  relation "gpt4_claveg_usuario_3d0c46_idx" already exists
+ERROR:  relation "gpt4_clientid_clientId_2ff93cd3_like" already exists
+ERROR:  relation "gpt4_clientid_codigo_05d7cdcf_like" already exists
+ERROR:  relation "gpt4_creditor_name_bf92021a_like" already exists
+ERROR:  relation "gpt4_creditor_postal_address_street_d2ef64c2_like" already exists
+ERROR:  relation "gpt4_creditoraccount_creditor_id_c83bfa94" already exists
+ERROR:  relation "gpt4_creditoraccount_iban_9e946bfe_like" already exists
+ERROR:  relation "gpt4_creditoragent_bic_13526fc8_like" already exists
+ERROR:  relation "gpt4_creditoragent_financial_institution_id_8613ec2b_like" already exists
+ERROR:  relation "gpt4_creditoragent_other_information_93df8244_like" already exists
+ERROR:  relation "gpt4_debtor_customer_id_f98db95c_like" already exists
+ERROR:  relation "gpt4_debtor_name_e2b615fd_like" already exists
+ERROR:  relation "gpt4_debtor_postal_address_city_1955a33c_like" already exists
+ERROR:  relation "gpt4_debtor_postal_address_street_fdc08321_like" already exists
+ERROR:  relation "gpt4_debtoraccount_debtor_id_1df483ce" already exists
+ERROR:  relation "gpt4_debtoraccount_iban_91e63d1f_like" already exists
+ERROR:  relation "gpt4_kid_codigo_d23b90c9_like" already exists
+ERROR:  relation "gpt4_kid_kid_954aa63d_like" already exists
+ERROR:  relation "gpt4_transfer_client_id_d2c1b8e3" already exists
+ERROR:  relation "gpt4_transfer_client_id_d2c1b8e3_like" already exists
+ERROR:  relation "gpt4_transfer_creditor_account_id_90b37354" already exists
+ERROR:  relation "gpt4_transfer_creditor_agent_id_1a980781" already exists
+ERROR:  relation "gpt4_transfer_creditor_id_0cb87fa0" already exists
+ERROR:  relation "gpt4_transfer_debtor_account_id_5b771f23" already exists
+ERROR:  relation "gpt4_transfer_debtor_id_0dce2b00" already exists
+ERROR:  relation "gpt4_transfer_kid_id_69d5b9d8" already exists
+ERROR:  relation "gpt4_transfer_kid_id_69d5b9d8_like" already exists
+ERROR:  relation "gpt4_transfer_payment_id_16823cd3_like" already exists
+ERROR:  relation "gpt4_transfer_payment_identification_id_ec6bbdd2" already exists
+ERROR:  relation "oauth2_provider_accesstoken_application_id_b22886e1" already exists
+ERROR:  relation "oauth2_provider_accesstoken_token_checksum_85319a26_like" already exists
+ERROR:  relation "oauth2_provider_accesstoken_user_id_6e4c9a65" already exists
+ERROR:  relation "oauth2_provider_application_client_id_03f0cc84_like" already exists
+ERROR:  relation "oauth2_provider_application_client_secret_53133678" already exists
+ERROR:  relation "oauth2_provider_application_client_secret_53133678_like" already exists
+ERROR:  relation "oauth2_provider_application_user_id_79829054" already exists
+ERROR:  relation "oauth2_provider_grant_application_id_81923564" already exists
+ERROR:  relation "oauth2_provider_grant_code_49ab4ddf_like" already exists
+ERROR:  relation "oauth2_provider_grant_user_id_e8f62af8" already exists
+ERROR:  relation "oauth2_provider_idtoken_application_id_08c5ff4f" already exists
+ERROR:  relation "oauth2_provider_idtoken_user_id_dd512b59" already exists
+ERROR:  relation "oauth2_provider_refreshtoken_application_id_2d1c311b" already exists
+ERROR:  relation "oauth2_provider_refreshtoken_user_id_da837fce" already exists
+ERROR:  relation "transfers_sepa2_created_by_id_da6e7492" already exists
+ERROR:  relation "transfers_sepa3_created_by_id_bb359bd3" already exists
+ERROR:  relation "transfers_sepatransaction_transaction_id_06a7eabb_like" already exists
+ERROR:  relation "transfers_transfer_idempotency_key_d2e1aade_like" already exists
+ERROR:  constraint "auth_group_permissio_permission_id_84c5c92e_fk_auth_perm" for relation "auth_group_permissions" already exists
+ERROR:  constraint "auth_group_permissions_group_id_b120cbf9_fk_auth_group_id" for relation "auth_group_permissions" already exists
+ERROR:  constraint "auth_permission_content_type_id_2f476e4b_fk_django_co" for relation "auth_permission" already exists
+ERROR:  constraint "auth_user_groups_group_id_97559544_fk_auth_group_id" for relation "auth_user_groups" already exists
+ERROR:  constraint "auth_user_groups_user_id_6a12ed8b_fk_auth_user_id" for relation "auth_user_groups" already exists
+ERROR:  constraint "auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm" for relation "auth_user_user_permissions" already exists
+ERROR:  constraint "auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id" for relation "auth_user_user_permissions" already exists
+ERROR:  constraint "authentication_custo_customuser_id_33d2a5f7_fk_authentic" for relation "authentication_customuser_user_permissions" already exists
+ERROR:  constraint "authentication_custo_customuser_id_a7d1343c_fk_authentic" for relation "authentication_customuser_groups" already exists
+ERROR:  constraint "authentication_custo_group_id_c5ef1d10_fk_auth_grou" for relation "authentication_customuser_groups" already exists
+ERROR:  constraint "authentication_custo_permission_id_e47332af_fk_auth_perm" for relation "authentication_customuser_user_permissions" already exists
+ERROR:  constraint "authtoken_token_user_id_35299eff_fk_auth_user_id" for relation "authtoken_token" already exists
+ERROR:  constraint "core_debtor_created_by_id_7dc64213_fk_authentic" for relation "core_debtor" already exists
+ERROR:  constraint "core_debtor_iban_id_ac5873ed_fk_core_iban_id" for relation "core_debtor" already exists
+ERROR:  constraint "core_iban_created_by_id_bd6d179a_fk_authentic" for relation "core_iban" already exists
+ERROR:  constraint "core_paymentresponse_payment_id_id_7dbdef17_fk_transfers" for relation "core_paymentresponse" already exists
+ERROR:  constraint "core_paymentresponse_transaction_status_i_b6d357f3_fk_core_tran" for relation "core_paymentresponse" already exists
+ERROR:  constraint "core_statusresponse_code_id_afee82cb_fk_core_tran" for relation "core_statusresponse" already exists
+ERROR:  constraint "django_admin_log_content_type_id_c4bce8eb_fk_django_co" for relation "django_admin_log" already exists
+ERROR:  constraint "django_admin_log_user_id_c564eba6_fk_auth_user_id" for relation "django_admin_log" already exists
+ERROR:  constraint "gpt3_bulktransfer_group_header_id_9e13c7fd_fk_gpt3_grou" for relation "gpt3_bulktransfer" already exists
+ERROR:  constraint "gpt3_creditor_postal_address_id_c3fe4bdd_fk_gpt3_address_id" for relation "gpt3_creditor" already exists
+ERROR:  constraint "gpt3_credittransfers_creditor_account_id_edfee0e4_fk_gpt3_acco" for relation "gpt3_credittransfersdetails" already exists
+ERROR:  constraint "gpt3_credittransfers_creditor_agent_id_307e38d8_fk_gpt3_fina" for relation "gpt3_credittransfersdetails" already exists
+ERROR:  constraint "gpt3_credittransfers_creditor_id_c2e3bb00_fk_gpt3_cred" for relation "gpt3_credittransfersdetails" already exists
+ERROR:  constraint "gpt3_credittransfers_instructed_amount_id_565e82d1_fk_gpt3_inst" for relation "gpt3_credittransfersdetails" already exists
+ERROR:  constraint "gpt3_credittransfers_payment_identificati_b212326b_fk_gpt3_paym" for relation "gpt3_credittransfersdetails" already exists
+ERROR:  constraint "gpt3_credittransfers_payment_information__73990371_fk_gpt3_paym" for relation "gpt3_credittransfersdetails" already exists
+ERROR:  constraint "gpt3_debtor_postal_address_id_27b92747_fk_gpt3_address_id" for relation "gpt3_debtor" already exists
+ERROR:  constraint "gpt3_paymentinformat_bulk_id_b9376a56_fk_gpt3_bulk" for relation "gpt3_paymentinformation" already exists
+ERROR:  constraint "gpt3_paymentinformat_debtor_account_id_a9f8fa70_fk_gpt3_acco" for relation "gpt3_paymentinformation" already exists
+ERROR:  constraint "gpt3_paymentinformat_debtor_agent_id_e4143698_fk_gpt3_fina" for relation "gpt3_paymentinformation" already exists
+ERROR:  constraint "gpt3_paymentinformation_debtor_id_be16dc7a_fk_gpt3_debtor_id" for relation "gpt3_paymentinformation" already exists
+ERROR:  constraint "gpt3_sepacredittrans_creditor_account_id_b4e44e68_fk_gpt3_acco" for relation "gpt3_sepacredittransfer" already exists
+ERROR:  constraint "gpt3_sepacredittrans_creditor_agent_id_5770bbb2_fk_gpt3_fina" for relation "gpt3_sepacredittransfer" already exists
+ERROR:  constraint "gpt3_sepacredittrans_creditor_id_cd53570b_fk_gpt3_cred" for relation "gpt3_sepacredittransfer" already exists
+ERROR:  constraint "gpt3_sepacredittrans_debtor_account_id_ba04d35d_fk_gpt3_acco" for relation "gpt3_sepacredittransfer" already exists
+ERROR:  constraint "gpt3_sepacredittrans_instructed_amount_id_0a3b9c40_fk_gpt3_inst" for relation "gpt3_sepacredittransfer" already exists
+ERROR:  constraint "gpt3_sepacredittrans_payment_identificati_c053176b_fk_gpt3_paym" for relation "gpt3_sepacredittransfer" already exists
+ERROR:  constraint "gpt3_sepacredittransfer_debtor_id_defce29b_fk_gpt3_debtor_id" for relation "gpt3_sepacredittransfer" already exists
+ERROR:  constraint "gpt4_creditoraccount_creditor_id_c83bfa94_fk_gpt4_creditor_id" for relation "gpt4_creditoraccount" already exists
+ERROR:  constraint "gpt4_debtoraccount_debtor_id_1df483ce_fk_gpt4_debtor_id" for relation "gpt4_debtoraccount" already exists
+ERROR:  constraint "gpt4_transfer_client_id_d2c1b8e3_fk_gpt4_clientid_codigo" for relation "gpt4_transfer" already exists
+ERROR:  constraint "gpt4_transfer_creditor_account_id_90b37354_fk_gpt4_cred" for relation "gpt4_transfer" already exists
+ERROR:  constraint "gpt4_transfer_creditor_agent_id_1a980781_fk_gpt4_cred" for relation "gpt4_transfer" already exists
+ERROR:  constraint "gpt4_transfer_creditor_id_0cb87fa0_fk_gpt4_creditor_id" for relation "gpt4_transfer" already exists
+ERROR:  constraint "gpt4_transfer_debtor_account_id_5b771f23_fk_gpt4_debt" for relation "gpt4_transfer" already exists
+ERROR:  constraint "gpt4_transfer_debtor_id_0dce2b00_fk_gpt4_debtor_id" for relation "gpt4_transfer" already exists
+ERROR:  constraint "gpt4_transfer_kid_id_69d5b9d8_fk_gpt4_kid_codigo" for relation "gpt4_transfer" already exists
+ERROR:  constraint "gpt4_transfer_payment_identificati_ec6bbdd2_fk_gpt4_paym" for relation "gpt4_transfer" already exists
+ERROR:  constraint "oauth2_provider_acce_application_id_b22886e1_fk_oauth2_pr" for relation "oauth2_provider_accesstoken" already exists
+ERROR:  constraint "oauth2_provider_acce_id_token_id_85db651b_fk_oauth2_pr" for relation "oauth2_provider_accesstoken" already exists
+ERROR:  constraint "oauth2_provider_acce_source_refresh_token_e66fbc72_fk_oauth2_pr" for relation "oauth2_provider_accesstoken" already exists
+ERROR:  constraint "oauth2_provider_accesstoken_user_id_6e4c9a65_fk_auth_user_id" for relation "oauth2_provider_accesstoken" already exists
+ERROR:  constraint "oauth2_provider_application_user_id_79829054_fk_auth_user_id" for relation "oauth2_provider_application" already exists
+ERROR:  constraint "oauth2_provider_gran_application_id_81923564_fk_oauth2_pr" for relation "oauth2_provider_grant" already exists
+ERROR:  constraint "oauth2_provider_grant_user_id_e8f62af8_fk_auth_user_id" for relation "oauth2_provider_grant" already exists
+ERROR:  constraint "oauth2_provider_idto_application_id_08c5ff4f_fk_oauth2_pr" for relation "oauth2_provider_idtoken" already exists
+ERROR:  constraint "oauth2_provider_idtoken_user_id_dd512b59_fk_auth_user_id" for relation "oauth2_provider_idtoken" already exists
+ERROR:  constraint "oauth2_provider_refr_access_token_id_775e84e8_fk_oauth2_pr" for relation "oauth2_provider_refreshtoken" already exists
+ERROR:  constraint "oauth2_provider_refr_application_id_2d1c311b_fk_oauth2_pr" for relation "oauth2_provider_refreshtoken" already exists
+ERROR:  constraint "oauth2_provider_refreshtoken_user_id_da837fce_fk_auth_user_id" for relation "oauth2_provider_refreshtoken" already exists
+ERROR:  constraint "transfers_sepa2_created_by_id_da6e7492_fk_authentic" for relation "transfers_sepa2" already exists
+ERROR:  constraint "transfers_sepa3_created_by_id_bb359bd3_fk_authentic" for relation "transfers_sepa3" already exists
+✅ Restauración SQL completada.
+✅ ¡Subido SQL Local!
+---///---///---///---///---///---///---///---///---///---
+
+--------------------------------------------- USUARIO ----------------------------------------------
+----------------------------------------- RESPALDOS LOCAL ------------------------------------------
+--------------------------------------------- PEM JWKS ---------------------------------------------
+------------------------------------- VERIFICAR TRANSFERENCIAS -------------------------------------
+------------------------------------- SINCRONIZACION COMPLETA --------------------------------------
+
+📅 Fecha de ejecución: 2025-06-07 15:46:49
+📄 Script: 00_14_sincronizacion_archivos.sh
+═══════════════════════════════════════════
+🔄 Sincronizando archivos al destino: /home/markmur88/api_bank_heroku
+sending incremental file list
+./
+.env
+.env.local
+.env.production
+.gitignore
+.python-version
+01_full0.sh
+LICENSE
+Problema.md
+Procfile
+README.md
+chatgpt.md
+chmod_log.txt
+datos_sensibles.txt
+manage.py
+pendientes.txt
+prompts.txt
+requirements.txt
+api/
+api/__init__.py
+api/context_processors.py
+api/middleware.py
+api/urls.py
+api/views.py
+api/__pycache__/
+api/__pycache__/__init__.cpython-311.pyc
+api/__pycache__/middleware.cpython-311.pyc
+api/__pycache__/urls.cpython-311.pyc
+api/__pycache__/views.cpython-311.pyc
+api/accounts/
+api/accounts/__init__.py
+api/accounts/admin.py
+api/accounts/apps.py
+api/accounts/forms.py
+api/accounts/models.py
+api/accounts/serializers.py
+api/accounts/tests.py
+api/accounts/urls.py
+api/accounts/views.py
+api/accounts/migrations/
+api/accounts/migrations/__init__.py
+api/authentication/
+api/authentication/__init__.py
+api/authentication/admin.py
+api/authentication/apps.py
+api/authentication/generate_jwt.py
+api/authentication/generate_token.py
+api/authentication/generated_token.txt
+api/authentication/jwt_token_utils.py
+api/authentication/models.py
+api/authentication/serializers.py
+api/authentication/urls.py
+api/authentication/views.py
+api/authentication/__pycache__/
+api/authentication/__pycache__/__init__.cpython-311.pyc
+api/authentication/__pycache__/admin.cpython-311.pyc
+api/authentication/__pycache__/apps.cpython-311.pyc
+api/authentication/__pycache__/models.cpython-311.pyc
+api/authentication/__pycache__/serializers.cpython-311.pyc
+api/authentication/__pycache__/urls.cpython-311.pyc
+api/authentication/__pycache__/views.cpython-311.pyc
+api/authentication/migrations/
+api/authentication/migrations/0001_initial.py
+api/authentication/migrations/__init__.py
+api/authentication/migrations/__pycache__/
+api/authentication/migrations/__pycache__/0001_initial.cpython-311.pyc
+api/authentication/migrations/__pycache__/__init__.cpython-311.pyc
+api/collection/
+api/collection/__init__.py
+api/collection/admin.py
+api/collection/apps.py
+api/collection/forms.py
+api/collection/models.py
+api/collection/serializers.py
+api/collection/tests.py
+api/collection/urls.py
+api/collection/views.py
+api/collection/migrations/
+api/collection/migrations/__init__.py
+api/configuraciones_api/
+api/configuraciones_api/__init__.py
+api/configuraciones_api/admin.py
+api/configuraciones_api/apps.py
+api/configuraciones_api/forms.py
+api/configuraciones_api/helpers.py
+api/configuraciones_api/loader.py
+api/configuraciones_api/models.py
+api/configuraciones_api/urls.py
+api/configuraciones_api/views.py
+api/configuraciones_api/__pycache__/
+api/configuraciones_api/__pycache__/__init__.cpython-311.pyc
+api/configuraciones_api/__pycache__/admin.cpython-311.pyc
+api/configuraciones_api/__pycache__/apps.cpython-311.pyc
+api/configuraciones_api/__pycache__/forms.cpython-311.pyc
+api/configuraciones_api/__pycache__/helpers.cpython-311.pyc
+api/configuraciones_api/__pycache__/models.cpython-311.pyc
+api/configuraciones_api/__pycache__/urls.cpython-311.pyc
+api/configuraciones_api/__pycache__/views.cpython-311.pyc
+api/configuraciones_api/migrations/
+api/configuraciones_api/migrations/0001_initial.py
+api/configuraciones_api/migrations/__init__.py
+api/configuraciones_api/migrations/__pycache__/
+api/configuraciones_api/migrations/__pycache__/0001_initial.cpython-311.pyc
+api/configuraciones_api/migrations/__pycache__/__init__.cpython-311.pyc
+api/core/
+api/core/__init__.py
+api/core/admin.py
+api/core/apps.py
+api/core/auth_services.py
+api/core/bank_services.py
+api/core/choices.py
+api/core/forms.py
+api/core/middleware.py
+api/core/mixin.py
+api/core/models.py
+api/core/serializers.py
+api/core/services.py
+api/core/tests.py
+api/core/urls.py
+api/core/utils.py
+api/core/validator.py
+api/core/views.py
+api/core/__pycache__/
+api/core/__pycache__/__init__.cpython-311.pyc
+api/core/__pycache__/admin.cpython-311.pyc
+api/core/__pycache__/apps.cpython-311.pyc
+api/core/__pycache__/auth_services.cpython-311.pyc
+api/core/__pycache__/bank_services.cpython-311.pyc
+api/core/__pycache__/choices.cpython-311.pyc
+api/core/__pycache__/forms.cpython-311.pyc
+api/core/__pycache__/middleware.cpython-311.pyc
+api/core/__pycache__/mixin.cpython-311.pyc
+api/core/__pycache__/models.cpython-311.pyc
+api/core/__pycache__/serializers.cpython-311.pyc
+api/core/__pycache__/services.cpython-311.pyc
+api/core/__pycache__/urls.cpython-311.pyc
+api/core/__pycache__/views.cpython-311.pyc
+api/core/management/
+api/core/management/commands/
+api/core/management/commands/__init__.py
+api/core/management/commands/genkey.py
+api/core/management/commands/genkeyBDD.py
+api/core/management/commands/verificar_transferencias.py
+api/core/migrations/
+api/core/migrations/0001_initial.py
+api/core/migrations/__init__.py
+api/core/migrations/__pycache__/
+api/core/migrations/__pycache__/0001_initial.cpython-311.pyc
+api/core/migrations/__pycache__/__init__.cpython-311.pyc
+api/core/templatetags/
+api/core/templatetags/custom_filters.py
+api/core/templatetags/__pycache__/
+api/core/templatetags/__pycache__/custom_filters.cpython-311.pyc
+api/gpt/
+api/gpt/__init__.py
+api/gpt/admin.py
+api/gpt/apps.py
+api/gpt/forms.py
+api/gpt/helpers.py
+api/gpt/models.py
+api/gpt/urls.py
+api/gpt/utils.py
+api/gpt/views.py
+api/gpt/views2.py
+api/gpt/migrations/
+api/gpt/migrations/__init__.py
+api/gpt2/
+api/gpt2/__init__.py
+api/gpt2/admin.py
+api/gpt2/apps.py
+api/gpt2/forms.py
+api/gpt2/helpers.py
+api/gpt2/models.py
+api/gpt2/urls.py
+api/gpt2/utils.py
+api/gpt2/views.py
+api/gpt2/migrations/
+api/gpt2/migrations/__init__.py
+api/gpt3/
+api/gpt3/__init__.py
+api/gpt3/admin.py
+api/gpt3/apps.py
+api/gpt3/bank_client.py
+api/gpt3/forms.py
+api/gpt3/generate_aml.py
+api/gpt3/generate_xml.py
+api/gpt3/helpers.py
+api/gpt3/models.py
+api/gpt3/schemas.py
+api/gpt3/urls.py
+api/gpt3/utils2.py
+api/gpt3/views2.py
+api/gpt3/__pycache__/
+api/gpt3/__pycache__/__init__.cpython-311.pyc
+api/gpt3/__pycache__/admin.cpython-311.pyc
+api/gpt3/__pycache__/apps.cpython-311.pyc
+api/gpt3/__pycache__/forms.cpython-311.pyc
+api/gpt3/__pycache__/helpers.cpython-311.pyc
+api/gpt3/__pycache__/models.cpython-311.pyc
+api/gpt3/__pycache__/schemas.cpython-311.pyc
+api/gpt3/__pycache__/urls.cpython-311.pyc
+api/gpt3/__pycache__/utils2.cpython-311.pyc
+api/gpt3/__pycache__/views2.cpython-311.pyc
+api/gpt3/migrations/
+api/gpt3/migrations/0001_initial.py
+api/gpt3/migrations/__init__.py
+api/gpt3/migrations/__pycache__/
+api/gpt3/migrations/__pycache__/0001_initial.cpython-311.pyc
+api/gpt3/migrations/__pycache__/__init__.cpython-311.pyc
+api/gpt4/
+api/gpt4/__init__.py
+api/gpt4/admin.py
+api/gpt4/apps.py
+api/gpt4/conexion_banco.py
+api/gpt4/decorators.py
+api/gpt4/forms.py
+api/gpt4/models.py
+api/gpt4/urls.py
+api/gpt4/utils.py
+api/gpt4/utils_transfer.py
+api/gpt4/views.py
+api/gpt4/__pycache__/
+api/gpt4/__pycache__/__init__.cpython-311.pyc
+api/gpt4/__pycache__/admin.cpython-311.pyc
+api/gpt4/__pycache__/apps.cpython-311.pyc
+api/gpt4/__pycache__/conexion_banco.cpython-311.pyc
+api/gpt4/__pycache__/decorators.cpython-311.pyc
+api/gpt4/__pycache__/forms.cpython-311.pyc
+api/gpt4/__pycache__/models.cpython-311.pyc
+api/gpt4/__pycache__/urls.cpython-311.pyc
+api/gpt4/__pycache__/utils.cpython-311.pyc
+api/gpt4/__pycache__/views.cpython-311.pyc
+api/gpt4/migrations/
+api/gpt4/migrations/0001_initial.py
+api/gpt4/migrations/__init__.py
+api/gpt4/migrations/__pycache__/
+api/gpt4/migrations/__pycache__/0001_initial.cpython-311.pyc
+api/gpt4/migrations/__pycache__/__init__.cpython-311.pyc
+api/sandbox/
+api/sandbox/__init__.py
+api/sandbox/admin.py
+api/sandbox/apps.py
+api/sandbox/forms.py
+api/sandbox/models.py
+api/sandbox/serializers.py
+api/sandbox/services.py
+api/sandbox/tests.py
+api/sandbox/urls.py
+api/sandbox/views.py
+api/sandbox/migrations/
+api/sandbox/migrations/__init__.py
+api/sct/
+api/sct/__init__.py
+api/sct/admin.py
+api/sct/apps.py
+api/sct/diagrama_proceso.txt
+api/sct/forms.py
+api/sct/generate_aml.py
+api/sct/generate_pdf.py
+api/sct/generate_xml.py
+api/sct/generate_xml2.py
+api/sct/generate_xml3.py
+api/sct/helpers.py
+api/sct/models.py
+api/sct/process_bank.py
+api/sct/process_bank_json_xml_aml.py
+api/sct/process_deutsche_bank.py
+api/sct/process_json.py
+api/sct/process_transfer.py
+api/sct/process_xml_send.py
+api/sct/process_xml_send2.py
+api/sct/serializers.py
+api/sct/services.py
+api/sct/tests.py
+api/sct/urls.py
+api/sct/views.py
+api/sct/migrations/
+api/sct/migrations/__init__.py
+api/sepa_payment/
+api/sepa_payment/__init__.py
+api/sepa_payment/admin.py
+api/sepa_payment/apps.py
+api/sepa_payment/forms.py
+api/sepa_payment/models.py
+api/sepa_payment/services.py
+api/sepa_payment/signals.py
+api/sepa_payment/tests.py
+api/sepa_payment/urls.py
+api/sepa_payment/views.py
+api/sepa_payment/migrations/
+api/sepa_payment/migrations/__init__.py
+api/transactions/
+api/transactions/admin.py
+api/transactions/apps.py
+api/transactions/forms.py
+api/transactions/models.py
+api/transactions/serializers.py
+api/transactions/tests.py
+api/transactions/views.py
+api/transactions/views_sepa.py
+api/transactions/views_sepa_transactions.txt
+api/transactions/views_transactions.txt
+api/transactions/__pycache__/
+api/transactions/__pycache__/views.cpython-311.pyc
+api/transactions/migrations/
+api/transactions/migrations/__init__.py
+api/transfers/
+api/transfers/__init__.py
+api/transfers/admin.py
+api/transfers/apps.py
+api/transfers/forms.py
+api/transfers/models.py
+api/transfers/serializers.py
+api/transfers/tests.py
+api/transfers/urls.py
+api/transfers/views.py
+api/transfers/views_all.py
+api/transfers/views_api.py
+api/transfers/views_api_copy.py
+api/transfers/views_com.txt
+api/transfers/views_com2.py
+api/transfers/views_copy.py
+api/transfers/views_copy_transfers.txt
+api/transfers/views_transfers.txt
+api/transfers/__pycache__/
+api/transfers/__pycache__/__init__.cpython-311.pyc
+api/transfers/__pycache__/admin.cpython-311.pyc
+api/transfers/__pycache__/apps.cpython-311.pyc
+api/transfers/__pycache__/forms.cpython-311.pyc
+api/transfers/__pycache__/models.cpython-311.pyc
+api/transfers/__pycache__/serializers.cpython-311.pyc
+api/transfers/__pycache__/urls.cpython-311.pyc
+api/transfers/__pycache__/views.cpython-311.pyc
+api/transfers/__pycache__/views_all.cpython-311.pyc
+api/transfers/__pycache__/views_api.cpython-311.pyc
+api/transfers/__pycache__/views_com2.cpython-311.pyc
+api/transfers/__pycache__/views_copy.cpython-311.pyc
+api/transfers/migrations/
+api/transfers/migrations/0001_initial.py
+api/transfers/migrations/__init__.py
+api/transfers/migrations/__pycache__/
+api/transfers/migrations/__pycache__/0001_initial.cpython-311.pyc
+api/transfers/migrations/__pycache__/__init__.cpython-311.pyc
+bin/
+bin/post_compile
+certs/
+certs/desarrollo.crt
+certs/desarrollo.key
+config/
+config/__init__.py
+config/asgi.py
+config/urls.py
+config/wsgi.py
+config/__pycache__/
+config/__pycache__/__init__.cpython-311.pyc
+config/__pycache__/urls.cpython-311.pyc
+config/schemas/
+config/schemas/pain.001.001.03.xsd
+config/schemas/pain.002.001.03.xsd
+config/settings/
+config/settings/__init__.py
+config/settings/base1.py
+config/settings/base2.py
+config/settings/configuración_dinamica.py
+config/settings/local.py
+config/settings/production.py
+config/settings/__pycache__/
+config/settings/__pycache__/__init__.cpython-311.pyc
+config/settings/__pycache__/base1.cpython-311.pyc
+config/settings/__pycache__/local.cpython-311.pyc
+config/utils/
+config/utils/__init__.py
+config/utils/validar_entorno.py
+media/
+media/claves/
+media/claves/jwks_6316220d-fc7b-4678-902c-1cdf60acbc8e.json
+media/claves/priv_6316220d-fc7b-4678-902c-1cdf60acbc8e.pem
+media/claves/pub_6316220d-fc7b-4678-902c-1cdf60acbc8e.pem
+middleware/
+middleware/configuracion_entorno.py
+schemas/
+schemas/__init__.py
+schemas/pain.001.001.03.xsd
+schemas/pain.002.001.03.xsd
+schemas/zCod.md
+schemas/certs/
+schemas/certs/desarrollo.crt
+schemas/certs/desarrollo.key
+schemas/keys/
+schemas/keys/client_id.key
+schemas/keys/client_secret.key
+schemas/keys/ecdsa_private_key.pem
+schemas/keys/ecdsa_public_key.pem
+schemas/keys/jwks_public.json
+schemas/keys/private_key.pem
+schemas/keys/public_key.pem
+schemas/keys/secret.key
+schemas/keys/logs/
+schemas/keys/logs/clave_gen.log
+schemas/transferencias/
+schemas/transferencias/sepaCreditTransferRequestSchema.json
+schemas/xsd/
+schemas/xsd/aml_transaction_report.xsd
+schemas/xsd/pain.001.001.03.xsd
+schemas/xsd/pain.002.001.03.xsd
+static/
+static/favicon.ico
+static/css/
+static/css/bootstrap.min.css
+static/css/styles.css
+static/images/
+static/images/background.png
+static/js/
+static/js/bootstrap.bundle.min.js
+staticfiles/
+staticfiles/favicon.ico
+staticfiles/admin/
+staticfiles/admin/css/
+staticfiles/admin/css/autocomplete.css
+staticfiles/admin/css/base.css
+staticfiles/admin/css/changelists.css
+staticfiles/admin/css/dark_mode.css
+staticfiles/admin/css/dashboard.css
+staticfiles/admin/css/forms.css
+staticfiles/admin/css/login.css
+staticfiles/admin/css/nav_sidebar.css
+staticfiles/admin/css/responsive.css
+staticfiles/admin/css/responsive_rtl.css
+staticfiles/admin/css/rtl.css
+staticfiles/admin/css/unusable_password_field.css
+staticfiles/admin/css/widgets.css
+staticfiles/admin/css/vendor/
+staticfiles/admin/css/vendor/select2/
+staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.md
+staticfiles/admin/css/vendor/select2/select2.css
+staticfiles/admin/css/vendor/select2/select2.min.css
+staticfiles/admin/img/
+staticfiles/admin/img/LICENSE
+staticfiles/admin/img/README.txt
+staticfiles/admin/img/calendar-icons.svg
+staticfiles/admin/img/icon-addlink.svg
+staticfiles/admin/img/icon-alert.svg
+staticfiles/admin/img/icon-calendar.svg
+staticfiles/admin/img/icon-changelink.svg
+staticfiles/admin/img/icon-clock.svg
+staticfiles/admin/img/icon-deletelink.svg
+staticfiles/admin/img/icon-hidelink.svg
+staticfiles/admin/img/icon-no.svg
+staticfiles/admin/img/icon-unknown-alt.svg
+staticfiles/admin/img/icon-unknown.svg
+staticfiles/admin/img/icon-viewlink.svg
+staticfiles/admin/img/icon-yes.svg
+staticfiles/admin/img/inline-delete.svg
+staticfiles/admin/img/search.svg
+staticfiles/admin/img/selector-icons.svg
+staticfiles/admin/img/sorting-icons.svg
+staticfiles/admin/img/tooltag-add.svg
+staticfiles/admin/img/tooltag-arrowright.svg
+staticfiles/admin/img/gis/
+staticfiles/admin/img/gis/move_vertex_off.svg
+staticfiles/admin/img/gis/move_vertex_on.svg
+staticfiles/admin/js/
+staticfiles/admin/js/SelectBox.js
+staticfiles/admin/js/SelectFilter2.js
+staticfiles/admin/js/actions.js
+staticfiles/admin/js/autocomplete.js
+staticfiles/admin/js/calendar.js
+staticfiles/admin/js/cancel.js
+staticfiles/admin/js/change_form.js
+staticfiles/admin/js/core.js
+staticfiles/admin/js/filters.js
+staticfiles/admin/js/inlines.js
+staticfiles/admin/js/jquery.init.js
+staticfiles/admin/js/nav_sidebar.js
+staticfiles/admin/js/popup_response.js
+staticfiles/admin/js/prepopulate.js
+staticfiles/admin/js/prepopulate_init.js
+staticfiles/admin/js/theme.js
+staticfiles/admin/js/unusable_password_field.js
+staticfiles/admin/js/urlify.js
+staticfiles/admin/js/admin/
+staticfiles/admin/js/admin/DateTimeShortcuts.js
+staticfiles/admin/js/admin/RelatedObjectLookups.js
+staticfiles/admin/js/vendor/
+staticfiles/admin/js/vendor/jquery/
+staticfiles/admin/js/vendor/jquery/LICENSE.txt
+staticfiles/admin/js/vendor/jquery/jquery.js
+staticfiles/admin/js/vendor/jquery/jquery.min.js
+staticfiles/admin/js/vendor/select2/
+staticfiles/admin/js/vendor/select2/LICENSE.md
+staticfiles/admin/js/vendor/select2/select2.full.js
+staticfiles/admin/js/vendor/select2/select2.full.min.js
+staticfiles/admin/js/vendor/select2/i18n/
+staticfiles/admin/js/vendor/select2/i18n/af.js
+staticfiles/admin/js/vendor/select2/i18n/ar.js
+staticfiles/admin/js/vendor/select2/i18n/az.js
+staticfiles/admin/js/vendor/select2/i18n/bg.js
+staticfiles/admin/js/vendor/select2/i18n/bn.js
+staticfiles/admin/js/vendor/select2/i18n/bs.js
+staticfiles/admin/js/vendor/select2/i18n/ca.js
+staticfiles/admin/js/vendor/select2/i18n/cs.js
+staticfiles/admin/js/vendor/select2/i18n/da.js
+staticfiles/admin/js/vendor/select2/i18n/de.js
+staticfiles/admin/js/vendor/select2/i18n/dsb.js
+staticfiles/admin/js/vendor/select2/i18n/el.js
+staticfiles/admin/js/vendor/select2/i18n/en.js
+staticfiles/admin/js/vendor/select2/i18n/es.js
+staticfiles/admin/js/vendor/select2/i18n/et.js
+staticfiles/admin/js/vendor/select2/i18n/eu.js
+staticfiles/admin/js/vendor/select2/i18n/fa.js
+staticfiles/admin/js/vendor/select2/i18n/fi.js
+staticfiles/admin/js/vendor/select2/i18n/fr.js
+staticfiles/admin/js/vendor/select2/i18n/gl.js
+staticfiles/admin/js/vendor/select2/i18n/he.js
+staticfiles/admin/js/vendor/select2/i18n/hi.js
+staticfiles/admin/js/vendor/select2/i18n/hr.js
+staticfiles/admin/js/vendor/select2/i18n/hsb.js
+staticfiles/admin/js/vendor/select2/i18n/hu.js
+staticfiles/admin/js/vendor/select2/i18n/hy.js
+staticfiles/admin/js/vendor/select2/i18n/id.js
+staticfiles/admin/js/vendor/select2/i18n/is.js
+staticfiles/admin/js/vendor/select2/i18n/it.js
+staticfiles/admin/js/vendor/select2/i18n/ja.js
+staticfiles/admin/js/vendor/select2/i18n/ka.js
+staticfiles/admin/js/vendor/select2/i18n/km.js
+staticfiles/admin/js/vendor/select2/i18n/ko.js
+staticfiles/admin/js/vendor/select2/i18n/lt.js
+staticfiles/admin/js/vendor/select2/i18n/lv.js
+staticfiles/admin/js/vendor/select2/i18n/mk.js
+staticfiles/admin/js/vendor/select2/i18n/ms.js
+staticfiles/admin/js/vendor/select2/i18n/nb.js
+staticfiles/admin/js/vendor/select2/i18n/ne.js
+staticfiles/admin/js/vendor/select2/i18n/nl.js
+staticfiles/admin/js/vendor/select2/i18n/pl.js
+staticfiles/admin/js/vendor/select2/i18n/ps.js
+staticfiles/admin/js/vendor/select2/i18n/pt-BR.js
+staticfiles/admin/js/vendor/select2/i18n/pt.js
+staticfiles/admin/js/vendor/select2/i18n/ro.js
+staticfiles/admin/js/vendor/select2/i18n/ru.js
+staticfiles/admin/js/vendor/select2/i18n/sk.js
+staticfiles/admin/js/vendor/select2/i18n/sl.js
+staticfiles/admin/js/vendor/select2/i18n/sq.js
+staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.js
+staticfiles/admin/js/vendor/select2/i18n/sr.js
+staticfiles/admin/js/vendor/select2/i18n/sv.js
+staticfiles/admin/js/vendor/select2/i18n/th.js
+staticfiles/admin/js/vendor/select2/i18n/tk.js
+staticfiles/admin/js/vendor/select2/i18n/tr.js
+staticfiles/admin/js/vendor/select2/i18n/uk.js
+staticfiles/admin/js/vendor/select2/i18n/vi.js
+staticfiles/admin/js/vendor/select2/i18n/zh-CN.js
+staticfiles/admin/js/vendor/select2/i18n/zh-TW.js
+staticfiles/admin/js/vendor/xregexp/
+staticfiles/admin/js/vendor/xregexp/LICENSE.txt
+staticfiles/admin/js/vendor/xregexp/xregexp.js
+staticfiles/admin/js/vendor/xregexp/xregexp.min.js
+staticfiles/css/
+staticfiles/css/bootstrap.min.css
+staticfiles/css/styles.css
+staticfiles/debug_toolbar/
+staticfiles/debug_toolbar/css/
+staticfiles/debug_toolbar/css/print.css
+staticfiles/debug_toolbar/css/toolbar.css
+staticfiles/debug_toolbar/js/
+staticfiles/debug_toolbar/js/history.js
+staticfiles/debug_toolbar/js/redirect.js
+staticfiles/debug_toolbar/js/timer.js
+staticfiles/debug_toolbar/js/toolbar.js
+staticfiles/debug_toolbar/js/utils.js
+staticfiles/drf-yasg/
+staticfiles/drf-yasg/README
+staticfiles/drf-yasg/immutable.js
+staticfiles/drf-yasg/immutable.min.js
+staticfiles/drf-yasg/insQ.js
+staticfiles/drf-yasg/insQ.min.js
+staticfiles/drf-yasg/redoc-init.js
+staticfiles/drf-yasg/style.css
+staticfiles/drf-yasg/swagger-ui-init.js
+staticfiles/drf-yasg/redoc-old/
+staticfiles/drf-yasg/redoc-old/LICENSE
+staticfiles/drf-yasg/redoc-old/redoc.min.js
+staticfiles/drf-yasg/redoc-old/redoc.min.js.map
+staticfiles/drf-yasg/redoc/
+staticfiles/drf-yasg/redoc/LICENSE
+staticfiles/drf-yasg/redoc/redoc-logo.png
+staticfiles/drf-yasg/redoc/redoc.min.js
+staticfiles/drf-yasg/redoc/redoc.standalone.js.map
+staticfiles/drf-yasg/swagger-ui-dist/
+staticfiles/drf-yasg/swagger-ui-dist/LICENSE
+staticfiles/drf-yasg/swagger-ui-dist/NOTICE
+staticfiles/drf-yasg/swagger-ui-dist/absolute-path.js
+staticfiles/drf-yasg/swagger-ui-dist/favicon-32x32.png
+staticfiles/drf-yasg/swagger-ui-dist/index.css
+staticfiles/drf-yasg/swagger-ui-dist/index.js
+staticfiles/drf-yasg/swagger-ui-dist/oauth2-redirect.html
+staticfiles/drf-yasg/swagger-ui-dist/swagger-initializer.js
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js.map
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui-es-bundle-core.js
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui-es-bundle-core.js.map
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui-es-bundle.js
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui-es-bundle.js.map
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js.map
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui.css
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui.css.map
+staticfiles/drf-yasg/swagger-ui-dist/swagger-ui.js.map
+staticfiles/images/
+staticfiles/images/background.png
+staticfiles/js/
+staticfiles/js/bootstrap.bundle.min.js
+staticfiles/rest_framework/
+staticfiles/rest_framework/css/
+staticfiles/rest_framework/css/bootstrap-theme.min.css
+staticfiles/rest_framework/css/bootstrap-theme.min.css.map
+staticfiles/rest_framework/css/bootstrap-tweaks.css
+staticfiles/rest_framework/css/bootstrap.min.css
+staticfiles/rest_framework/css/bootstrap.min.css.map
+staticfiles/rest_framework/css/default.css
+staticfiles/rest_framework/css/font-awesome-4.0.3.css
+staticfiles/rest_framework/css/prettify.css
+staticfiles/rest_framework/docs/
+staticfiles/rest_framework/docs/css/
+staticfiles/rest_framework/docs/css/base.css
+staticfiles/rest_framework/docs/css/highlight.css
+staticfiles/rest_framework/docs/css/jquery.json-view.min.css
+staticfiles/rest_framework/docs/img/
+staticfiles/rest_framework/docs/img/favicon.ico
+staticfiles/rest_framework/docs/img/grid.png
+staticfiles/rest_framework/docs/js/
+staticfiles/rest_framework/docs/js/api.js
+staticfiles/rest_framework/docs/js/highlight.pack.js
+staticfiles/rest_framework/docs/js/jquery.json-view.min.js
+staticfiles/rest_framework/fonts/
+staticfiles/rest_framework/fonts/fontawesome-webfont.eot
+staticfiles/rest_framework/fonts/fontawesome-webfont.svg
+staticfiles/rest_framework/fonts/fontawesome-webfont.ttf
+staticfiles/rest_framework/fonts/fontawesome-webfont.woff
+staticfiles/rest_framework/fonts/glyphicons-halflings-regular.eot
+staticfiles/rest_framework/fonts/glyphicons-halflings-regular.svg
+staticfiles/rest_framework/fonts/glyphicons-halflings-regular.ttf
+staticfiles/rest_framework/fonts/glyphicons-halflings-regular.woff
+staticfiles/rest_framework/fonts/glyphicons-halflings-regular.woff2
+staticfiles/rest_framework/img/
+staticfiles/rest_framework/img/glyphicons-halflings-white.png
+staticfiles/rest_framework/img/glyphicons-halflings.png
+staticfiles/rest_framework/img/grid.png
+staticfiles/rest_framework/js/
+staticfiles/rest_framework/js/ajax-form.js
+staticfiles/rest_framework/js/bootstrap.min.js
+staticfiles/rest_framework/js/coreapi-0.1.1.js
+staticfiles/rest_framework/js/csrf.js
+staticfiles/rest_framework/js/default.js
+staticfiles/rest_framework/js/jquery-3.7.1.min.js
+staticfiles/rest_framework/js/load-ajax-form.js
+staticfiles/rest_framework/js/prettify-min.js
+templates/
+templates/base.html
+templates/dashboard.html
+templates/ebics_table.html
+templates/home.html
+templates/layout.html
+templates/login.html
+templates/readme.html
+templates/signup.html
+templates/api/
+templates/api/GPT/
+templates/api/GPT/account_list.html
+templates/api/GPT/amount_list.html
+templates/api/GPT/cancel_success.html
+templates/api/GPT/create_account.html
+templates/api/GPT/create_amount.html
+templates/api/GPT/create_creditor.html
+templates/api/GPT/create_debtor.html
+templates/api/GPT/create_financial_institution.html
+templates/api/GPT/create_party.html
+templates/api/GPT/create_payment_identification.html
+templates/api/GPT/create_postal_address.html
+templates/api/GPT/creditor_list.html
+templates/api/GPT/debtor_list.html
+templates/api/GPT/financial_institution_list.html
+templates/api/GPT/initiate_transfer.html
+templates/api/GPT/postal_address_list.html
+templates/api/GPT/retry_success.html
+templates/api/GPT/transfer_list.html
+templates/api/GPT/transfer_status.html
+templates/api/GPT/transfer_success.html
+templates/api/GPT3/
+templates/api/GPT3/account_list.html
+templates/api/GPT3/amount_list.html
+templates/api/GPT3/cancel_success.html
+templates/api/GPT3/crear_bulk.html
+templates/api/GPT3/crear_transferencia.html
+templates/api/GPT3/create_account.html
+templates/api/GPT3/create_amount.html
+templates/api/GPT3/create_creditor.html
+templates/api/GPT3/create_debtor.html
+templates/api/GPT3/create_financial_institution.html
+templates/api/GPT3/create_postal_address.html
+templates/api/GPT3/creditor_list.html
+templates/api/GPT3/debtor_list.html
+templates/api/GPT3/detalle_bulk.html
+templates/api/GPT3/detalle_transferencia.html
+templates/api/GPT3/estado_bulk_success.html
+templates/api/GPT3/financial_institution_list.html
+templates/api/GPT3/listar_bulk.html
+templates/api/GPT3/listar_transferencias.html
+templates/api/GPT3/postal_address_list.html
+templates/api/GPT3/send_bulk_success.html
+templates/api/GPT4/
+templates/api/GPT4/create_clientid.html
+templates/api/GPT4/create_creditor.html
+templates/api/GPT4/create_creditor_account.html
+templates/api/GPT4/create_creditor_agent.html
+templates/api/GPT4/create_debtor.html
+templates/api/GPT4/create_debtor_account.html
+templates/api/GPT4/create_kid.html
+templates/api/GPT4/create_transfer.html
+templates/api/GPT4/edit_transfer.html
+templates/api/GPT4/list_creditor_accounts.html
+templates/api/GPT4/list_creditor_agents.html
+templates/api/GPT4/list_creditors.html
+templates/api/GPT4/list_debtor.html
+templates/api/GPT4/list_debtor_accounts.html
+templates/api/GPT4/list_logs.html
+templates/api/GPT4/list_transfer.html
+templates/api/GPT4/oauth2_authorize.html
+templates/api/GPT4/oauth2_authorize2.html
+templates/api/GPT4/oauth2_callback.html
+templates/api/GPT4/send_transfer.html
+templates/api/GPT4/transfer_detail.html
+templates/api/GPT4/transfer_detail1.html
+templates/api/GPT4/transfer_sca.html
+templates/api/SCT/
+templates/api/SCT/cancel_success.html
+templates/api/SCT/create_account.html
+templates/api/SCT/create_address.html
+templates/api/SCT/create_creditor.html
+templates/api/SCT/create_creditor_agent.html
+templates/api/SCT/create_debtor.html
+templates/api/SCT/create_instructed_amount.html
+templates/api/SCT/initiate_transfer.html
+templates/api/SCT/sct_list5.html
+templates/api/SCT/sct_proc5.html
+templates/api/SCT/sct_send5.html
+templates/api/SCT/sct_upda5.html
+templates/api/SCT/transfer_confirm_delete.html
+templates/api/SCT/transfer_form.html
+templates/api/SCT/transfer_list.html
+templates/api/SCT/transfer_list2.html
+templates/api/SCT/transfer_status.html
+templates/api/SCT/transfer_success.html
+templates/api/SEPA/
+templates/api/SEPA/transfer_confirm_delete.html
+templates/api/SEPA/transfer_form.html
+templates/api/SEPA/transfer_list.html
+templates/api/accounts/
+templates/api/accounts/account_confirm_delete.html
+templates/api/accounts/account_form.html
+templates/api/accounts/account_list.html
+templates/api/claves/
+templates/api/claves/eliminar.html
+templates/api/claves/formulario.html
+templates/api/claves/lista.html
+templates/api/collection/
+templates/api/collection/collection_confirm_delete.html
+templates/api/collection/collection_form.html
+templates/api/collection/collection_list.html
+templates/api/collection/mandate_confirm_delete.html
+templates/api/collection/mandate_form.html
+templates/api/collection/mandate_list.html
+templates/api/configuraciones/
+templates/api/configuraciones/eliminar.html
+templates/api/configuraciones/formulario.html
+templates/api/configuraciones/lista.html
+templates/api/core/
+templates/api/core/core_model_confirm_delete.html
+templates/api/core/core_model_form.html
+templates/api/core/core_model_list.html
+templates/api/core/debtor_confirm_delete.html
+templates/api/core/debtor_form.html
+templates/api/core/debtor_list.html
+templates/api/core/iban_confirm_delete.html
+templates/api/core/iban_form.html
+templates/api/core/iban_list.html
+templates/api/extras/
+templates/api/extras/diagnostico_banco.html
+templates/api/extras/transfer_form.html
+templates/api/sandbox/
+templates/api/sandbox/incomingcollection_form.html
+templates/api/sandbox/incomingcollection_list.html
+templates/api/sepa_payment/
+templates/api/sepa_payment/list_transfers.html
+templates/api/sepa_payment/status.html
+templates/api/sepa_payment/transfer.html
+templates/api/transactions/
+templates/api/transactions/transaction_confirm_delete.html
+templates/api/transactions/transaction_detail.html
+templates/api/transactions/transaction_form.html
+templates/api/transactions/transaction_list.html
+templates/api/transfers/
+templates/api/transfers/sepa_transaction_form.html
+templates/api/transfers/sepa_transaction_list.html
+templates/api/transfers/sepa_transfer_form.html
+templates/api/transfers/transfer_confirm_delete.html
+templates/api/transfers/transfer_form.html
+templates/api/transfers/transfer_list.html
+templates/forms/
+templates/forms/base_confirm_delete.html
+templates/forms/base_form.html
+templates/forms/base_list.html
+templates/partials/
+templates/partials/footer.html
+templates/partials/header.html
+templates/partials/navGeneral.html
+templates/partials/navGeneral2.html
+templates/partials/navGeneralFuncional.html
+templates/partials/navGeneral/
+templates/partials/navGeneral/accounts/
+templates/partials/navGeneral/accounts/index.html
+templates/partials/navGeneral/auth/
+templates/partials/navGeneral/auth/index.html
+templates/partials/navGeneral/collection/
+templates/partials/navGeneral/collection/index.html
+templates/partials/navGeneral/core/
+templates/partials/navGeneral/core/index.html
+templates/partials/navGeneral/sct/
+templates/partials/navGeneral/sct/index.html
+templates/partials/navGeneral/sepa_payment/
+templates/partials/navGeneral/sepa_payment/index.html
+templates/partials/navGeneral/transactions/
+templates/partials/navGeneral/transactions/index.html
+templates/partials/navGeneral/transfers/
+templates/partials/navGeneral/transfers/index.html
+
+sent 24,106,027 bytes  received 14,163 bytes  48,240,380.00 bytes/sec
+total size is 24,049,569  speedup is 1.00
+📂 Cambios enviados a /home/markmur88/api_bank_heroku.
+---///---///---///---///---///---///---///---///---///---
+
+🧾 Ajustando DJANGO_ENV en base1.py en /home/markmur88/api_bank_heroku
+✅ DJANGO_ENV actualizado a local en __init__.py.
+---///---///---///---///---///---///---///---///---///---
+
+---------------------------------------- VARIABLES A HEROKU ----------------------------------------
+------------------------------------------ SUBIR A GITHUB ------------------------------------------
+------------------------------------------ SUBIR A HEROKU ------------------------------------------
+-------------------------------------- SINCRONIZACION BDD WEB --------------------------------------
+----------------------------------------------- VPS ------------------------------------------------
+----------------------------------- SETUP COMPLETO CORETRANSAPI ------------------------------------
+------------------------------------- VERIFICAR HTTPS HEADERS --------------------------------------
+------------------------------------- REPORTE DE SALUD DEL VPS -------------------------------------
+------------------------------------- GENERAR CLAVE PGP NJALLA -------------------------------------
+---------------------------------------- DEPLOY INCREMENTAL ----------------------------------------
+--------------------------------- REINICIAR SERVICIO CORETRANSAPI ----------------------------------
+---------------------------------- VERIFICAR ESTADO CORETRANSAPI -----------------------------------
+------------------------------------- VERIFICAR SSL Y PUERTOS --------------------------------------
+----------------------------------- STATUS COMPLETO CONSOLIDADO ------------------------------------
+---------------------------------------------- CLEAN -----------------------------------------------
+----------------------------------------------- SSL ------------------------------------------------
+------------------------------------------ LOCAL CON SSL -------------------------------------------
+--------------------------------------------- GUNICORN ---------------------------------------------
+-------------------------------------------- CAMBIO MAC --------------------------------------------
+----------------------------------------------- UFW ------------------------------------------------
+----------------------------------------- SCRIPT COMPLETO ------------------------------------------
+api_bank_h2 ✅ Proyecto iniciado correctamente ✅
+
+
+📋 RESUMEN FINAL:
+🔹 Log principal de ejecución: $LOG_DIR/full_deploy.log
+🔹 Log de despliegue resumido: /home/markmur88/api_bank_h2/scripts/logs/01_full_deploy/full_deploy.log
+🔹 Estado: ✅ Éxito
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo supervisorctl status coretransapi
+
+coretransapi                     RUNNING   pid 52205, uptime 0:05:50
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo supervisorctl restart coretransapi
+
+coretransapi: stopped
+coretransapi: started
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ ls -l /home/markmur88/api_bank_heroku/api.sock
+
+srwxrwxrwx 1 markmur88 markmur88 0 Jun  7 15:50 /home/markmur88/api_bank_heroku/api.sock
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo chown markmur88:www-data /home/markmur88/api_bank_heroku/api.sock
+sudo chmod 770 /home/markmur88/api_bank_heroku/api.sock
+
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ ls -l /home/markmur88/api_bank_heroku/api.sock                        
+
+srwxrwx--- 1 markmur88 www-data 0 Jun  7 15:50 /home/markmur88/api_bank_heroku/api.sock
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ https://api.coretransapi.com/
+zsh: no such file or directory: https://api.coretransapi.com/
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo systemctl reload nginx
+
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo tail -n 50 /var/log/nginx/error.log
+
+2025/06/07 14:42:42 [error] 43191#43191: *1654 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /indice.cgi HTTP/1.1", upstream: "http://127.0.0.1:8000/indice.cgi", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:42 [error] 43191#43191: *1655 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /status HTTP/1.1", upstream: "http://127.0.0.1:8000/status", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:42 [error] 43191#43191: *1662 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /menu.pl HTTP/1.1", upstream: "http://127.0.0.1:8000/menu.pl", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:42 [error] 43191#43191: *1663 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /info.asp HTTP/1.1", upstream: "http://127.0.0.1:8000/info.asp", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:42 [error] 43191#43191: *1668 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /menu.shtml HTTP/1.1", upstream: "http://127.0.0.1:8000/menu.shtml", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:42 [error] 43191#43191: *1669 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /cgi-bin/param.cgi?get_device_conf HTTP/1.1", upstream: "http://127.0.0.1:8000/cgi-bin/param.cgi?get_device_conf", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:42 [error] 43191#43191: *1675 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /lms/db HTTP/1.1", upstream: "http://127.0.0.1:8000/lms/db", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:42 [error] 43191#43191: *1674 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /main.html HTTP/1.1", upstream: "http://127.0.0.1:8000/main.html", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1682 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /start.html HTTP/1.1", upstream: "http://127.0.0.1:8000/start.html", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1683 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /ext-js/app/common/zld_product_spec.js HTTP/1.1", upstream: "http://127.0.0.1:8000/ext-js/app/common/zld_product_spec.js", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1688 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /admin.cfm HTTP/1.1", upstream: "http://127.0.0.1:8000/admin.cfm", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1689 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /login/login.html HTTP/1.1", upstream: "http://127.0.0.1:8000/login/login.html", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1694 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /default.cgi HTTP/1.1", upstream: "http://127.0.0.1:8000/default.cgi", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1695 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /allversions HTTP/1.1", upstream: "http://127.0.0.1:8000/allversions", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1702 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /index.pl HTTP/1.1", upstream: "http://127.0.0.1:8000/index.pl", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1703 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /versions HTTP/1.1", upstream: "http://127.0.0.1:8000/versions", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1708 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /admin.aspx HTTP/1.1", upstream: "http://127.0.0.1:8000/admin.aspx", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:43 [error] 43191#43191: *1709 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /r-seenet/index.php HTTP/1.1", upstream: "http://127.0.0.1:8000/r-seenet/index.php", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1714 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /main.jsa HTTP/1.1", upstream: "http://127.0.0.1:8000/main.jsa", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1715 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /api/vip/i18n/api/v2/translation/products/vRNIUI/versions/1 HTTP/1.1", upstream: "http://127.0.0.1:8000/api/vip/i18n/api/v2/translation/products/vRNIUI/versions/1", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1722 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /base.pl HTTP/1.1", upstream: "http://127.0.0.1:8000/base.pl", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1723 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /tos/index.php?user/login HTTP/1.1", upstream: "http://127.0.0.1:8000/tos/index.php?user/login", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1728 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /c/login HTTP/1.1", upstream: "http://127.0.0.1:8000/c/login", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1729 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /base.php HTTP/1.1", upstream: "http://127.0.0.1:8000/base.php", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1734 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /inicio.aspx HTTP/1.1", upstream: "http://127.0.0.1:8000/inicio.aspx", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1735 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /WebApp/js/UI_String.js HTTP/1.1", upstream: "http://127.0.0.1:8000/WebApp/js/UI_String.js", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1742 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /base.jsp HTTP/1.1", upstream: "http://127.0.0.1:8000/base.jsp", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:44 [error] 43191#43191: *1743 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /login.aspx HTTP/1.1", upstream: "http://127.0.0.1:8000/login.aspx", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1748 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /indice.aspx HTTP/1.1", upstream: "http://127.0.0.1:8000/indice.aspx", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1749 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /officescan/console/html/localization.js HTTP/1.1", upstream: "http://127.0.0.1:8000/officescan/console/html/localization.js", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1754 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /start.php HTTP/1.1", upstream: "http://127.0.0.1:8000/start.php", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1755 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /officescan/console/cgi/cgiChkMasterPwd.exe HTTP/1.1", upstream: "http://127.0.0.1:8000/officescan/console/cgi/cgiChkMasterPwd.exe", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1762 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /base.jsa HTTP/1.1", upstream: "http://127.0.0.1:8000/base.jsa", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1763 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /IPCamDesc.xml HTTP/1.1", upstream: "http://127.0.0.1:8000/IPCamDesc.xml", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1768 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /kylin/ HTTP/1.1", upstream: "http://127.0.0.1:8000/kylin/", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1769 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /base.jhtml HTTP/1.1", upstream: "http://127.0.0.1:8000/base.jhtml", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1775 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /api/v1.0/environment HTTP/1.1", upstream: "http://127.0.0.1:8000/api/v1.0/environment", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:45 [error] 43191#43191: *1774 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET /index.shtml HTTP/1.1", upstream: "http://127.0.0.1:8000/index.shtml", host: "504e1ef2.host.njalla.net"
+2025/06/07 14:42:50 [error] 43191#43191: *1860 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET / HTTP/1.0", upstream: "http://127.0.0.1:8000/"
+2025/06/07 14:42:50 [error] 43191#43191: *1875 connect() failed (111: Connection refused) while connecting to upstream, client: 143.42.206.215, server: api.coretransapi.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "504e1ef2.host.njalla.net"
+2025/06/07 15:09:27 [error] 47317#47317: *1929 connect() failed (111: Connection refused) while connecting to upstream, client: 149.88.24.198, server: api.coretransapi.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "api.coretransapi.com"
+2025/06/07 15:09:28 [error] 47317#47317: *1929 connect() failed (111: Connection refused) while connecting to upstream, client: 149.88.24.198, server: api.coretransapi.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:8000/favicon.ico", host: "api.coretransapi.com", referrer: "https://api.coretransapi.com/"
+2025/06/07 15:19:18 [error] 48460#48460: *1934 connect() failed (111: Connection refused) while connecting to upstream, client: 171.244.43.14, server: api.coretransapi.com, request: "GET /robots.txt HTTP/1.1", upstream: "http://127.0.0.1:8000/robots.txt", host: "api.coretransapi.com"
+2025/06/07 15:25:29 [error] 49687#49687: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 149.88.24.198, server: api.coretransapi.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "api.coretransapi.com"
+2025/06/07 15:44:35 [error] 52136#52136: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 149.88.24.198, server: api.coretransapi.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "api.coretransapi.com"
+2025/06/07 15:44:46 [error] 52136#52136: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 135.237.123.168, server: api.coretransapi.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "80.78.30.242"
+2025/06/07 15:44:58 [error] 52224#52224: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 149.88.24.198, server: api.coretransapi.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "api.coretransapi.com"
+2025/06/07 15:47:28 [error] 52224#52224: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 149.88.24.198, server: api.coretransapi.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "api.coretransapi.com"
+2025/06/07 15:49:43 [error] 52224#52224: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 149.88.24.198, server: api.coretransapi.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "api.coretransapi.com"
+2025/06/07 15:49:43 [error] 52224#52224: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 149.88.24.198, server: api.coretransapi.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:8000/favicon.ico", host: "api.coretransapi.com", referrer: "https://api.coretransapi.com/"
+                                                                                                             
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ sudo supervisorctl restart coretransapi
+sudo systemctl restart nginx
+
+coretransapi: stopped
+coretransapi: started
+                                                                                                          
+┌──(markmur88㉿coretransapi)-[~/api_bank_h2]
+└─$ source /home/markmur88/envAPP/bin/activate
+                                                                                                          
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_heroku]
+└─$ sudo nano /etc/nginx/sites-available/default      
+
+                                                                                                          
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_heroku]
+└─$ sudo nginx -t && sudo systemctl reload nginx
+
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+                                                                                                          
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_heroku]
+└─$ sudo supervisorctl status coretransapi
+ls -l /home/markmur88/api_bank_heroku/api.sock
+
+coretransapi                     RUNNING   pid 53731, uptime 0:08:45
+srwxrwxrwx 1 markmur88 markmur88 0 Jun  7 15:53 /home/markmur88/api_bank_heroku/api.sock
+                                                                                                          
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_heroku]
+└─$ sudo grep -R "proxy_pass" /etc/nginx/sites-enabled/
+
+/etc/nginx/sites-enabled/coretransapi.conf:        proxy_pass http://127.0.0.1:8000;
+                                                                                                          
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_heroku]
+└─$ sudo nano /etc/nginx/sites-enabled/coretransapi.conf
+
+                                                                                                          
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_heroku]
+└─$ sudo nginx -t && sudo systemctl reload nginx
+
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+                                                                                                          
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_heroku]
+└─$ api                                         
+                                                                                                          
+┌──(envAPP)─(markmur88㉿coretransapi)-[~/api_bank_h2]
+🗒 /home/markmur88/Notas/texto/2025-06-08.txt (2025-06-08 08:26:44)
+[03:16]
+despliegue
+[03:23]
+deploy
+[03:48]
+simulador
+[10:09]
+listo tor simulador y proyecto
+[10:27]
+Instalar Heroku CLI
+[11:48]
+onion
+[11:49]
+subir servidor
+[12:24]
+simulador
+[12:35]
+sincronizacion
+[12:41]
+nombre archivo
+[12:49]
+arrancó simulador
+[15:09]
+JWT Y TOKEN
+[15:10]
+sincronizado, Git, H2
+[15:26]
+TrasnfernciaSimilada, vevn PyJWT
+🗒 /home/markmur88/Notas/texto/2025-06-09.txt (2025-06-10 22:24:26)
+[03:05]
+inicio
+[03:51]
+┌──(markmur88㉿local)-[~]
+└─$ vps_l_user        
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sun Jun  8 15:48:46 2025 from 194.126.177.89
+[04:29]
+                                                                                                           
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 03:02:57 2025 from 194.126.177.137
+[04:36]
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 04:29:12 2025 from 194.126.177.137
+[04:49]
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 04:36:45 2025 from 194.126.177.137
+[04:54]
+venv simulador
+[05:14]
+reinicio
+[10:57]
+d_local
+vps_locsync
+[11:28]
+corrido simulador
+[12:46]
+Deploy de plantillas conexion y curl
+[12:54]
+┌──(markmur88㉿local)-[~]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 05:14:26 2025 from 149.88.24.195
+┌──(markmur88㉿coretransapi)-[~]
+[12:54]
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 12:10:52 2025 from 149.88.102.41
+[13:39]
+┌──(envAPP)─(markmur88㉿local)-[~/api_bank_h2]
+└─$ vps_l_user
+Linux coretransapi 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun  9 12:54:32 2025 from 149.88.102.41
+[13:53]
+Act Logs
+[14:27]
+USE_OAUTH2_UI
+🗒 /home/markmur88/Notas/texto/2025-06-10.txt (2025-06-10 22:24:26)
+[03:13]
+https://github.com/markmur90/Simulador.git
+git@github.com:markmur90/Notas.git
+🗒 /home/markmur88/Notas/texto/2025-06-11.txt (2025-06-11 13:35:45)
+[04:39]
+minimax ai
+gab ia
+anakin
+opentouter
+venice
+[08:41]
+
+
+Al final tu histórico habrá vuelto al punto limpio anterior a las fusiones no deseadas.
+
+git fetch origin
+git reset --hard f6164200e74d87c8a6d2e813626608fa80920587
+git push origin main --force
+git tag -l | xargs -r git tag -d
+for TAG in $(git ls-remote --tags origin | awk '{print $2}' | sed 's|refs/tags/||'); do
+  git push origin :refs/tags/$TAG
+done
+[10:19]
+Rutas para Deploy
+
+A continuación tienes las rutas de configuración más comunes en un servidor Ubuntu/Debian para cada uno de los servicios que mencionas (y algunos adicionales que suelen acompañar tu stack bancario). Si tu distribución o tu patrón de instalación difiere, ajústalas en consecuencia.
+
+gunicorn
+Archivos para el servicio systemd y configuración global:
+
+/etc/systemd/system/gunicorn.service
+/etc/gunicorn/config.py                # (opcional, si usas un archivo de configuración central)
+/etc/gunicorn.d/*.py                   # (si tu paquete lo crea en /etc/gunicorn.d/)
+
+nginx
+Nginel principal, bloques de servidor y directorios de includes:
+
+/etc/nginx/nginx.conf
+/etc/nginx/sites-available/
+/etc/nginx/sites-enabled/
+/etc/nginx/conf.d/*.conf
+
+supervisor
+Archivo maestro y directorios para cada programa:
+
+/etc/supervisor/supervisord.conf
+/etc/supervisor/conf.d/*.conf
+
+fail2ban
+Configuración principal, cárceles y overrides:
+
+/etc/fail2ban/fail2ban.conf
+/etc/fail2ban/jail.conf
+/etc/fail2ban/jail.d/*.conf
+
+certbot
+Certificados, renovaciones y opciones globales:
+
+/etc/letsencrypt/cli.ini
+/etc/letsencrypt/renewal/*.conf
+/etc/letsencrypt/live/<dominio>/fullchain.pem
+/etc/letsencrypt/live/<dominio>/privkey.pem
+
+tor
+Archivo de configuración y datos del servicio:
+
+/etc/tor/torrc
+/var/lib/tor/hidden_service/            # (si alojas un servicio onion)
+/var/lib/tor/<relay-or-exit-profile>/
+
+Y algunos más que conviene tener a mano:
+
+systemd (genérico)
+Unidades personalizadas y overrides:
+
+/etc/systemd/system/*.service
+/etc/systemd/system/*.socket
+/etc/systemd/system/<unidad>.service.d/override.conf
+
+ufw (firewall)
+Reglas y configuraciones:
+
+/etc/ufw/ufw.conf
+/etc/ufw/before.rules
+/etc/ufw/after.rules
+/etc/ufw/applications.d/*.profile
+
+sshd
+Servidor SSH (acceso administrativo):
+
+/etc/ssh/sshd_config
+/etc/ssh/ssh_config
+
+postgresql
+Si tu backend es PostgreSQL, por versión y cluster:
+
+/etc/postgresql/<versión>/main/postgresql.conf
+/etc/postgresql/<versión>/main/pg_hba.conf
+
+redis
+Cache y celery broker típico:
+
+/etc/redis/redis.conf
+
+Con estas rutas podrás localizar y ajustar cada componente de tu infraestructura bancaria. 
+[20:35]
+Test
+🗒 /home/markmur88/Notas/texto/2025-06-12.txt (2025-06-12 19:36:43)
+[17:54]
+cNOT
+[18:18]
+localup
+vps up
+vps_l_user
+cMEN
+[18:38]
+cAPI
+[18:43]
+vps_l_user
+cMEN
+d_local
+cSCR
+cAPI
+vps_up_copy
+cSIM
+cNOT
+cNOT
+cAPI
+simulador
+servicios simulador independiente
+cSIM
+cNOT
+cSCR
+cAPI
+vps_up_copy
+cAPI
+cSCR
+cAPI
+vps_up_copy
+cSIM
+vps_up_copy
+debug
+sm_dir
+vps_up_copy
+ALLOWED_HOSTS
+vps_up_copy
+ip AllowInternalNetworkMiddleware
+vps_up_copy
+vps_up_copy
+[22:54]
+cAPI
+cNOT
+cSIM
+cAPI
+cSIM
+[23:14]
+cAPI
+cSIM
+cAPI
+hk_dir
+h2_dir
+sm_dir
+vps_up_copy
+cSIM
+cSIM
+cSIM
+cAPI
+cSIM
+cAPI
+cSIM
+🗒 /home/markmur88/Notas/texto/2025-06-13.txt (2025-06-12 23:32:56)
+[02:37]
+Actualización de rutas
+express
+vps_up_copy
+completar el servidor
+vps_up_copy
+cSIM
+express
+vps_up_copy
+vps_up_copy
+express
+simulador descargado
+cAPI
+🗒 /home/markmur88/Notas/texto/2025-06-14.txt (2025-06-13 19:55:04)
+🗒 /home/markmur88/Notas/texto/2025-06-16.txt (2025-06-16 10:54:51)
+🗒 /home/markmur88/Notas/texto/2025-06-17.txt (2025-06-16 22:42:13)
+[03:59]
+Subir Simulador, corregido middleeare, bootstrap
+[05:05]
+sync vps x tasks
+start2
+[05:41]
+sincronizar datos simulador
+🗒 /home/markmur88/Notas/texto/2025-06-19.txt (2025-06-19 14:38:18)
+[17:36]
+Subir: h2
+heroku
+scripts
+simulador
+🗒 /home/markmur88/Notas/texto/2025-06-20.txt (2025-06-20 13:16:53)
+[02:09]
+cargar datos en local del simulador
+subir simulador
+arrancar simulador
+desce el script hacer pruebas con conexion
+d_local
+arranque de simulador
+prueba de script
+[04:06]
+
+[04:06]
+express
+actualización script para puertos 
+inicio de sim auto
+[20:10]
+d_local
+🗒 /home/markmur88/Notas/texto/2025-06-21.txt (2025-06-21 03:33:05)
+[00:45]
+modicficado simulador los templates
+[01:15]
+express
+d_local
+express
+espress
+verificar arranque de servicios
+corrección de plantilla usuarios
+bk bdd
+h2
+hk
+scr
+sim
+express
+modificar sim
+corriendo codex
+[08:25]
+
+[08:27]
+corriendo codex
+express
+eliminar debtor creditor y transfer simulados
+express
+correccion del menu de administrador para listar
+🗒 /home/markmur88/Notas/texto/2025-06-22.txt (2025-06-22 13:13:55)
+[19:57]
+Crear alias Elisa
+🗒 /home/markmur88/Notas/texto/2025-06-23.txt (2025-06-23 17:19:22)
+[20:37]
+haciendo bk sync con notas
+🗒 /home/markmur88/Notas/texto/2025-06-24.txt (2025-06-24 11:30:03)
+🗒 /home/markmur88/Notas/texto/2025-06-25.txt (2025-06-25 00:41:29)
+[03:02]
+corregido conexion_ssh.py
+conexion_banco.py
+[07:32]
+clientid
+[07:32]
+Simulador - clientid
+List
+cuentas-deudor - list
+transferencias - nuevo InvalidToken
+No exception message supplied
+Registro Token en  	Value
+connection 	
+
+<DatabaseWrapper vendor='sqlite' alias='default'>
+
+expression 	
+
+Col(sim_debtor_account, banco.DebtorAccount.iban)
+
+self 	
+
+<banco.models.EncryptedCharField: iban>
+
+value 	
+
+'gAAAAABoVKu6S3xbgGdA2RQrFcRZWaTgY5vJp7vcwK5dedBEWj_sanP6VHMQNpb2PCEOz9KjELFoHLrgsePMuwwsCN8ta5hgqQ21j-r28Pfk8PyxCUmX5ww='
+[07:37]
+Simulador-ClientId
+Simulador-ClientID-List
+Simulador-cuentas.deudor-list
+Simulador-transferencias-nuevo.InvalidToken
+
+🎤 Audios acumulados:
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+date: operando extra ‘%H:%M:%S"’
+Pruebe 'date --help' para más información.
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado

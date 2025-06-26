@@ -91,3 +91,7 @@ Simulador-AccountMovemen
 Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
 Simulador-login_api_similador
 Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
