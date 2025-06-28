@@ -156,3 +156,18 @@
 2025-06-24 03:55:01 - 👉 Inicio de backup maestro.
 2025-06-25 03:55:01 - 👉 Inicio de backup maestro.
 2025-06-25 22:35:01 - 👉 Inicio de backup maestro.
+2025-06-26 22:35:01 - 👉 Inicio de backup maestro.
+2025-06-28 18:44:36 - 👉 Inicio de backup maestro.
+2025-06-28 18:44:51 - ✅ Dump de BD generado: db_backup_2025-06-28__18-44.sql
+2025-06-28 18:45:28 - ✅ Tar H2 completado: proyecto_backup_H2_2025-06-28__18-44.tar.gz
+2025-06-28 18:46:34 - ✅ Tar HK completado: proyecto_backup_HK_2025-06-28__18-44.tar.gz
+2025-06-28 18:49:23 - ✅ Tar SC completado: proyecto_backup_SC_2025-06-28__18-44.tar.gz
+2025-06-28 18:50:08 - ✅ Tar SM completado: proyecto_backup_SM_2025-06-28__18-44.tar.gz
+2025-06-28 18:50:34 - ✅ Tar NT completado: proyecto_backup_NT_2025-06-28__18-44.tar.gz
+2025-06-28 18:50:36 - 📦 Tars a enviar: 4 archivos.
+2025-06-28 18:50:47 - 📤 Enviado tar: proyecto_backup_NT_2025-06-28__18-44.tar.gz
+2025-06-28 18:53:00 - 📤 Enviado tar: proyecto_backup_SM_2025-06-28__18-44.tar.gz
+2025-06-28 19:01:27 - 📤 Enviado tar: proyecto_backup_SC_2025-06-28__18-44.tar.gz
+2025-06-28 19:04:56 - 📤 Enviado tar: proyecto_backup_HK_2025-06-28__18-44.tar.gz
+2025-06-28 19:04:58 - 🧹 Limpieza de tars antiguos completada.
+2025-06-28 19:15:01 - 👉 Inicio de backup maestro.

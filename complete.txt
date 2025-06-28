@@ -95,3 +95,4 @@ Conexión bancaria desactivada.
 Simulador-transferencias-nuevo-InvalidToken
 Error de seguridad: State mismatch
 Error en Autorización
+22
