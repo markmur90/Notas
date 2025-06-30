@@ -668,3 +668,4 @@ Error en Autorización
 Failed to read voice 'gtts:es'
 ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
 aplay: main:850: audio open error: Dispositivo o recurso ocupado
+bash: /home/makrmur88/Notas/resumen_proyecto.sh: No existe el fichero o el directorio

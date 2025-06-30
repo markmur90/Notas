@@ -96,3 +96,5 @@ Simulador-transferencias-nuevo-InvalidToken
 Error de seguridad: State mismatch
 Error en Autorización
 22
+send_transfer_view
+send
