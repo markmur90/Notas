@@ -1,1 +1,2 @@
 Realizar prueba de Local a VPS
+Revisar plantilla
