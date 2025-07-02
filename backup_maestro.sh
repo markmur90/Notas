@@ -106,6 +106,8 @@ backup_project "HK" "${HOME}/api_bank_heroku"
 backup_project "SC" "${HOME}/scripts"
 backup_project "SM" "${HOME}/Simulador"
 backup_project "NT" "${HOME}/Notas"
+backup_project "NT" "${HOME}/eliza"
+backup_project "NT" "${HOME}/AI"
 
 # === 3) Selección de 4 tars más recientes ===
 mapfile -t RECENT < <(ls -1t "${BACKUP_VPS_DIR}"/proyecto_backup_*.tar.gz 2>/dev/null | head -n 4)

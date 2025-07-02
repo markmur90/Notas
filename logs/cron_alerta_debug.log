@@ -123,3 +123,147 @@ Failed to create secure directory (/run/user/1000/pulse): No such file or direct
 [src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_176930.mp3: No such file or directory
 /home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
 [src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_195958.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_1208556.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_2261650.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_2910976.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3281148.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3296757.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3312232.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3328108.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_14718.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_31254.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_50036.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_72805.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_215905.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_242007.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_1400740.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_2355107.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_2929195.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_2952285.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_2972934.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_2993775.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3015520.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3023678.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3031990.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3041298.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3050904.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3059893.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3068652.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3077300.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3087160.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3096675.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3105447.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3114939.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3128376.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3137301.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3145908.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3163257.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3175988.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3185497.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3194662.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3204042.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3213081.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3222110.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3230999.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_3240215.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_8396.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_16097.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_26837.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_36260.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_45705.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_54229.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_65461.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_75353.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_81269.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_86625.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_91965.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_97324.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_102854.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_109295.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_115613.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_121781.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_128653.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_135049.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_141145.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_147481.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_153135.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_159066.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_166213.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_172127.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_178479.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_183949.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_190357.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_199343.mp3: No such file or directory
+/home/markmur88/Notas/alerta_horaria.sh: línea 37: /home/markmur88/notas_env/bin/activate: No existe el fichero o el directorio
+[src/streamdump.c:stream_open():600] error: failed to open file: /tmp/alerta_voz_211725.mp3: No such file or directory
