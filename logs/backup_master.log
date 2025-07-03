@@ -194,3 +194,20 @@
 2025-07-02 20:54:50 - 📤 Enviado tar: proyecto_backup_SC_2025-07-02__17-03.tar.gz
 2025-07-02 20:58:18 - 📤 Enviado tar: proyecto_backup_HK_2025-07-02__17-03.tar.gz
 2025-07-02 20:58:23 - 🧹 Limpieza de tars antiguos completada.
+2025-07-02 23:52:02 - 👉 Inicio de backup maestro.
+2025-07-02 23:52:10 - ✅ Dump de BD generado: db_backup_2025-07-02__23-52.sql
+2025-07-02 23:54:48 - ✅ Tar H2 completado: proyecto_backup_H2_2025-07-02__23-52.tar.gz
+2025-07-02 23:55:41 - ✅ Tar HK completado: proyecto_backup_HK_2025-07-02__23-52.tar.gz
+2025-07-02 23:58:37 - ✅ Tar SC completado: proyecto_backup_SC_2025-07-02__23-52.tar.gz
+2025-07-02 23:59:23 - ✅ Tar SM completado: proyecto_backup_SM_2025-07-02__23-52.tar.gz
+2025-07-02 23:59:40 - ✅ Tar NT completado: proyecto_backup_NT_2025-07-02__23-52.tar.gz
+2025-07-03 00:25:01 - 👉 Inicio de backup maestro.
+2025-07-03 00:31:09 - ✅ Tar EL completado: proyecto_backup_EL_2025-07-02__23-52.tar.gz
+2025-07-03 00:55:04 - 👉 Inicio de backup maestro.
+2025-07-03 18:44:35 - 👉 Inicio de backup maestro.
+2025-07-03 18:44:37 - ✅ Dump de BD generado: db_backup_2025-07-03__18-44.sql
+2025-07-03 18:53:22 - 👉 Inicio de backup maestro.
+2025-07-03 18:53:24 - ✅ Dump de BD generado: db_backup_2025-07-03__18-53.sql
+2025-07-03 18:53:54 - ✅ Tar H2 completado: proyecto_backup_H2_2025-07-03__18-53.tar.gz
+2025-07-03 18:53:58 - ✅ Tar HK completado: proyecto_backup_HK_2025-07-03__18-53.tar.gz
+2025-07-03 18:57:41 - ✅ Tar SC completado: proyecto_backup_SC_2025-07-03__18-53.tar.gz

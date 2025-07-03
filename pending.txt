@@ -1,5 +1,3 @@
-Realizar prueba de Local a VPS
-Revisar plantilla
-confirmar ssh
-confirmar hack
-Pedir al Agente la transferencia
+SSH
+Hack
+Send

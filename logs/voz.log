@@ -1018,3 +1018,6 @@ Error: Failed to connect. Probable cause: Unknown
 /home/markmur88/Notas/alerta_horaria.sh: línea 135: gtts-cli: orden no encontrada
 /home/markmur88/Notas/alerta_horaria.sh: línea 135: gtts-cli: orden no encontrada
 /home/markmur88/Notas/alerta_horaria.sh: línea 135: gtts-cli: orden no encontrada
+/home/markmur88/Notas/alerta_horaria.sh: línea 135: gtts-cli: orden no encontrada
+/home/markmur88/Notas/alerta_horaria.sh: línea 135: gtts-cli: orden no encontrada
+./alerta_horaria.sh: línea 135: gtts-cli: orden no encontrada

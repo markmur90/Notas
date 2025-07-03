@@ -98,3 +98,6 @@ Error en Autorización
 22
 send_transfer_view
 send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS

@@ -1,0 +1,13 @@
+[22:09]
+envio al agente
+subido a vps
+actualizacion
+subir a vps
+realizar transferencia
+confirmar ssh y hack
+Pedir al agente la transferencia
+express
+h2
+heroku
+scripts
+Simulador
