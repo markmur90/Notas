@@ -33,11 +33,48 @@ tar -czf "$DIR_BACKUP/proyecto_backup_SC_$FECHA.tar.gz" -C "$DIR_PROYECTO_SC" .
 tar -czf "$DIR_BACKUP/proyecto_backup_SM_$FECHA.tar.gz" -C "$DIR_PROYECTO_SM" .
 tar -czf "$DIR_BACKUP/proyecto_backup_NT_$FECHA.tar.gz" -C "$DIR_PROYECTO_NT" .
 
-# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/db_backup_HK_$FECHA.sql" "$VPS_USER@$VPS_IP:$DIR_REMOTO/"
-# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_HK_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_HK/"
-# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_H2_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_H2/"
-# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_SC_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_SC/"
-# scp -i "$SSH_KEY" -P "$VPS_PORT" "$DIR_BACKUP/proyecto_backup_SM_$FECHA.tar.gz" "$VPS_USER@$VPS_IP:$DIR_REMOTO_SM/"
+# Función para dividir archivos mayores de 49MB
+split_file() {
+    local file=$1
+    local prefix=$2
+    local size=49M
+    split -b "$size" "$file" "$prefix"
+}
+
+# Función para enviar archivos a Telegram
+send_to_telegram() {
+    local file=$1
+    local chat_id=$2
+    local token=$3
+    curl -s -F document=@"$file" "https://api.telegram.org/bot$token/sendDocument?chat_id=$chat_id"
+}
+
+# Configuración de Telegram
+TELEGRAM_TOKEN="7881009139:AAH1mokuP0AjmCbd_tN3VJIxVkG7Fq95j5o"
+TELEGRAM_CHAT_ID="769077177"
+
+# Procesar y enviar archivos
+for file in "$DIR_BACKUP"/*.tar.gz; do
+    if [ -f "$file" ]; then
+        size=$(stat -c%s "$file")
+        if [ "$size" -gt 51200000 ]; then  # 51200000 bytes = 49 MB
+            split_file "$file" "$DIR_BACKUP/split_"
+            for part in "$DIR_BACKUP/split_"*; do
+                send_to_telegram "$part" "$TELEGRAM_CHAT_ID" "$TELEGRAM_TOKEN"
+                if [ $? -ne 0 ]; then
+                    echo "Error al enviar $part a Telegram"
+                    exit 1
+                fi
+            done
+        else
+            send_to_telegram "$file" "$TELEGRAM_CHAT_ID" "$TELEGRAM_TOKEN"
+            if [ $? -ne 0 ]; then
+                echo "Error al enviar $file a Telegram"
+                exit 1
+            fi
+        fi
+    fi
+done
 
 echo "✅ Respaldo y sincronización completados el $FECHA"
 
