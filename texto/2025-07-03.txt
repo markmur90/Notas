@@ -1,0 +1,22 @@
+[18:35]
+cambiar opción de obtener token por automático.
+quitar y optimizar el template para el token.
+🔵 Heroku
+
+    Integra muchas dependencias y decoradores (csrf_exempt, ListView, etc.).
+
+    Usa funciones personalizadas como crear_challenge_mtan, crear_challenge_phototan.
+
+    Utiliza conexion_banco para comunicarse con el Simulador.
+
+    No se aprecia aún la lógica exacta de envío de OTP ni validación de token en vistas send_transfer, aunque parece que se conecta con lógica de challenge.
+
+📌 Requiere validación si la vista send_transfer_view:
+
+    Extrae el token desde sesión o input.
+
+    Llama a la API del simulador para el OTP.
+
+    Permite la inserción manual o automática del código.
+
+    Recibe y procesa la respuesta del simulador.[A
