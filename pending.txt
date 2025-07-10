@@ -1,3 +1,2 @@
-SSH
-Hack
-Send
+comprobar direcciones en línea
+realizar transferencia

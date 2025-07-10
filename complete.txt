@@ -101,3 +101,11 @@ send
 Pedir al Agente la transferencia
 Revisar plantilla
 Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
