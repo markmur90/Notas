@@ -1711,3 +1711,3038 @@ comprobar datos en simulador
 Failed to read voice 'gtts:es'
 ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
 aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-12 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-13 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-14 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-15 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-15 22:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-17 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-18 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-19 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+Playing raw data '/tmp/resumen_total_100833.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+📦 Resumen total del proyecto
+🕒 2025-07-20 15:00:02
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-21 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-22 15:00:02
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-23 15:00:05
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-24 15:00:02
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-25 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-26 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-27 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-28 15:00:02
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-29 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-30 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-07-31 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-08-01 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-08-02 15:00:02
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
+📦 Resumen total del proyecto
+🕒 2025-08-03 15:00:01
+
+📝 Notas acumuladas:
+
+🎤 Audios grabados:
+/home/markmur88/Notas/audio/voz_00-20-51.wav
+/home/markmur88/Notas/audio/voz_19-22-56.wav
+
+📦 Tareas Pendientes:
+📝 /home/markmur88/Notas/pending.txt
+comprobar direcciones en línea
+realizar transferencia
+
+📦 Tareas Completas:
+📝 /home/markmur88/Notas/complete.txt
+Dominio
+DNS
+IP
+IP Servidor
+En red segura
+Sincronización
+Plantilla
+Conexión Banco
+d_local -S -Gi
+vps_locsync
+Run Simulador
+Test
+correr local
+Pantilla Comexión Banco
+d_njalla
+vps_locsyncl
+🧪 1. Local a Local
+chmod
+d_njalla
+vps_locsyncl
+vps_sim_start
+IP
+"auth_url": "https://simulator-api.db.com:443/gw/oidc/authorize?response_type=code&client_id=7c1e2c53-8cc3-4ea0-bdd6-b3423e76adc7&redirect_uri=https://ap
+https://simulator-api.db.com:443/gw/oidc/authorize
+4. VPS a Local.arreglar puertos vps
+Arreglar puertos vps.
+Sincronización - Menu Deploy 2 (zSync).
+Reinicio API - Menu Deploy 5 (api_restart_local).
+Correr running - Menu Simulador 5 (sim_bank_restart).
+Arreglar Ip dinámica.
+bdd
+sync
+Arreglar IP dinámica.
+Entorno
+bdd
+hacer prueba de conexion
+reemplazar archivos para carga de datos a bdd con env
+sync
+me quedo en sandbox
+Arreglar IP dinámica.
+después revisar entorno que aplique las salidas
+revisar archivos de sincronización cron
+Arreglar Git Notas
+env
+arreglar rutas deploy vps, observar notas
+Arreglar plantilla envío.
+plantilla de conexion
+crear entorno de conexion para suimulador
+Arrancar servidor en vps con servicios independientes.
+completar servidor.
+certs
+8443
+DAtos API
+1. Local a Local.
+3. VPS a VPS.
+Test con los siguientes procesos:
+test de prueba
+4. VPS a Local.Entorno
+Anañir datos a simulador
+Implementar Plantillas
+menu ufw
+Confirmar IP obtenida.
+2. Local a VPS.
+Añadir datos al vps
+CArgar LLMS
+Deploy Simulador, API, Local
+Revisar simulador tasks.py
+Revisar Simulador
+Revisar API
+Revisar Local
+222
+subir sim a vps
+Corregir ALLOW_FAKE_BANK
+probar sim vps
+Crear oficial con contraseña
+transfer a vps
+migraciones simulador
+subir simulador
+arrabcar simulador
+registros
+Plantillas por cargos
+conexion banco, revisión dominio e ip
+modificar dominio, mock, y path
+pruebas script
+correccion menu admin
+Rutas API a simulador
+Corregir rutas en la API
+Simulador-ClientID-List
+222
+Simulador-AccountMovemen
+Simulador-oauth2_authorize pasa la autorización a aprobar la transacción
+Simulador-login_api_similador
+Views.py generar_token
+Conexión bancaria desactivada.
+Simulador-transferencias-nuevo-InvalidToken
+Error de seguridad: State mismatch
+Error en Autorización
+22
+send_transfer_view
+send
+Pedir al Agente la transferencia
+Revisar plantilla
+Realizar prueba de Local a VPS
+SSH
+Hack
+Send
+Borrar datos simulador
+Comprobar en local datos sin información del simulador y api
+subir datos al vps
+subir local
+comprobar datos en simulador
+
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+aplay: main:850: audio open error: Dispositivo o recurso ocupado
