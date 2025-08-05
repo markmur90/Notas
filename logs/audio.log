@@ -203,3 +203,7 @@ Playing raw data '/tmp/resumen_voz_800026.wav' : Unsigned 8 bit, Rate 8000 Hz, M
 📨 Mensaje enviado a Telegram
 Failed to read voice 'gtts:es'
 Playing raw data '/tmp/resumen_voz_60832.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+🔊 Generando resumen por voz
+📨 Mensaje enviado a Telegram
+Failed to read voice 'gtts:es'
+Playing raw data '/tmp/resumen_voz_179444.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
