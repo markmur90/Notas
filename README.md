@@ -1,91 +1,188 @@
-# Notas
+# Proyecto de Automatización y Gestión de Notas
 
-Colección de scripts Bash para llevar notas rápidas, gestionar pendientes y realizar
-recordatorios horarios. Incluye además tareas de respaldo automático y
-sincronización con un servidor remoto a través de `scp`.
+Este repositorio agrupa una serie de scripts Bash para:
 
-## Estructura de scripts principales
+- **Control de tiempo de trabajo** en zona America/Bogota, con registro diario y total.
+- **Alertas horarias** mediante notificación gráfica, síntesis de voz y Telegram.
+- **Respaldo y sincronización** de base de datos y proyecto en un servidor VPS.
+- **Generación de resúmenes** de notas en texto y audio, con envío por Telegram.
+- **Listado completo** de notas, audios y tareas (pendientes/completadas).
 
-- **alerta_horaria.sh** – Envía una notificación con la hora actual,
-  pendientes y tiempo invertido en el día y el proyecto. Desde esta versión la
-  alerta hablada y el mensaje de Telegram se ejecutan en cada corrida del script.
-  Se espera que este script sea llamado periódicamente mediante `cron`.
-- **nota_texto.sh** – Permite crear notas de texto rápidas guardándolas en la
-  carpeta `texto` con fecha y hora.
-- **nota_voz.sh** – Graba hasta 60 segundos de audio si hay dispositivo de
-  captura disponible, guardando el archivo en `audio/FECHA`.
-- **pendientes.sh** – Muestra un menú simple para listar, agregar o completar
-  tareas pendientes almacenadas en `pending.txt`.
-- **daily_backup.sh** y **startup_sync.sh** – Scripts de respaldo y
-  sincronización de archivos hacia un servidor remoto mediante SSH.
+---
 
-El archivo `crontab.txt` contiene un ejemplo de programación para ejecutar estas
-acciones de forma periódica.
+## 📁 Estructura de carpetas
 
-## Lógica de `alerta_horaria.sh`
-
-El script lleva contadores de tiempo total y del día mediante archivos de
-log. Cada ejecución incrementa estos contadores en cinco minutos y genera un
-mensaje con los pendientes actuales. Además de la notificación gráfica,
-reproduce el texto por voz y lo envía por Telegram.
-
-Anteriormente la reproducción de audio y el envío por Telegram se realizaban
-cada tres ejecuciones (aproximadamente cada 30 minutos si se ejecutaba cada
-10). Esta versión elimina esa condición, por lo que la salida de audio
-coincide con cada notificación del sistema.
-
-### Mejorar la voz de las alertas
-
-El script usa `espeak` para la salida hablada. Si están instalados los paquetes
-`mbrola` y alguna de sus voces (`mbrola-es1`, `mbrola-es2`, etc.), se utilizará
-de forma automática la primera voz MBROLA disponible (por ejemplo `mb-es1`), que
-suena más natural que la predeterminada.
-
-También es posible emplear [gTTS](https://pypi.org/project/gTTS/) para obtener
-una voz más natural. Si `gtts-cli` y `mpg123` están presentes, el script la
-utilizará automáticamente en lugar de `espeak`. Requiere conexión a internet.
-
-Para instalarlos en sistemas basados en Debian:
-
-```bash
-sudo apt-get install mbrola mbrola-es1
+```
+/home/markmur88/Notas/
+├── texto/                     # Archivos de notas .txt
+│   └── nota_texto.txt
+├── audio/                     # Audios generados (.wav)
+│   └── voz_*.wav
+├── logs/                      # Logs diversos
+│   ├── alerta_horaria.log
+│   ├── tiempo_total.log
+│   ├── tiempo_dia.log
+│   ├── ultima_fecha.log
+│   ├── resumen_audio.log
+│   └── resumen_total_audio.log
+├── pending.txt                # Tareas pendientes
+├── complete.txt               # Tareas completadas
+├── voz_seleccionada           # Código de voz elegida para espeak
+└── enviar_telegram.sh         # Script para enviar mensajes a Telegram
 ```
 
-Para contar con más voces en español puedes instalar paquetes adicionales de
-MBROLA, como `mbrola-es2`, `mbrola-es3` o `mbrola-es4`:
+En tu directorio de proyecto (por ejemplo `api_bank_h2/`) y backups encontrarás:
 
-```bash
-sudo apt-get install mbrola-es2 mbrola-es3 mbrola-es4
+```
+/home/markmur88/backup/vps/
+├── db_backup_YYYY-MM-DD_HH.sql
+└── proyecto_backup_YYYY-MM-DD_HH.tar.gz
 ```
 
-Para probar la síntesis con gTTS se necesitan `python3-pip` y el reproductor
-`mpg123`. Instala ambos con:
+---
+
+## 🔧 Prerrequisitos
+
+- **bash**
+- **coreutils** (`date`, `find`, `stat`, `awk`, etc.)
+- **espeak** (o `gtts-cli` + `mpg123` + `ffmpeg/play`)
+- **aplay** (o reproductor WAV compatible)
+- **notify-send** (para notificaciones gráficas)
+- **psql/pg\_dump** (cliente de PostgreSQL)
+- **ssh/scp** con clave pública configurada
+- Un **bot de Telegram** y tu script `enviar_telegram.sh` con `BOT_TOKEN` y `CHAT_ID`.
+
+---
+
+## Instaladores de Voces
+
+### 1) espeak y voces MBROLA
+
+sudo apt-get update && sudo apt-get install -y espeak mbrola mbrola-us1 mbrola-us2 mbrola-uk1 mbrola-uk2 mbrola-de1 mbrola-de2
+
+### 2) Python y gtts-cli
+
+sudo apt-get install -y python3-pip && pip3 install --upgrade gTTS
+
+### 3) mpg123 (para reproducir MP3)
+
+sudo apt-get install -y mpg123
+
+### 4) ffmpeg y sox (para convertir y reproducir WAV)
+
+sudo apt-get install -y ffmpeg sox
+
+### 5) opción: instala todas las voces disponibles de MBROLA (si deseas más idiomas)
+
+sudo apt-get install -y mbrola-*
+
+---
+
+## ⚙️ Configuración global
+
+Edita en cada script, o exporta como variable de entorno:
 
 ```bash
-sudo apt-get install python3-pip mpg123
-pip3 install --user gtts
+USER_LOCAL="markmur88"                              # Tu usuario Linux
+TIMEZONE="America/Bogota"                          # Zona horaria de referencia
+VOICE_FILE="$HOME/Notas/voz_seleccionada"          # Voz para espeak
+LOG_DIR="$HOME/Notas/logs"                         # Directorio de logs
+DIR_PROYECTO="/home/$USER_LOCAL/api_bank_h2"       # Ruta a tu código fuente
+DIR_BACKUP="/home/$USER_LOCAL/backup/vps"          # Carpeta de backups
+# Datos de la BD
+DB_NAME="mydatabase"
+DB_USER="$USER_LOCAL"
+DB_PASS="Ptf8454Jd55"
+DB_HOST="localhost"
+DB_PORT="5432"
+# VPS
+VPS_USER="$USER_LOCAL"
+VPS_IP="80.78.30.242"
+VPS_PORT="22"
+SSH_KEY="/home/$USER_LOCAL/.ssh/vps_njalla_nueva"
+DIR_REMOTO="/home/$VPS_USER/api_bank_heroku"
 ```
 
-Para elegir una voz distinta o configurarla manualmente, ejecuta:
+---
+
+## 🚀 Scripts y Usos
+
+### 1. `alerta_horaria.sh`
+
+Envía cada X minutos una notificación local y por Telegram, anuncia la hora y tiempo trabajado desde el inicio de sesión en Bogotá.\
+**Uso:**
 
 ```bash
-./alerta_horaria.sh --config-voice
+chmod +x alerta_horaria.sh
+./alerta_horaria.sh
 ```
 
-Se mostrará un menú con las voces disponibles de `espeak` y la selección
-quedará guardada en `~/Notas/voz_seleccionada` para próximas ejecuciones.
-Al ejecutar esta opción se mostrará un menú con todas las voces disponibles
-según `espeak` (por ejemplo `es`, `en`, `mb-es1`). Al elegir una,
-escucharás una muestra y podrás confirmar si deseas usarla.
-La selección quedará guardada en `~/Notas/voz_seleccionada` para próximas
-ejecuciones.
+### 2. `backup_sync.sh`
 
-## Sincronización automática de logs
-
-El script `logs_sync.sh` monitorea la carpeta `logs` con `inotifywait` y, ante cualquier cambio, realiza un commit y empuja los resultados al repositorio configurado. Se debe contar con acceso por SSH al repositorio.
-
-Ejemplo de uso:
+Genera dump de PostgreSQL y comprime tu proyecto, luego copia a VPS vía `scp`.\
+**Uso:**
 
 ```bash
-./logs_sync.sh
+chmod +x backup_sync.sh
+./backup_sync.sh
 ```
+
+### 3. `resumen_dia.sh`
+
+Lee la nota más reciente en `Notas/texto`, anuncia fecha/hora y contenido por voz, envía por Telegram y guarda el audio.\
+**Uso:**
+
+```bash
+chmod +x resumen_dia.sh
+./resumen_dia.sh
+```
+
+### 4. `resumen_total.sh`
+
+Listados completos de notas, audios, pendientes y completadas; envía conteo por Telegram, genera y archiva un audio.\
+**Uso:**
+
+```bash
+chmod +x resumen_total.sh
+./resumen_total.sh
+```
+
+### 5. `tiempo_acumulado.sh`
+
+Calcula minutos/horas trabajados hoy y total, basados en logs diarios y totales, envía resumen por Telegram.\
+**Uso:**
+
+```bash
+chmod +x tiempo_acumulado.sh
+./tiempo_acumulado.sh
+```
+
+---
+
+## 📋 Ejemplo de envío por Telegram
+
+Tu script `enviar_telegram.sh` debe recibir un solo argumento con el texto:
+
+```bash
+#!/bin/bash
+BOT_TOKEN="TU_TOKEN_AQUI"
+CHAT_ID="TU_CHAT_ID"
+curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
+     -d chat_id="$CHAT_ID" -d text="$1"
+```
+
+---
+
+## 🛠️ Personalización
+
+- **Frecuencia de alertas:** ajusta el cron o bucle en `alerta_horaria.sh`.
+- **Voz y velocidad:** cambia el parámetro `-s` de espeak o elige otra voz en `voz_seleccionada`.
+- **Formato de backup:** añade exclusiones o compresión incremental en `backup_sync.sh`.
+- **Filtros de notas:** modifica patrones en `find` para distintos nombres de archivos.
+
+---
+
+## 📜 Licencia
+
+Este proyecto es de uso personal. Adáptalo y extiéndelo según tus necesidades bancarias y de productividad. ¡Disfruta de tus scripts!
+
